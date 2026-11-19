@@ -1,0 +1,208 @@
+# Suno Studio: Artist Registry
+# Purpose: Maintain authoritative metadata for all studio artists
+# Scope: Individual artists, band members, collaborators
+# Note: This file is a schema reference. Individual artist records are maintained in artist-roster/
+
+# SCHEMA REFERENCE
+# ================================================================
+
+# Artist Record Structure
+# example_artist:
+#   public_name: "Artist Name"
+#   gender: "M|F"
+#   status: "active|inactive|retired"
+#   archetype: "Internal character archetype"
+#   primary_genres: ["Genre1", "Genre2"]
+#   secondary_genres: ["Genre3"]
+#   vocal_identity: "Description of voice character"
+#   production_dna: "Core production philosophy"
+#   core_themes: ["Theme1", "Theme2"]
+#   recurring_motifs: ["Motif1", "Motif2"]
+#   target_audience: "Description of intended listeners"
+#   created_at: "YYYY-MM-DD"
+#   notes: "Additional context"
+
+# CURRENT REGISTRY
+# ================================================================
+
+# MEN
+adrian_reyes:
+  public_name: "Adrian Reyes"
+  gender: "M"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/adrian-reyes"
+
+nathan_cross:
+  public_name: "Nathan Cross"
+  gender: "M"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/nathan-cross"
+
+isaac_vega:
+  public_name: "Isaac Vega"
+  gender: "M"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/isaac-vega"
+
+ethan_navarro:
+  public_name: "Ethan Navarro"
+  gender: "M"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/ethan-navarro"
+
+jordan_blake:
+  public_name: "Jordan Blake"
+  gender: "M"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/jordan-blake"
+
+lucas_reed:
+  public_name: "Lucas Reed"
+  gender: "M"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/lucas-reed"
+
+# WOMEN
+elena_cruz:
+  public_name: "Elena Cruz"
+  gender: "F"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/elena-cruz"
+
+sophia_martinez:
+  public_name: "Sophia Martinez"
+  gender: "F"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/sophia-martinez"
+
+maya_bennett:
+  public_name: "Maya Bennett"
+  gender: "F"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/maya-bennett"
+
+isabella_reyes:
+  public_name: "Isabella Reyes"
+  gender: "F"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/isabella-reyes"
+
+natalie_vega:
+  public_name: "Natalie Vega"
+  gender: "F"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/natalie-vega"
+
+olivia_brooks:
+  public_name: "Olivia Brooks"
+  gender: "F"
+  status: "active"
+  archetype: "[PLACEHOLDER]"
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+  notes: "Individual artist record maintained in artist-roster/olivia-brooks"

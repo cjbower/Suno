@@ -1,0 +1,170 @@
+# Suno Studio: Voice Registry
+# Purpose: Maintain authoritative metadata for vocal identities and voice characteristics
+# Scope: Voice profiles, vocal archetypes, voice treatments
+# Note: Individual voice profiles are maintained in artist development plans
+
+# SCHEMA REFERENCE
+# ================================================================
+
+# Voice Profile Structure
+# example_voice:
+#   artist_id: "artist_identifier"
+#   artist_name: "Artist Name"
+#   voice_category: "male|female|ensemble"
+#   range_description: "[PLACEHOLDER]"
+#   tone_character: "[PLACEHOLDER]"
+#   production_signature: "Description of consistent vocal treatment"
+#   emotional_territories: ["Territory1", "Territory2"]
+#   technical_notes: "[PLACEHOLDER]"
+#   recording_preferences: "[PLACEHOLDER]"
+#   created_at: "YYYY-MM-DD"
+#   notes: "Additional context"
+
+# CURRENT REGISTRY
+# ================================================================
+
+# MEN
+adrian_reyes_voice:
+  artist_id: "adrian_reyes"
+  artist_name: "Adrian Reyes"
+  voice_category: "male"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+nathan_cross_voice:
+  artist_id: "nathan_cross"
+  artist_name: "Nathan Cross"
+  voice_category: "male"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+isaac_vega_voice:
+  artist_id: "isaac_vega"
+  artist_name: "Isaac Vega"
+  voice_category: "male"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+ethan_navarro_voice:
+  artist_id: "ethan_navarro"
+  artist_name: "Ethan Navarro"
+  voice_category: "male"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+jordan_blake_voice:
+  artist_id: "jordan_blake"
+  artist_name: "Jordan Blake"
+  voice_category: "male"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+lucas_reed_voice:
+  artist_id: "lucas_reed"
+  artist_name: "Lucas Reed"
+  voice_category: "male"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+# WOMEN
+elena_cruz_voice:
+  artist_id: "elena_cruz"
+  artist_name: "Elena Cruz"
+  voice_category: "female"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+sophia_martinez_voice:
+  artist_id: "sophia_martinez"
+  artist_name: "Sophia Martinez"
+  voice_category: "female"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+maya_bennett_voice:
+  artist_id: "maya_bennett"
+  artist_name: "Maya Bennett"
+  voice_category: "female"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+isabella_reyes_voice:
+  artist_id: "isabella_reyes"
+  artist_name: "Isabella Reyes"
+  voice_category: "female"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+natalie_vega_voice:
+  artist_id: "natalie_vega"
+  artist_name: "Natalie Vega"
+  voice_category: "female"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"
+
+olivia_brooks_voice:
+  artist_id: "olivia_brooks"
+  artist_name: "Olivia Brooks"
+  voice_category: "female"
+  range_description: "[PLACEHOLDER]"
+  tone_character: "[PLACEHOLDER]"
+  production_signature: "[PLACEHOLDER]"
+  emotional_territories: []
+  technical_notes: "[PLACEHOLDER]"
+  recording_preferences: "[PLACEHOLDER]"
+  created_at: "2026-11-18"

@@ -1,0 +1,123 @@
+# Suno Studio: Band Registry
+# Purpose: Maintain authoritative metadata for all studio bands and ensembles
+# Scope: Bands, ensembles, group projects
+# Note: Individual band records are maintained in artist-roster/bands/
+
+# SCHEMA REFERENCE
+# ================================================================
+
+# Band Record Structure
+# example_band:
+#   public_name: "Band Name"
+#   status: "active|inactive|retired"
+#   formation_year: null
+#   member_count: null
+#   primary_genres: ["Genre1", "Genre2"]
+#   secondary_genres: ["Genre3"]
+#   vocal_identity: "Description of group vocal character"
+#   production_dna: "Core production philosophy"
+#   core_themes: ["Theme1", "Theme2"]
+#   recurring_motifs: ["Motif1", "Motif2"]
+#   target_audience: "Description of intended listeners"
+#   members: ["artist_id_1", "artist_id_2"]
+#   created_at: "YYYY-MM-DD"
+#   notes: "Additional context"
+
+# CURRENT REGISTRY
+# ================================================================
+
+north_star_revival:
+  public_name: "North Star Revival"
+  status: "active"
+  formation_year: null
+  member_count: null
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  members: []
+  created_at: "2026-11-18"
+  notes: "Individual band record maintained in artist-roster/bands/north-star-revival"
+
+lantern_house:
+  public_name: "Lantern House"
+  status: "active"
+  formation_year: null
+  member_count: null
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  members: []
+  created_at: "2026-11-18"
+  notes: "Individual band record maintained in artist-roster/bands/lantern-house"
+
+signal_fire:
+  public_name: "Signal Fire"
+  status: "active"
+  formation_year: null
+  member_count: null
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  members: []
+  created_at: "2026-11-18"
+  notes: "Individual band record maintained in artist-roster/bands/signal-fire"
+
+harbor_lights:
+  public_name: "Harbor Lights"
+  status: "active"
+  formation_year: null
+  member_count: null
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  members: []
+  created_at: "2026-11-18"
+  notes: "Individual band record maintained in artist-roster/bands/harbor-lights"
+
+midnight_avenue:
+  public_name: "Midnight Avenue"
+  status: "active"
+  formation_year: null
+  member_count: null
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  members: []
+  created_at: "2026-11-18"
+  notes: "Individual band record maintained in artist-roster/bands/midnight-avenue"
+
+city_saints:
+  public_name: "City Saints"
+  status: "active"
+  formation_year: null
+  member_count: null
+  primary_genres: []
+  secondary_genres: []
+  vocal_identity: "[PLACEHOLDER]"
+  production_dna: "[PLACEHOLDER]"
+  core_themes: []
+  recurring_motifs: []
+  target_audience: "[PLACEHOLDER]"
+  members: []
+  created_at: "2026-11-18"
+  notes: "Individual band record maintained in artist-roster/bands/city-saints"

@@ -1,0 +1,25 @@
+# Suno Studio: Motif Registry
+# Purpose: Maintain authoritative metadata for recurring musical and thematic motifs
+# Scope: Musical motifs, thematic elements, production signatures
+# Note: Individual motif definitions are maintained in creative/motif-library.md
+
+# SCHEMA REFERENCE
+# ================================================================
+
+# Motif Record Structure
+# example_motif:
+#   id: "unique-motif-identifier"
+#   name: "Motif Name"
+#   motif_type: "musical|thematic|production|arrangement"
+#   description: "Description of the motif"
+#   associated_artists: ["artist_id_1", "artist_id_2"]
+#   associated_themes: ["theme1", "theme2"]
+#   examples: ["song_id_1", "song_id_2"]
+#   created_at: "YYYY-MM-DD"
+#   notes: "Additional context, usage guidelines, or development notes"
+
+# CURRENT REGISTRY
+# ================================================================
+
+# No motifs catalogued yet. This registry will be populated during Phase 3+ as
+# recurring musical patterns and thematic elements are identified across the studio's work.

@@ -1,0 +1,78 @@
+# Decision Log
+
+**Purpose:** Record and document all significant architectural, creative, and operational decisions made within Suno Studio.
+
+**Scope:** Decisions about artist development, album creation, genre selection, release strategy, and repository governance.
+
+---
+
+## Decision Record Format
+
+Each decision record contains:
+
+- **Decision ID:** Unique identifier
+- **Title:** Short title for the decision
+- **Date:** When the decision was made or recorded
+- **Category:** Creative | Operational | Governance | Personnel | Technology
+- **Status:** Active | Superseded | On Hold | Reversed
+- **Rationale:** Why this decision was made
+- **Source:** Who made the decision or what document/discussion led to it
+- **Confidence:** High | Medium | Low
+- **Impact:** Affected areas or implications
+- **Related Decisions:** Links to related decisions
+
+---
+
+## Decision Log
+
+[PLACEHOLDER: Decisions will be recorded here with full details as projects proceed]
+
+### Decision Template
+
+**ID:** [PLACEHOLDER]
+
+**Title:** [PLACEHOLDER]
+
+**Date:** [PLACEHOLDER: YYYY-MM-DD]
+
+**Category:** [Creative | Operational | Governance | Personnel | Technology]
+
+**Status:** [Active | Superseded | On Hold | Reversed]
+
+**Rationale:** [PLACEHOLDER: Why was this decision made?]
+
+**Source:** [PLACEHOLDER: Who made it? What document or discussion led to it?]
+
+**Confidence:** [High | Medium | Low]
+
+**Impact:** [PLACEHOLDER: What areas are affected?]
+
+**Related Decisions:** [Links to related decisions]
+
+---
+
+## Architectural Decisions from Manifesto V2
+
+The following decisions were established in Manifesto V2 and serve as foundational guidance:
+
+1. **Source Material Principle** – Source material determines emotional objective, which determines artist assignment, which determines genre selection. This order is non-negotiable.
+
+2. **Identity Persistence** – Artist identities must remain stable and recognizable over time. Catalog continuity is more important than any individual song.
+
+3. **Genre Freedom** – No genre is excluded or privileged. Genre is selected based on source material and emotional objective, not commercial viability or convention.
+
+4. **Contemporary Production** – Target production quality should be comparable to mainstream commercial releases. Traditional church presentation is not required.
+
+5. **Emotional Authenticity** – Emotional authenticity is more important than genre purity or technical perfection.
+
+6. **Label Structure** – The studio operates as a label with multiple artist rosters, bands, and producer projects, not as a single-artist operation.
+
+7. **Catalog-First Architecture** – Catalog continuity and long-term artist identity are prioritized over short-term commercial considerations.
+
+---
+
+## Cross-References
+
+- Manifesto V2: `../foundations/AI_Music_Project_Manifesto_and_Notes_v2.md`
+- Delta report: `manifesto-delta-report.md`
+- Operations: `../operations/`

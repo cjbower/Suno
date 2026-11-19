@@ -1,0 +1,30 @@
+# Suno Studio: Song Registry
+# Purpose: Maintain authoritative metadata for all studio songs
+# Scope: Individual tracks, works in progress, released songs
+# Note: Individual song records are maintained in catalog/repertoire/
+
+# SCHEMA REFERENCE
+# ================================================================
+
+# Song Record Structure
+# example_song:
+#   id: "unique-identifier"
+#   title: "Song Title"
+#   artist_id: "artist_or_band_id"
+#   artist_name: "Artist or Band Name"
+#   status: "concept|development|arrangement|production|mixing|mastering|completed"
+#   source_material: "Reference to source material (psalm, poem, historical document, etc.)"
+#   emotional_objective: "Intended emotional response or impact"
+#   primary_genre: "Primary genre classification"
+#   secondary_genres: ["Genre2", "Genre3"]
+#   tempo_bpm: null
+#   duration_seconds: null
+#   album_id: null
+#   created_at: "YYYY-MM-DD"
+#   completed_at: null
+#   notes: "Additional context, production notes, or development history"
+
+# CURRENT REGISTRY
+# ================================================================
+
+# No songs created yet. This registry will be populated during Phase 3+ as songs are defined.

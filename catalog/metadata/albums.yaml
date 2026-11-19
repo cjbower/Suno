@@ -1,0 +1,49 @@
+# Suno Studio: Album Registry
+# Purpose: Maintain authoritative metadata for all studio albums
+# Scope: Albums, EPs, collections
+# Note: Individual album records are maintained in catalog/albums/
+
+# SCHEMA REFERENCE
+# ================================================================
+
+# Album Record Structure
+# example_album:
+#   id: "unique-identifier"
+#   title: "Album Title"
+#   artist_id: "artist_or_band_id"
+#   artist_name: "Artist or Band Name"
+#   album_type: "album|ep|single|compilation"
+#   status: "planned|in_production|completed|released"
+#   release_date: null
+#   track_count: null
+#   primary_genres: ["Genre1", "Genre2"]
+#   source_material: "Description of source material or thematic inspiration"
+#   emotional_objective: "[PLACEHOLDER]"
+#   production_philosophy: "[PLACEHOLDER]"
+#   cover_art: null
+#   created_at: "YYYY-MM-DD"
+#   notes: "Additional context"
+
+# CURRENT REGISTRY
+# ================================================================
+
+# No albums created yet. This registry will be populated during Phase 3+ as albums are defined.
+
+# RESERVED ALBUM IDENTIFIERS
+# ================================================================
+
+# From Manifesto V2:
+# fortress:
+#   title: "Fortress"
+#   status: "pending_design"
+#   notes: "Potential album identity; concept and artist assignment pending"
+#
+# republic:
+#   title: "Republic"
+#   status: "pending_design"
+#   notes: "Potential album identity; concept and artist assignment pending"
+#
+# watchman_vol_1:
+#   title: "Watchman, Vol. 1"
+#   status: "pending_design"
+#   notes: "Potential album identity; concept and artist assignment pending"
