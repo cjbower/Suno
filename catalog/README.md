@@ -9,6 +9,7 @@
 ## Structure
 
 - **albums/** – Album projects and documentation
+- **demos/** – Reserved internal demo asset structure and intake lifecycle; no demos are registered
 - **repertoire/** – Source material and thematic organization
 - **metadata/** – YAML schemas and canonical registries
 
@@ -42,6 +43,8 @@ Refer to `metadata/` for canonical YAML files:
 - `songs.yaml` – Song registry
 - `voices.yaml` – Voice profile registry
 - `motifs.yaml` – Motif registry
+- `demos.yaml`, `demo-reviews.yaml`, and `development-projects.yaml` – Schema examples only; no records registered
+- `audience-research-sessions.yaml` and `audience-responses.yaml` – Schema examples only; no sessions or responses registered
 
 ---
 
@@ -50,3 +53,5 @@ Refer to `metadata/` for canonical YAML files:
 - Main README: `README.md`
 - Creative framework: `creative/`
 - Artist rosters: `artist-roster/`
+- Demo intake and A&R: `operations/demo-intake/`
+- Audience research: `operations/audience-research/`

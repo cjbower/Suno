@@ -12,6 +12,8 @@
 - **release-calendar.md** – Planned releases and timeline
 - **workflow-notes.md** – Current workflow processes and documentation
 - **automation-opportunities.md** – Potential automation and workflow improvements
+- **demo-intake/** – Demo intake, triage, A&R review, disposition, and approved development handoff
+- **audience-research/** – Research stages, survey design, privacy, analysis, and report templates
 
 ---
 
@@ -24,18 +26,22 @@ Source Material
     ↓
 Emotional Classification
     ↓
-Artist Assignment
+Demo Intake and A&R (when evaluating a demo)
     ↓
-Song Development
+Approved Development Brief
     ↓
-Review
+Internal Studio Development
     ↓
-Release
+Frozen Candidate Review
     ↓
-Catalog
+Human Editorial Decision
     ↓
-Podcast Companion (if applicable)
+Catalog and Release Operations (after separate approvals)
+    ↓
+Audience Research (optional; informs, does not approve)
 ```
+
+This is not a mandatory sequence for every project. Demo Intake/A&R, Internal Studio Development, Audience Research, catalog, and release operations have distinct ownership. A positive review or audience response does not itself assign an artist, authorize development, or approve a release.
 
 ---
 
@@ -44,3 +50,6 @@ Podcast Companion (if applicable)
 - Catalog: `../catalog/`
 - Creative framework: `../creative/`
 - Artist rosters: `../artist-roster/`
+- Demo Intake and A&R: `demo-intake/`
+- Audience Research Operations: `audience-research/`
+- Cross-domain governance: `../docs/demo-and-audience-research-governance.md`

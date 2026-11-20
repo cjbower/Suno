@@ -69,6 +69,28 @@ The following decisions were established in Manifesto V2 and serve as foundation
 
 7. **Catalog-First Architecture** – Catalog continuity and long-term artist identity are prioritized over short-term commercial considerations.
 
+### Phase 2B.4 – Demo and Audience Research Boundaries
+
+**ID:** DEC-2B4-01
+
+**Title:** Keep demo intake, development, audience research, and release authority separate
+
+**Date:** Not recorded
+
+**Category:** Operational | Governance
+
+**Status:** Active
+
+**Rationale:** Demos are persistent creative assets and require provenance, rights context, review, and explicit development authorization. Audience research informs creative and market decisions but does not replace artistic judgment, source fidelity, rights review, technical validation, or human editorial authority.
+
+**Source:** Phase 2B.4 approved project direction and `docs/demo-and-audience-research-governance.md`.
+
+**Confidence:** High
+
+**Impact:** Demo Intake and A&R owns intake, evaluation, and the Approved Development Brief; Internal Studio Development owns authorized execution; Audience Research Operations owns participant process, instruments, session integrity, privacy, analysis, and reporting; A&R and human editorial review retain decision authority. Catalog and release promotion remain separate approvals. The initial internal founder-demo class is the only active intake class; external submissions and audience research remain inactive.
+
+**Related Decisions:** Source Material Principle; Identity Persistence; Catalog-First Architecture.
+
 ---
 
 ## Cross-References

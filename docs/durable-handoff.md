@@ -224,6 +224,21 @@ Assessment of `catalog/metadata/voices.yaml`:
 - No voice assignments or populated voice profiles were added
 - The registry was not modified during this phase
 
+### Phase 2B.4: Demo Intake and Audience Research Operations
+
+Documentation-only architecture for Subphases 2B.4A and 2B.4B is present:
+
+- `catalog/demos/` defines internal and reserved external demo areas; no demo assets are registered.
+- `catalog/metadata/demos.yaml`, `demo-reviews.yaml`, and `development-projects.yaml` are schema examples only.
+- `operations/demo-intake/` documents intake, triage, A&R review, dispositions, lineage, and the Approved Development Brief boundary.
+- `catalog/metadata/audience-research-sessions.yaml` and `audience-responses.yaml` are schema examples only.
+- `operations/audience-research/` documents inactive maturity stages, cohort boundaries, survey/session design, privacy, analysis, and report templates.
+- `docs/demo-and-audience-research-governance.md` defines cross-domain authority and escalation boundaries.
+- No demos, audio, development projects, participants, responses, surveys, recruitment, external submissions, contracts, assignments, releases, or platform accounts were created or activated.
+- Only `internal_founder_demo` is an active submission class; external intake and all audience-research stages remain inactive.
+
+Validation status and any limitations are recorded in `docs/phase-2b4-demo-audience-research-validation-report.md`. The changes are documentation and schema examples only. Local commit details are recorded in `docs/local-commit-report.md`; no push has occurred.
+
 ## Known Data-Quality Issues
 
 A generation defect was found in some artist documents:
@@ -467,25 +482,29 @@ The podcast-host decision remains open.
 
 ### 1. Human review of local commits
 
-Review `docs/local-commit-report.md` and the local commits before authorizing any push. The current branch is `main`; Git reports its configured `origin/main` upstream as gone. Do not change upstream tracking as part of this handoff. Verify branch and remote state before any future push.
+Review `docs/local-commit-report.md` and the existing local commits before authorizing any push. At the start of Phase 2B.4, `git status --short --branch` reported `main...origin/main`; this observation does not verify remote contents. Do not change upstream tracking as part of this handoff.
 
-### 2. Perform Artist-Name Data Quality Audit
+### 2. Review and locally commit Phase 2B.4
+
+Review the validation report and local commit audit before any push. The Phase 2B.4 changes are local only; no push has occurred. Human review and explicit authorization remain required before any push.
+
+### 3. Perform Artist-Name Data Quality Audit
 
 Correct `isauella reyes` and scan all entity files for similar artifacts.
 
-### 3. Review Naming-Collision Evidence
+### 4. Review Naming-Collision Evidence
 
 Reassess the replacement names against current sources before treating their collision risk as verified. Do not accept generated LOW or MEDIUM labels without checking the underlying sources and search methodology.
 
-### 4. Review Voice Architecture
+### 5. Review Voice Architecture
 
 Have a human review the voice-architecture and governance documents before changing the YAML schema or making voice assignments.
 
-### 5. Run Phase 2B.3 Distribution Research
+### 6. Run Phase 2B.3 Distribution Research
 
 Use the previously drafted documentation-only instruction.  Require official sources, retrieval dates, explicit uncertainty, and no account creation or purchasing.
 
-### 6. Add Source Registry Design
+### 7. Add Source Registry Design
 
 Consider a future canonical `sources.yaml` because the entire creative sequence begins with source material.
 
@@ -547,6 +566,7 @@ Initial baseline commit            Complete
 Roster entity normalization        Complete, repository-verified
 Known artist-name remediation      Complete, repository-verified; replacement research pending
 Voice architecture foundation      Complete, repository-verified; human review pending
+Demo Intake and Audience Research  Documentation and schema examples complete; no records or operations activated
 Local commit workflow              Complete locally; human review required
 Artist identity population         Not started
 Voice profile population           Not started

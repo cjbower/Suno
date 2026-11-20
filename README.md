@@ -62,6 +62,9 @@ Suno Studio is a **label-based creative operation** with:
 - [Roadmap](operations/roadmap.md) – Long-term strategic vision
 - [Release Calendar](operations/release-calendar.md) – Planned releases and timeline
 - [Automation Opportunities](operations/automation-opportunities.md) – Future workflow improvements
+- [Demo Intake and A&R](operations/demo-intake/README.md) – Governed intake, evaluation, and development handoff
+- [Audience Research Operations](operations/audience-research/README.md) – Research governance, privacy, and reporting framework
+- [Demo and Audience Research Governance](docs/demo-and-audience-research-governance.md) – Cross-domain decision boundaries
 
 ---
 
@@ -102,6 +105,11 @@ Canonical metadata maintained in [catalog/metadata/](catalog/metadata/) as YAML 
 - `songs.yaml` – Song registry
 - `voices.yaml` – Voice profile registry
 - `motifs.yaml` – Recurring motifs and patterns
+- `demos.yaml` – Demo schema example; no demos registered
+- `demo-reviews.yaml` – A&R review schema example; no reviews registered
+- `development-projects.yaml` – Development handoff schema example; no projects registered
+- `audience-research-sessions.yaml` – Research session schema example; no sessions registered
+- `audience-responses.yaml` – Audience response schema example; no responses registered
 
 ---
 
@@ -192,7 +200,7 @@ Retired, superseded, and rejected materials are preserved in [archive/](archive/
 
 **Phase 2A (Repository Scaffolding):** ✅ Complete
 
-**Current Development:** Populating creative framework and artist documentation (Phase 2B/3)
+**Current Development:** Phase 2B.4 documentation and schema examples for Demo Intake/A&R and Audience Research Operations; no records or operational programs are active.
 
 ---
 

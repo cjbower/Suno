@@ -22,6 +22,13 @@ All notable changes to Suno Studio repository are documented in this file.
 - Added the voice architecture framework, governance principles, and registry assessment.
 - Documented existing voice-registry gaps without modifying voice metadata or assigning voices.
 
+### Phase 2B.4 – Demo Intake and Audience Research Operations
+
+- Added documentation-only demo intake, A&R evaluation, disposition, and development-handoff standards, with schema examples and no demo records.
+- Added audience-research governance, survey and session standards, privacy guidance, and response/session schema examples, with no participants or responses.
+- Defined cross-domain authority boundaries and updated repository indexes and the durable handoff.
+- No audio, artist assignments, surveys, recruitment, external submissions, contracts, or releases were created or activated.
+
 ## [2.0.0] – 2026-11-18
 
 ### Added (Phase 2A – Repository Scaffolding)
