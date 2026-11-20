@@ -113,11 +113,11 @@ All deliverables are complete and validated. No critical gaps remain. Some resea
 
 ✅ **research/naming/industry-collision-analysis/current-artist-review.md** (18,482 characters)
 - Assessment of 12 artists:
-  - Adrian Reyes: LOW collision
+  - Adrian Santiago: LOW collision
   - Nathan Cross: LOW-MEDIUM collision
   - Isaac Vega: MEDIUM collision
   - Ethan Navarro: MEDIUM collision
-  - Jordan Blake: MEDIUM collision
+  - Jordan Mercer: MEDIUM collision
   - Lucas Reed: LOW-MEDIUM collision
   - Elena Cruz: MEDIUM collision
   - Sophia Martinez: MEDIUM-HIGH collision

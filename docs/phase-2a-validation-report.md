@@ -34,11 +34,11 @@ Phase 2A successfully created the foundational repository structure, artist rost
 
 ### Artist Roster
 ✅ **12 Individual Artists** (all with complete scaffolding)
-- Adrian Reyes
+- Adrian Santiago
 - Nathan Cross
 - Isaac Vega
 - Ethan Navarro
-- Jordan Blake
+- Jordan Mercer
 - Lucas Reed
 - Elena Cruz
 - Sophia Martinez

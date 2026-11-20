@@ -69,7 +69,7 @@ Suno Studio is a **label-based creative operation** with:
 
 ### Individual Artists (12)
 
-**Men:** Adrian Reyes, Nathan Cross, Isaac Vega, Ethan Navarro, Jordan Blake, Lucas Reed
+**Men:** Adrian Santiago, Nathan Cross, Isaac Vega, Ethan Navarro, Jordan Mercer, Lucas Reed
 
 **Women:** Elena Cruz, Sophia Martinez, Maya Bennett, Isabella Reyes, Natalie Vega, Olivia Brooks
 

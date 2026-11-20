@@ -1,6 +1,6 @@
 # Discography
 
-**Artist Name:** Adrian Reyes
+**Artist Name:** Adrian Santiago
 
 **Purpose:** Maintain an authoritative listing of all songs by this artist, with metadata and status.
 

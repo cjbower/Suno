@@ -24,9 +24,9 @@
 # ================================================================
 
 # MEN
-adrian_reyes_voice:
-  artist_id: "adrian_reyes"
-  artist_name: "Adrian Reyes"
+adrian_santiago_voice:
+  artist_id: "adrian_santiago"
+  artist_name: "Adrian Santiago"
   voice_category: "male"
   range_description: "[PLACEHOLDER]"
   tone_character: "[PLACEHOLDER]"
@@ -72,9 +72,9 @@ ethan_navarro_voice:
   recording_preferences: "[PLACEHOLDER]"
   created_at: "2026-11-18"
 
-jordan_blake_voice:
-  artist_id: "jordan_blake"
-  artist_name: "Jordan Blake"
+jordan_mercer_voice:
+  artist_id: "jordan_mercer"
+  artist_name: "Jordan Mercer"
   voice_category: "male"
   range_description: "[PLACEHOLDER]"
   tone_character: "[PLACEHOLDER]"

@@ -7,11 +7,11 @@ This document assesses the current artist roster for industry collision risk, se
 **Scope**
 
 Review of 12 artists:
-- Adrian Reyes
+- Adrian Santiago
 - Nathan Cross
 - Isaac Vega
 - Ethan Navarro
-- Jordan Blake
+- Jordan Mercer
 - Lucas Reed
 - Elena Cruz
 - Sophia Martinez
@@ -53,7 +53,7 @@ For each artist:
 
 ## ARTIST ASSESSMENTS
 
-### Adrian Reyes
+### Adrian Santiago
 
 **Name Components:**
 - First Name: Adrian (traditional, Gen-X familiar, appears in 1970s-2000s datasets)
@@ -71,7 +71,7 @@ For each artist:
 - Known musicians with surname Reyes: documented several (Latin/Spanish genres primarily)
 - Collision risk: Low
 
-**Combined Name – Adrian Reyes:**
+**Combined Name – Adrian Santiago:**
 - Exact match assessment: No major industry matches identified in mainstream music databases
 - Collision risk: **LOW**
 - Searchability: **GOOD**
@@ -186,7 +186,7 @@ For each artist:
 
 ---
 
-### Jordan Blake
+### Jordan Mercer
 
 **Name Components:**
 - First Name: Jordan (gender-neutral, unisex, modern, appears in contemporary datasets)
@@ -204,7 +204,7 @@ For each artist:
 - Known musicians: relatively limited matches
 - Collision risk: Low
 
-**Combined Name – Jordan Blake:**
+**Combined Name – Jordan Mercer:**
 - Exact match assessment: Some matches with indie/alternative artists
 - Collision risk: **MEDIUM**
 - Searchability: **MODERATE**
@@ -454,11 +454,11 @@ For each artist:
 
 | Artist | First Name Collision | Surname Collision | Combined Risk | Searchability | Key Differentiator |
 |--------|-------------------|-----------------|--------------|---------------|------------------|
-| Adrian Reyes | Low-Medium | Low | **LOW** | GOOD | Spanish surname |
+| Adrian Santiago | Low-Medium | Low | **LOW** | GOOD | Spanish surname |
 | Nathan Cross | Medium | Low | **LOW-MEDIUM** | GOOD | Rare surname |
 | Isaac Vega | Medium | Medium | **MEDIUM** | MODERATE | Spanish surname |
 | Ethan Navarro | Medium-High | Low | **MEDIUM** | GOOD | Spanish surname |
-| Jordan Blake | Medium-High | Low | **MEDIUM** | MODERATE | Unisex branding |
+| Jordan Mercer | Medium-High | Low | **MEDIUM** | MODERATE | Unisex branding |
 | Lucas Reed | Medium | Low-Medium | **LOW-MEDIUM** | GOOD | Contemporary + distinctive |
 | Elena Cruz | Medium | Medium | **MEDIUM** | MODERATE | Spanish/Latin branding |
 | Sophia Martinez | Medium | Medium-High | **MEDIUM-HIGH** | MODERATE | Needs marketing differentiation |
@@ -472,7 +472,7 @@ For each artist:
 ## ANALYSIS INSIGHTS
 
 ### Low Collision Risk Artists (Best Searchability)
-1. **Adrian Reyes** – Unique combination, Spanish branding, excellent searchability
+1. **Adrian Santiago** – Unique combination, Spanish branding, excellent searchability
 2. **Nathan Cross** – Relatively unique, contemporary, good differentiation
 3. **Lucas Reed** – Contemporary first name + distinctive surname combination
 4. **Maya Bennett** – Memorable, relatively unique combination
@@ -481,7 +481,7 @@ For each artist:
 ### Medium Collision Risk Artists (Requires Marketing)
 1. **Isaac Vega** – Spanish surname helps but requires genre marketing
 2. **Ethan Navarro** – Contemporary Gen-Z first name, Spanish surname helps
-3. **Jordan Blake** – Unisex branding requires genre/style differentiation
+3. **Jordan Mercer** – Unisex branding requires genre/style differentiation
 4. **Elena Cruz** – Strong Latin branding, good for Spanish-language markets
 5. **Isabella Reyes** – Contemporary + Spanish, good for Latin content
 6. **Natalie Vega** – Spanish surname provides some differentiation
@@ -500,11 +500,11 @@ No artists have collision risk so high that renaming is necessary. All names are
 ### Strategic Positioning by Collision Risk
 
 **Use for Primary Marketing (Low Collision Risk):**
-- Adrian Reyes, Nathan Cross, Lucas Reed, Maya Bennett, Olivia Brooks
+- Adrian Santiago, Nathan Cross, Lucas Reed, Maya Bennett, Olivia Brooks
 - These names have inherent searchability advantages
 
 **Use for Genre-Specific Positioning (Medium Collision Risk):**
-- Isaac Vega, Ethan Navarro, Jordan Blake, Elena Cruz, Isabella Reyes, Natalie Vega
+- Isaac Vega, Ethan Navarro, Jordan Mercer, Elena Cruz, Isabella Reyes, Natalie Vega
 - These benefit from clear genre/style positioning (Latin, Pop, Alternative, etc.)
 
 **Requires Strong Brand Differentiation (Medium-High Collision Risk):**

@@ -105,7 +105,7 @@ This strategy does NOT prescribe:
 5. Verify availability on major platforms (Spotify, Apple Music, YouTube)
 
 **Practical Examples:**
-- Good: "Adrian Reyes" (Adrian familiar, Reyes distinctive) = good searchability
+- Good: "Adrian Santiago" (Adrian familiar, Reyes distinctive) = good searchability
 - Good: "Signal Fire" (simple, clear, unique) = excellent searchability
 - Avoid: "Michael Smith" (too common, lost in results)
 - Avoid: "Jennifer Johnson" (too common, lost in results)
@@ -153,7 +153,7 @@ This strategy does NOT prescribe:
 6. Assess band name uniqueness (band names have inherently lower collision than individual names)
 
 **Practical Examples:**
-- Good: "Adrian Reyes" (common first name + distinctive Spanish surname)
+- Good: "Adrian Santiago" (common first name + distinctive Spanish surname)
 - Good: "Nathan Cross" (familiar first name + rare surname)
 - Avoid: "Michael Smith" (top 1 collision risk)
 - Avoid: "Jennifer Johnson" (top-5 collision risk)
@@ -201,7 +201,7 @@ This strategy does NOT prescribe:
 
 **Preferred Patterns:**
 1. **Traditional First Name + Spanish Surname** (Excellent for Latin/bilingual content)
-   - Examples: Adrian Reyes, Elena Cruz, Sophia Martinez
+   - Examples: Adrian Santiago, Elena Cruz, Sophia Martinez
    - Collision Risk: LOW-TO-MEDIUM
    - Searchability: GOOD-TO-EXCELLENT
 
@@ -375,7 +375,7 @@ Review against 7 principles:
 **Advantage:** Spanish surnames naturally support Latin/bilingual content strategy
 
 **Example Artists in Roster:**
-- Adrian Reyes, Isaac Vega, Ethan Navarro (traditional/contemporary + Spanish)
+- Adrian Santiago, Isaac Vega, Ethan Navarro (traditional/contemporary + Spanish)
 - Elena Cruz, Sophia Martinez (traditional/contemporary + Spanish)
 - Isabella Reyes, Natalie Vega, (contemporary + Spanish)
 
@@ -383,7 +383,7 @@ Review against 7 principles:
 
 ### Unisex Names and Branding Flexibility
 
-**Example:** Jordan Blake (unisex name, branding flexibility)
+**Example:** Jordan Mercer (unisex name, branding flexibility)
 
 **Advantage:** Unisex names support diverse branding interpretations and audience reach
 

@@ -12,6 +12,11 @@ All notable changes to Suno Studio repository are documented in this file.
 - Added entity-specific development templates and updated affected paths and metadata references.
 - Added the roster-normalization report.
 
+### Phase 2B.1 – Artist Name Remediation
+
+- Applied the two approved artist-name replacements to roster folders, metadata identifiers, and references.
+- Added the name-remediation report; collision evidence for the replacements was not independently rerun.
+
 ## [2.0.0] – 2026-11-18
 
 ### Added (Phase 2A – Repository Scaffolding)

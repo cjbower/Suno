@@ -1,6 +1,6 @@
 # Production DNA
 
-**Artist Name:** Adrian Reyes
+**Artist Name:** Adrian Santiago
 
 **Purpose:** Define the core production philosophy, sonic identity, and technical approach that makes this artist recognizable across all projects.
 

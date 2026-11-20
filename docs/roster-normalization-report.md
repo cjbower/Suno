@@ -18,11 +18,11 @@
 
 The following 12 solo-artist folders moved to `artist-roster/solo-artists/`:
 
-- adrian-reyes
+- adrian-santiago
 - nathan-cross
 - isaac-vega
 - ethan-navarro
-- jordan-blake
+- jordan-mercer
 - lucas-reed
 - elena-cruz
 - sophia-martinez

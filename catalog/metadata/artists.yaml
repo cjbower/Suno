@@ -26,8 +26,8 @@
 # ================================================================
 
 # MEN
-adrian_reyes:
-  public_name: "Adrian Reyes"
+adrian_santiago:
+  public_name: "Adrian Santiago"
   gender: "M"
   status: "active"
   archetype: "[PLACEHOLDER]"
@@ -39,7 +39,7 @@ adrian_reyes:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/solo-artists/adrian-reyes"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/adrian-santiago"
 
 nathan_cross:
   public_name: "Nathan Cross"
@@ -86,8 +86,8 @@ ethan_navarro:
   created_at: "2026-11-18"
   notes: "Individual artist record maintained in artist-roster/solo-artists/ethan-navarro"
 
-jordan_blake:
-  public_name: "Jordan Blake"
+jordan_mercer:
+  public_name: "Jordan Mercer"
   gender: "M"
   status: "active"
   archetype: "[PLACEHOLDER]"
@@ -99,7 +99,7 @@ jordan_blake:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/solo-artists/jordan-blake"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/jordan-mercer"
 
 lucas_reed:
   public_name: "Lucas Reed"

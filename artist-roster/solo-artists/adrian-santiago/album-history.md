@@ -1,6 +1,6 @@
 # Album History
 
-**Artist Name:** Adrian Reyes
+**Artist Name:** Adrian Santiago
 
 **Purpose:** Document all album projects featuring this artist, with detailed information about participation, themes, and production.
 

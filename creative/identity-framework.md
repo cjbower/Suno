@@ -129,7 +129,7 @@ Genre is **never** chosen as a constraint or limitation.
 
 ## Examples: Stable vs. Variable
 
-### Example 1: Adrian Reyes – Genre Evolution
+### Example 1: Adrian Santiago – Genre Evolution
 - **Stable:** Warm, conversational voice; production DNA emphasizing emotional authenticity; themes of identity and redemption
 - **Variable:** Song A is indie rock; Song B is folk; Song C is Christian contemporary
 - **Principle:** Different genres serve different emotional objectives, but the artist remains recognizable because voice, production DNA, and themes remain stable

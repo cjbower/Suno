@@ -1,6 +1,6 @@
 # Artist Development Plan
 
-**Artist Name:** Adrian Reyes
+**Artist Name:** Adrian Santiago
 
 **Purpose:** Strategic direction and long-term vision for this artist's creative evolution within Suno Studio.
 

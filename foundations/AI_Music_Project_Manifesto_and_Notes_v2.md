@@ -41,7 +41,7 @@ This is a conceptual ownership and discovery model, not a prescribed legal or bu
 
 The studio uses a roster of recurring, distinguishable artist identities rather than forcing every source into one voice or style. An artist is a persistent creative identity with an identity record, voice definition, production DNA, thematic tendencies, development history, and attributed catalog. New work is assigned to an artist when that identity can serve the source and emotional objective credibly.
 
-The directive supplies this initial roster of proposed artist names: Adrian Reyes, Nathan Cross, Isaac Vega, Ethan Navarro, Jordan Blake, Lucas Reed, Elena Cruz, Sophia Martinez, Maya Bennett, Isabella Reyes, Natalie Vega, and Olivia Brooks. The names are roster placeholders only. No biographies, ages, hometowns, personal histories, voices, genres, audiences, or initiative assignments are established by this list. Each artist's profile must use explicit placeholders until approved information exists.
+The directive supplies this initial roster of proposed artist names: Adrian Santiago, Nathan Cross, Isaac Vega, Ethan Navarro, Jordan Mercer, Lucas Reed, Elena Cruz, Sophia Martinez, Maya Bennett, Isabella Reyes, Natalie Vega, and Olivia Brooks. The names are roster placeholders only. No biographies, ages, hometowns, personal histories, voices, genres, audiences, or initiative assignments are established by this list. Each artist's profile must use explicit placeholders until approved information exists.
 
 Roster principles:
 

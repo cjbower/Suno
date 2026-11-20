@@ -1,6 +1,6 @@
 # Themes
 
-**Artist Name:** Adrian Reyes
+**Artist Name:** Adrian Santiago
 
 **Purpose:** Document the core thematic territories and intellectual frameworks this artist naturally explores.
 
