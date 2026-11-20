@@ -1,0 +1,58 @@
+# Audience Response Schema
+# Schema example only. No responses or participant records are registered here.
+
+schema_reference:
+  unknown_value: UNKNOWN
+  allowed_grades:
+    - A
+    - B
+    - C
+    - D
+    - F
+    - N/R
+  fields:
+    response_id: response identifier
+    session_id: session identifier
+    participant_id: anonymous identifier; not a participant record
+    cohort: cohort value or UNKNOWN
+    submitted_at: timestamp or UNKNOWN
+    grade_fields: descriptive letter grades
+    semantic_profile: displayed bipolar dimensions
+    behavioral_intent: stated intentions, not observed behavior
+    open_response: reviewed free text or UNKNOWN
+    limitations: response limitations or UNKNOWN
+
+schema_example:
+  response_id: UNKNOWN
+  session_id: UNKNOWN
+  participant_id: UNKNOWN
+  cohort: UNKNOWN
+  submitted_at: UNKNOWN
+  grade_fields:
+    first_impression: N/R
+    emotional_impact: N/R
+    memorability: N/R
+    voice: N/R
+    production: N/R
+    arrangement: N/R
+    lyrics: N/R
+    authenticity: N/R
+    replay_interest: N/R
+  semantic_profile:
+    forgettable_memorable: UNKNOWN
+    generic_distinctive: UNKNOWN
+    artificial_human: UNKNOWN
+    dated_contemporary: UNKNOWN
+    emotionally_flat_affecting: UNKNOWN
+    weak_powerful: UNKNOWN
+    confusing_clear: UNKNOWN
+    unlikely_likely_to_replay: UNKNOWN
+  behavioral_intent:
+    listen_again: UNKNOWN
+    add_to_playlist: UNKNOWN
+    share: UNKNOWN
+    listen_to_artist_again: UNKNOWN
+    listen_to_companion_podcast: UNKNOWN
+    preferred_listening_context: UNKNOWN
+  open_response: UNKNOWN
+  limitations: UNKNOWN

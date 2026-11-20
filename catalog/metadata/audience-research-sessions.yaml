@@ -1,0 +1,36 @@
+# Audience Research Session Schema
+# Schema example only. No sessions or participant records are registered here.
+
+schema_reference:
+  unknown_value: UNKNOWN
+  fields:
+    session_id: stable session identifier
+    research_question: approved question
+    demo_id: evaluated demo identifier
+    development_id: development project identifier or UNKNOWN
+    candidate_version: frozen candidate version
+    audio_sha256: checksum of evaluated audio
+    survey_version: frozen survey instrument version
+    cohort: future cohort value or UNKNOWN
+    session_date: date or UNKNOWN
+    facilitator: authorized facilitator identifier or UNKNOWN
+    participant_count: aggregate count or UNKNOWN
+    status: session status or UNKNOWN
+    limitations: known limitations
+    report_location: approved aggregate report location or UNKNOWN
+
+schema_example:
+  session_id: UNKNOWN
+  research_question: UNKNOWN
+  demo_id: UNKNOWN
+  development_id: UNKNOWN
+  candidate_version: UNKNOWN
+  audio_sha256: UNKNOWN
+  survey_version: UNKNOWN
+  cohort: UNKNOWN
+  session_date: UNKNOWN
+  facilitator: UNKNOWN
+  participant_count: UNKNOWN
+  status: UNKNOWN
+  limitations: UNKNOWN
+  report_location: UNKNOWN
