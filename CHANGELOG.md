@@ -17,6 +17,11 @@ All notable changes to Suno Studio repository are documented in this file.
 - Applied the two approved artist-name replacements to roster folders, metadata identifiers, and references.
 - Added the name-remediation report; collision evidence for the replacements was not independently rerun.
 
+### Phase 2B.2 – Voice Architecture Foundation
+
+- Added the voice architecture framework, governance principles, and registry assessment.
+- Documented existing voice-registry gaps without modifying voice metadata or assigning voices.
+
 ## [2.0.0] – 2026-11-18
 
 ### Added (Phase 2A – Repository Scaffolding)
@@ -114,8 +119,8 @@ All notable changes to Suno Studio repository are documented in this file.
 
 ---
 
-**Version:** 2.0.0 (Phase 2A Complete)
+**Version:** 2.0.0 (Phase 2B changes documented as unreleased)
 
-**Status:** Repository scaffolding complete; ready for content population (Phase 2B)
+**Status:** Phases 2B.0–2B.2 are committed locally; human review is required before any push.
 
-**Next Phase:** 2B – Populate foundational documents with actual content
+**Next Phase:** Follow the future work and open decisions in `docs/durable-handoff.md`.

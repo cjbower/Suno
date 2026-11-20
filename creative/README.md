@@ -12,6 +12,7 @@
 - **artist-development-template.md** – Framework for developing and documenting solo artist identities
 - **band-development-template.md** – Framework for developing and documenting ensemble identities
 - **producer-project-template.md** – Framework for projects organized around production identity
+- **voice-architecture.md** – Framework for voice identity, governance, and lifecycle
 - **genre-portfolio.md** – Complete catalog of supported genres and guidance on genre selection
 
 ---
