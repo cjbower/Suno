@@ -102,3 +102,79 @@ After the final report commit, branch `main` has no staged, unstaged, or non-ign
 ## Human Review Gate
 
 No commits were pushed. Human review and explicit authorization are required before any push.
+
+## Phase 2B.4 Local Commit Workflow
+
+This section records the later Phase 2B.4 workflow and supersedes the earlier repository-status and upstream observations for the current worktree. Earlier commit records above remain unchanged.
+
+### Pre-Commit Repository Status
+
+- Branch: `main`; `git status --short --branch` reported `main...origin/main`.
+- Pending changes: seven tracked documentation/index files modified and 38 expected new Phase 2B.4 files; no files were staged before inspection.
+- No renamed or deleted files.
+- Six ignored `.DS_Store` files were present and excluded.
+- No unexpected binary/media files, survey exports, participant data, common credential patterns, or secret-like content were found.
+- The pre-existing root README reference to `docs/production-philosophy.md` remains unresolved and was not repaired.
+
+### Validation
+
+- Parsed all 11 YAML files under `catalog/metadata/`; all passed.
+- Verified the five new demo/research YAML files contain only schema references and placeholder examples, with no records.
+- Checked all 34 changed Markdown files for non-empty content. Nineteen new or changed relative links resolved; no added trailing whitespace was found.
+- `git diff --check` passed during initial inspection; `git diff --cached --check` passed for each staged commit; the post-implementation `git diff HEAD --check` passed.
+- Confirmed no demo/audio assets, participants, responses, surveys, assignments, contracts, releases, or protected artist/band/voice/song/album records were added or modified.
+- No application test suite was run; this was documentation/schema work.
+
+### Commits Created
+
+#### 1. Phase 2B.4A – Demo Intake and A&R
+
+- **SHA:** `92f8a02782c71ae2fec043e51650363552d3fc0b`
+- **Subject:** `feat: establish demo intake and A&R architecture`
+- **Files added:** `catalog/demos/README.md`, `catalog/demos/external/README.md`, `catalog/demos/internal/README.md`, six lifecycle `.gitkeep` files under `catalog/demos/internal/`, `catalog/metadata/demo-reviews.yaml`, `catalog/metadata/demos.yaml`, `catalog/metadata/development-projects.yaml`, and all 11 documents under `operations/demo-intake/`.
+- **Files modified:** None.
+- **Files renamed/deleted:** None.
+- **Validation:** Staged path list and staged whitespace check passed; post-commit `git show --stat --summary HEAD` matched the intended 23-file scope; remaining worktree contained only the next audience-research and shared documentation groups.
+- **Known limitations:** No actual demo or source asset was supplied, so asset-level provenance, checksum, and rights review remain future work.
+
+#### 2. Phase 2B.4B – Audience Research
+
+- **SHA:** `67850bc5da323f4012b576d7689e2d3f3afa6be5`
+- **Subject:** `feat: establish audience research operations`
+- **Files added:** `catalog/metadata/audience-research-sessions.yaml`, `catalog/metadata/audience-responses.yaml`, and all 11 documents under `operations/audience-research/`.
+- **Files modified:** None.
+- **Files renamed/deleted:** None.
+- **Validation:** Staged path list and staged whitespace check passed; post-commit `git show --stat --summary HEAD` matched the intended 13-file scope; remaining worktree contained only shared governance and index documentation.
+- **Known limitations:** No survey platform or production data store was selected. Consent, retention, access, deletion, and minor-participant procedures require approval before research activation.
+
+#### 3. Shared Phase 2B.4 Governance
+
+- **SHA:** `0415f1c53cd1ff49e018848d60d579ecb5149c7a`
+- **Subject:** `docs: record demo and audience research governance`
+- **Files added:** `docs/demo-and-audience-research-governance.md`, `docs/phase-2b4-demo-audience-research-validation-report.md`.
+- **Files modified:** `CHANGELOG.md`, `README.md`, `catalog/README.md`, `catalog/metadata/README.md`, `docs/decision-log.md`, `docs/durable-handoff.md`, `operations/README.md`.
+- **Files renamed/deleted:** None.
+- **Validation:** Staged path list and staged whitespace check passed; post-commit `git show --stat --summary HEAD` matched the intended nine-file shared documentation scope. The known broken production-philosophy reference is recorded and unchanged.
+- **Known limitations:** Phase 2B.4 remains documentation/schema-only; external intake and audience research are inactive.
+
+#### 4. Phase 2B.4 Commit Audit
+
+- **SHA:** Reported in the final post-commit summary; not embedded in this report's own commit.
+- **Subject:** `docs: record Phase 2B.4 local commit audit`
+- **Related phase:** Phase 2B.4 local commit workflow.
+- **Files added/renamed/deleted:** None.
+- **Files modified:** `docs/local-commit-report.md`.
+- **Validation:** The report itself was checked for non-empty Markdown and relative-link integrity before staging. Final repository-status and `git diff HEAD --check` validations were run after the audit commit.
+- **Known limitations:** The audit commit's SHA is necessarily reported outside its own committed contents.
+
+### Changes Not Committed
+
+No tracked or non-ignored untracked changes remain after the audit commit. Six ignored `.DS_Store` files remain outside the commits.
+
+### Final Repository Status
+
+Branch `main` is clean and ahead of `origin/main` by four local commits. No remote or upstream configuration was changed. No commits were pushed.
+
+### Human Review Gate
+
+No commits were pushed. Human review and explicit authorization are required before any push.
