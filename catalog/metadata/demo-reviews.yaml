@@ -1,0 +1,67 @@
+# Demo Review Schema
+# Schema example only. No review records are registered in this file.
+
+schema_reference:
+  allowed_grades:
+    - A
+    - B
+    - C
+    - D
+    - F
+    - N/R
+  numeric_grades: not approved for canonical review records
+  fields:
+    review_id: stable review identifier
+    demo_id: reviewed demo identifier
+    review_type: review instrument/type or UNKNOWN
+    reviewer_id: authorized reviewer identifier or UNKNOWN
+    reviewer_role: reviewer role or UNKNOWN
+    review_date: date or UNKNOWN
+    evaluation_instrument_version: version or UNKNOWN
+    emotional_impact_grade: allowed grade
+    song_concept_grade: allowed grade
+    hook_grade: allowed grade
+    source_fidelity_grade: allowed grade
+    voice_performance_grade: allowed grade
+    production_identity_grade: allowed grade
+    arrangement_grade: allowed grade
+    technical_quality_grade: allowed grade
+    roster_fit_grade: allowed grade
+    development_potential_grade: allowed grade
+    overall_creative_grade: editorial grade, not arithmetic
+    strongest_element: evidence or UNKNOWN
+    weakest_element: evidence or UNKNOWN
+    elements_to_preserve: evidence or UNKNOWN
+    elements_to_change: evidence or UNKNOWN
+    recommended_disposition: disposition or UNKNOWN
+    reviewer_confidence: confidence or UNKNOWN
+    limitations: limitations or UNKNOWN
+    notes: context or UNKNOWN
+
+schema_example:
+  review_id: UNKNOWN
+  demo_id: UNKNOWN
+  review_type: UNKNOWN
+  reviewer_id: UNKNOWN
+  reviewer_role: UNKNOWN
+  review_date: UNKNOWN
+  evaluation_instrument_version: UNKNOWN
+  emotional_impact_grade: N/R
+  song_concept_grade: N/R
+  hook_grade: N/R
+  source_fidelity_grade: N/R
+  voice_performance_grade: N/R
+  production_identity_grade: N/R
+  arrangement_grade: N/R
+  technical_quality_grade: N/R
+  roster_fit_grade: N/R
+  development_potential_grade: N/R
+  overall_creative_grade: N/R
+  strongest_element: UNKNOWN
+  weakest_element: UNKNOWN
+  elements_to_preserve: UNKNOWN
+  elements_to_change: UNKNOWN
+  recommended_disposition: UNKNOWN
+  reviewer_confidence: UNKNOWN
+  limitations: UNKNOWN
+  notes: UNKNOWN

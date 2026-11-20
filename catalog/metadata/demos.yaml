@@ -1,0 +1,120 @@
+# Demo Registry Schema
+# Schema example only. No demo records are registered in this file.
+
+schema_reference:
+  unknown_value: UNKNOWN
+  submission_types:
+    - internal_founder_demo
+    - roster_artist_demo
+    - band_demo
+    - producer_project_demo
+    - collaboration_demo
+    - external_submission
+    - acquired_concept
+    - inbound_pitch
+    - organic_discovery
+  active_submission_types:
+    - internal_founder_demo
+  lifecycle_states:
+    - submitted
+    - intake_incomplete
+    - intake_validated
+    - triage
+    - under_review
+    - focus_group
+    - development_candidate
+    - in_development
+    - on_hold
+    - approved_seed
+    - promoted_to_work
+    - collaboration_candidate
+    - handoff_candidate
+    - licensing_candidate
+    - declined
+    - withdrawn
+    - archived
+  fields:
+    demo_id: stable demo identifier
+    title: working title or UNKNOWN
+    submission_type: one of submission_types
+    submission_source: origin or UNKNOWN
+    submitted_by: authorized submitter identifier or UNKNOWN
+    submitted_at: date or UNKNOWN
+    ownership_assertion: submitted assertion, not rights approval
+    contract_required: true, false, or UNKNOWN
+    external_contributors: contributor references or UNKNOWN
+    rights_review_status: status or UNKNOWN
+    source_material_id: source registry identifier or UNKNOWN
+    source_material_description: description or UNKNOWN
+    audio_location: approved asset location or UNKNOWN
+    audio_sha256: checksum or UNKNOWN
+    suno_song_id: platform identifier or UNKNOWN
+    suno_url: platform URL or UNKNOWN
+    generator: generator name or UNKNOWN
+    model_version: model/version or UNKNOWN
+    original_prompt_status: status or UNKNOWN
+    original_prompt: preserved prompt or UNKNOWN
+    exclude_prompt: preserved exclusion prompt or UNKNOWN
+    lyrics_status: status or UNKNOWN
+    lyrics_location: approved asset location or UNKNOWN
+    language: language or UNKNOWN
+    approximate_genre: genre or UNKNOWN
+    approximate_bpm: BPM or UNKNOWN
+    review_status: lifecycle state or UNKNOWN
+    development_status: status or UNKNOWN
+    current_disposition: A&R disposition or UNKNOWN
+    assigned_entity_type: entity type or UNKNOWN
+    assigned_entity_id: entity identifier or UNKNOWN
+    voice_candidate: candidate reference or UNKNOWN
+    production_reference: reference or UNKNOWN
+    song_candidate: candidate reference or UNKNOWN
+    collaboration_candidate: candidate reference or UNKNOWN
+    handoff_candidate: candidate reference or UNKNOWN
+    derived_from: parent demo/version identifier or UNKNOWN
+    promoted_work_ids: work identifiers or UNKNOWN
+    known_defects: documented defects or UNKNOWN
+    elements_to_preserve: preserved elements or UNKNOWN
+    notes: context or UNKNOWN
+
+schema_example:
+  demo_id: UNKNOWN
+  title: UNKNOWN
+  submission_type: UNKNOWN
+  submission_source: UNKNOWN
+  submitted_by: UNKNOWN
+  submitted_at: UNKNOWN
+  ownership_assertion: UNKNOWN
+  contract_required: UNKNOWN
+  external_contributors: UNKNOWN
+  rights_review_status: UNKNOWN
+  source_material_id: UNKNOWN
+  source_material_description: UNKNOWN
+  audio_location: UNKNOWN
+  audio_sha256: UNKNOWN
+  suno_song_id: UNKNOWN
+  suno_url: UNKNOWN
+  generator: UNKNOWN
+  model_version: UNKNOWN
+  original_prompt_status: UNKNOWN
+  original_prompt: UNKNOWN
+  exclude_prompt: UNKNOWN
+  lyrics_status: UNKNOWN
+  lyrics_location: UNKNOWN
+  language: UNKNOWN
+  approximate_genre: UNKNOWN
+  approximate_bpm: UNKNOWN
+  review_status: UNKNOWN
+  development_status: UNKNOWN
+  current_disposition: UNKNOWN
+  assigned_entity_type: UNKNOWN
+  assigned_entity_id: UNKNOWN
+  voice_candidate: UNKNOWN
+  production_reference: UNKNOWN
+  song_candidate: UNKNOWN
+  collaboration_candidate: UNKNOWN
+  handoff_candidate: UNKNOWN
+  derived_from: UNKNOWN
+  promoted_work_ids: UNKNOWN
+  known_defects: UNKNOWN
+  elements_to_preserve: UNKNOWN
+  notes: UNKNOWN

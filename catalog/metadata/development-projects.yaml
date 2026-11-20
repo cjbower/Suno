@@ -1,0 +1,48 @@
+# Development Project Schema
+# Schema example only. No development projects are registered in this file.
+
+schema_reference:
+  unknown_value: UNKNOWN
+  fields:
+    development_id: stable development identifier
+    demo_id: approved source demo identifier
+    approved_disposition: A&R-approved disposition
+    assigned_entity_type: entity type or UNKNOWN
+    assigned_entity_id: entity identifier or UNKNOWN
+    source_material_id: source registry identifier or UNKNOWN
+    emotional_objective: approved objective or UNKNOWN
+    elements_to_preserve: protected elements or UNKNOWN
+    elements_to_change: authorized change areas or UNKNOWN
+    prohibited_changes: explicit boundaries or UNKNOWN
+    voice_strategy: voice approach or UNKNOWN
+    production_strategy: production approach or UNKNOWN
+    rights_conditions: conditions that must be met
+    success_evidence: evidence required for review
+    approved_by: authorized approver or UNKNOWN
+    approved_at: date or UNKNOWN
+    status: project status or UNKNOWN
+    current_version: current working version identifier or UNKNOWN
+    candidate_version: frozen candidate identifier or UNKNOWN
+    notes: context or UNKNOWN
+
+schema_example:
+  development_id: UNKNOWN
+  demo_id: UNKNOWN
+  approved_disposition: UNKNOWN
+  assigned_entity_type: UNKNOWN
+  assigned_entity_id: UNKNOWN
+  source_material_id: UNKNOWN
+  emotional_objective: UNKNOWN
+  elements_to_preserve: UNKNOWN
+  elements_to_change: UNKNOWN
+  prohibited_changes: UNKNOWN
+  voice_strategy: UNKNOWN
+  production_strategy: UNKNOWN
+  rights_conditions: UNKNOWN
+  success_evidence: UNKNOWN
+  approved_by: UNKNOWN
+  approved_at: UNKNOWN
+  status: UNKNOWN
+  current_version: UNKNOWN
+  candidate_version: UNKNOWN
+  notes: UNKNOWN
