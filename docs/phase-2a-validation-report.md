@@ -172,8 +172,8 @@ This principle is documented in:
 - `creative/artist-development-template.md` – Artist scaffold structure
 
 **Stable identity elements** are defined in:
-- `artist-roster/*/production-dna.md` – Voice and production
-- `artist-roster/*/themes.md` – Core themes
+- `artist-roster/solo-artists/*/production-dna.md` – Voice and production
+- `artist-roster/solo-artists/*/themes.md` – Core themes
 - Voice profiles in `catalog/metadata/voices.yaml`
 
 **Variable elements** (genre, tempo, instrumentation) are managed by artist assignment from source material through the established principle.

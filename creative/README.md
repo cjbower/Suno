@@ -9,7 +9,9 @@
 ## Core Documents
 
 - **identity-framework.md** – Relationship between source material, emotional objective, artist assignment, and genre selection
-- **artist-development-template.md** – Framework for developing and documenting individual artist identities
+- **artist-development-template.md** – Framework for developing and documenting solo artist identities
+- **band-development-template.md** – Framework for developing and documenting ensemble identities
+- **producer-project-template.md** – Framework for projects organized around production identity
 - **genre-portfolio.md** – Complete catalog of supported genres and guidance on genre selection
 
 ---

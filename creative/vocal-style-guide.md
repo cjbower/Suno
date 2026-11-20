@@ -106,5 +106,5 @@ Refer to individual artist **production-dna.md** files for artist-specific vocal
 
 - Production style guide: `production-style-guide.md`
 - Identity framework: `identity-framework.md`
-- Artist production DNA: `../artist-roster/*/production-dna.md`
+- Artist production DNA: `../artist-roster/solo-artists/*/production-dna.md`
 - Production philosophy: `../docs/production-philosophy.md`

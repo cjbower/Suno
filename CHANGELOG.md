@@ -4,6 +4,14 @@ All notable changes to Suno Studio repository are documented in this file.
 
 ---
 
+## [Unreleased] – 2026-11-20
+
+### Phase 2B.0 – Roster Normalization
+
+- Separated solo artists, bands, and producer projects into distinct roster locations.
+- Added entity-specific development templates and updated affected paths and metadata references.
+- Added the roster-normalization report.
+
 ## [2.0.0] – 2026-11-18
 
 ### Added (Phase 2A – Repository Scaffolding)

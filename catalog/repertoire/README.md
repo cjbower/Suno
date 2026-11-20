@@ -32,7 +32,7 @@ Each subdirectory contains:
 Source materials are linked to created works through:
 - Song metadata in `../metadata/songs.yaml`
 - Album themes in `../albums/*/theme.md`
-- Artist themes in `artist-roster/*/themes.md`
+- Artist themes in `artist-roster/solo-artists/*/themes.md`
 
 ---
 

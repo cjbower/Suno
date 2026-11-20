@@ -1,14 +1,14 @@
 # Artist Development Template
 
-**Purpose:** Define the structural framework and guidance for developing, documenting, and evolving individual artist identities within Suno Studio.
+**Purpose:** Define the structural framework and guidance for developing, documenting, and evolving solo artist identities within Suno Studio.
 
-**Scope:** This template applies to all individual artists and band leaders. Use it to maintain consistency and ensure that artist identity remains stable and recognizable across all projects and collaborations.
+**Scope:** This template applies only to solo artists. Use it to maintain consistency and ensure that artist identity remains stable and recognizable across all projects and collaborations.
 
 ---
 
 ## Document Structure
 
-Each artist folder in `artist-roster/` contains the following core documents:
+Each solo artist folder in `artist-roster/solo-artists/` contains the following core documents:
 
 1. **artist-profile.md** – Public-facing identity and positioning
 2. **artist-development-plan.md** – Strategic direction and evolution
@@ -88,7 +88,7 @@ Example structure:
 ## Template: Vocal Identity
 
 ### Voice Category
-[Placeholder: male | female | ensemble]
+[Placeholder: male | female]
 
 ### Range Description
 [Placeholder: Vocal range classification (e.g., baritone, soprano, etc.) and characteristic range within typical songs]

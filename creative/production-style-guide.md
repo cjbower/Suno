@@ -85,5 +85,5 @@ Artists with specific **production-dna.md** documentation may deviate from these
 
 - Identity framework: `identity-framework.md`
 - Vocal style guide: `vocal-style-guide.md`
-- Artist production DNA: `../artist-roster/*/production-dna.md`
+- Artist production DNA: `../artist-roster/solo-artists/*/production-dna.md`
 - Production philosophy: `../docs/production-philosophy.md`

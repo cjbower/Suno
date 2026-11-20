@@ -66,4 +66,4 @@
 
 - Canonical motif registry: `../catalog/metadata/motifs.yaml`
 - Identity framework: `identity-framework.md`
-- Artist themes: `../artist-roster/*/themes.md`
+- Artist themes: `../artist-roster/solo-artists/*/themes.md`

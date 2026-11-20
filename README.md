@@ -27,7 +27,10 @@ Suno Studio is a **label-based creative operation** with:
 ├── foundations/               # Manifestos and constitutional principles
 ├── docs/                      # Governance, decision log, validation reports
 ├── creative/                  # Production framework, style guides, identity framework
-├── artist-roster/             # Individual artists, bands, producer projects
+├── artist-roster/             # Solo artists, bands, producer projects
+│   ├── solo-artists/
+│   ├── bands/
+│   └── producer-projects/
 ├── catalog/                   # Albums, repertoire, metadata
 ├── operations/                # Roadmap, release calendar, workflow
 ├── archive/                   # Retired artists, superseded concepts
@@ -70,7 +73,7 @@ Suno Studio is a **label-based creative operation** with:
 
 **Women:** Elena Cruz, Sophia Martinez, Maya Bennett, Isabella Reyes, Natalie Vega, Olivia Brooks
 
-Each artist has detailed documentation in [artist-roster/](artist-roster/):
+Each solo artist has detailed documentation in [artist-roster/solo-artists/](artist-roster/solo-artists/):
 - Artist profile
 - Development plan and strategic direction
 - Production DNA and sonic identity
@@ -85,7 +88,7 @@ Each band has [documentation](artist-roster/bands/) including creative direction
 
 ### Producer Projects (2)
 
-**Meridian** and **Foundry** – Producer-led project entities with documentation in [artist-roster/producers/](artist-roster/producers/).
+**Meridian** and **Foundry** – Producer-led project entities with documentation in [artist-roster/producer-projects/](artist-roster/producer-projects/).
 
 ---
 

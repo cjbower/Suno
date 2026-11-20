@@ -1,7 +1,7 @@
 # Suno Studio: Artist Registry
 # Purpose: Maintain authoritative metadata for all studio artists
 # Scope: Individual artists, band members, collaborators
-# Note: This file is a schema reference. Individual artist records are maintained in artist-roster/
+# Note: This file is a schema reference. Individual artist records are maintained in artist-roster/solo-artists/
 
 # SCHEMA REFERENCE
 # ================================================================
@@ -39,7 +39,7 @@ adrian_reyes:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/adrian-reyes"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/adrian-reyes"
 
 nathan_cross:
   public_name: "Nathan Cross"
@@ -54,7 +54,7 @@ nathan_cross:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/nathan-cross"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/nathan-cross"
 
 isaac_vega:
   public_name: "Isaac Vega"
@@ -69,7 +69,7 @@ isaac_vega:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/isaac-vega"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/isaac-vega"
 
 ethan_navarro:
   public_name: "Ethan Navarro"
@@ -84,7 +84,7 @@ ethan_navarro:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/ethan-navarro"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/ethan-navarro"
 
 jordan_blake:
   public_name: "Jordan Blake"
@@ -99,7 +99,7 @@ jordan_blake:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/jordan-blake"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/jordan-blake"
 
 lucas_reed:
   public_name: "Lucas Reed"
@@ -114,7 +114,7 @@ lucas_reed:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/lucas-reed"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/lucas-reed"
 
 # WOMEN
 elena_cruz:
@@ -130,7 +130,7 @@ elena_cruz:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/elena-cruz"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/elena-cruz"
 
 sophia_martinez:
   public_name: "Sophia Martinez"
@@ -145,7 +145,7 @@ sophia_martinez:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/sophia-martinez"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/sophia-martinez"
 
 maya_bennett:
   public_name: "Maya Bennett"
@@ -160,7 +160,7 @@ maya_bennett:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/maya-bennett"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/maya-bennett"
 
 isabella_reyes:
   public_name: "Isabella Reyes"
@@ -175,7 +175,7 @@ isabella_reyes:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/isabella-reyes"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/isabella-reyes"
 
 natalie_vega:
   public_name: "Natalie Vega"
@@ -190,7 +190,7 @@ natalie_vega:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/natalie-vega"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/natalie-vega"
 
 olivia_brooks:
   public_name: "Olivia Brooks"
@@ -205,4 +205,4 @@ olivia_brooks:
   recurring_motifs: []
   target_audience: "[PLACEHOLDER]"
   created_at: "2026-11-18"
-  notes: "Individual artist record maintained in artist-roster/olivia-brooks"
+  notes: "Individual artist record maintained in artist-roster/solo-artists/olivia-brooks"
