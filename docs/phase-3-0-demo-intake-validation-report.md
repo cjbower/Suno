@@ -43,8 +43,8 @@ This report covers the first user-supplied Suno demo link only. The repository h
 
 ## Classification, Seed, and Disposition
 
-- **Primary classification:** `song_candidate`, based only on the public page identifying a titled song with lyrics; this is not a quality judgment.
-- **Primary seed:** `song_seed`, provisional; reusable value remains unassessed.
+- **Primary classification:** `UNKNOWN`; no completed founder review exists.
+- **Primary seed:** `UNKNOWN`; no completed founder review exists.
 - **Disposition:** `hold`.
 - **Owner:** UNKNOWN.
 - **Next action:** Receive the original audio and provenance materials, then complete founder listening review.
@@ -57,13 +57,54 @@ This report covers the first user-supplied Suno demo link only. The repository h
 - **PASS:** All known metadata is evidence-backed; unknown scalar values remain `UNKNOWN`.
 - **PASS:** All nine required evaluation criteria have written `N/R` evidence. No numeric grades or averages were used.
 - **PASS:** Semantic profile fields are narrative “not assessed” observations, not scores.
-- **PASS:** Classification, seed designation, hold disposition, next action, risks, required evidence, and review trigger are recorded.
+- **PASS:** Classification and seed remain `UNKNOWN`; hold disposition, next action, risks, required evidence, and review trigger are recorded.
 - **PASS:** Both populated YAML registries parse successfully; the demo ID is unique, review links to it, and taxonomy/disposition values are valid.
 - **PASS:** Per-demo Markdown artifacts are non-empty, code fences are balanced, and all changed-scope local links resolve.
 - **PASS:** No release, artist/voice assignment, audience-research, distribution, or development-project records were created.
 - **PASS:** `git diff --check` passes and no files are staged.
 - **PENDING:** The original audio is not locally preserved, no checksum is available, and no founder listening review has occurred.
 - **PENDING:** Additional demos have not yet been supplied; the inventory cannot be considered complete.
+
+## Classification Governance Correction
+
+### Issue Discovered
+
+The initial intake assigned `classification.primary: song_candidate` and `seed_designation.primary: song_seed` from the existence of a titled Suno page and visible lyrics, before any completed founder review. Those facts establish an intake record but do not support evaluative conclusions.
+
+### Repository Impact
+
+The rule now applies to all current and future demos: intake captures existence, provenance, identifiers, and source references; classification and seed designation remain `UNKNOWN` until a completed, documented founder review supplies written evidence. An AI intake screen, N/R-only review, title, lyrics, or public-page metadata does not satisfy the gate.
+
+### Files Modified
+
+- `catalog/metadata/demos.yaml`
+- `catalog/metadata/demo-reviews.yaml` schema definition only
+- `catalog/demos/internal/intake/DEMO-2026-0001/demo-profile.md`
+- `operations/demo-intake/intake-standard.md`
+- `operations/demo-intake/evaluation-standard.md`
+- `operations/demo-intake/triage-workflow.md`
+- `operations/demo-intake/ar-review-workflow.md`
+- `operations/demo-intake/README.md`
+- `catalog/demos/README.md`
+- `catalog/demos/internal/README.md`
+- `docs/durable-handoff.md`
+- `docs/decision-log.md`
+- This report
+
+### Records Modified
+
+- `DEMO-2026-0001`: changed `classification.primary` and `seed_designation.primary` to `UNKNOWN`; cleared both unsupported rationales to `UNKNOWN`. The demo ID, provenance, URLs, `hold` disposition, and review record were preserved. No review was added retroactively.
+- `REVIEW-2026-0001`: unchanged. It remains an AI intake screen with `founder_review_status: pending`.
+
+### Validation Performed
+
+- Confirmed no completed founder review exists; the linked review is explicitly an AI intake screen with founder review pending.
+- Parsed both YAML registries and verified the demo ID and linked review remain unchanged, with both primary values and rationales `UNKNOWN`.
+- Verified the documented founder-review gate, Markdown links, non-empty records, and `git diff --check`.
+
+### Remaining Limitations
+
+The original audio, checksum, source material, prompt, model version, and rights context remain unavailable. Founder listening review and all value conclusions remain pending. Additional demos have not yet been supplied, so Phase 3.0 remains incomplete.
 
 ## Warnings and Unresolved Questions
 

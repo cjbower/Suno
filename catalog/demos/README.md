@@ -12,7 +12,7 @@ The current active intake class is `internal_founder_demo`. All other classes ar
 
 ## Authoritative Metadata
 
-The canonical registry is [`../metadata/demos.yaml`](../metadata/demos.yaml). One provisional record (`DEMO-2026-0001`) points to a user-provided public Suno page; no local audio has been received or stored. The record remains intake-incomplete pending preservation evidence and founder review.
+The canonical registry is [`../metadata/demos.yaml`](../metadata/demos.yaml). One record (`DEMO-2026-0001`) points to a user-provided public Suno page; no local audio has been received or stored. The record remains intake-incomplete, and classification and seed designation remain `UNKNOWN` until a completed founder review supports them.
 
 Use the literal `UNKNOWN` for unknown scalar values rather than silently omitting them. The identifier format is `DEMO-YYYY-NNNN`, where `YYYY` is the intake year; identifiers are immutable and existing identifiers must never be renumbered. An asserted ownership statement is not rights approval.
 

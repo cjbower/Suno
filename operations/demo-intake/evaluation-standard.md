@@ -18,3 +18,9 @@
 - An inaccessible or incomplete demo is N/R, not F.
 - Preserve strongest elements even when the overall disposition is decline or archive.
 - Canonical review grades remain letters; do not encode them numerically without an approved future analysis specification.
+
+## Founder Review Gate for Classification and Seed
+
+Classification, seed designation, and their rationales are conclusions from review, not intake metadata. Keep their primary values `UNKNOWN` until a founder review is documented as complete and includes written evidence sufficient to support each conclusion.
+
+A qualifying founder review must be distinguishable from an AI intake screen and must record the founder reviewer, review date, review evidence, and completed status. An N/R-only screen or public-page metadata does not qualify. If the evidence is insufficient, keep the affected classification or seed value `UNKNOWN`.

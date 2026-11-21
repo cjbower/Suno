@@ -34,6 +34,25 @@ The original demo is immutable. Store it in an approved asset location and recor
 
 Missing or inaccessible material is `intake_incomplete` or `N/R` as appropriate, not a negative creative grade. Record the missing evidence, responsible owner, and review trigger. Do not start production or imply approval while required intake evidence is unresolved.
 
+## Classification Gate
+
+Intake records existence, identifiers, provenance, and source references only. Classification and seed designation are evaluative conclusions and must remain `UNKNOWN` during intake. Do not assign either value until a completed, documented founder review exists and provides written evidence supporting the conclusion. An AI intake screen, an N/R-only review, a title, lyrics, or public-page metadata does not satisfy this gate.
+
+The required order is:
+
+```text
+Demo Exists
+    -> Intake
+    -> UNKNOWN
+    -> Founder Review
+    -> Classification
+    -> Seed Qualification
+    -> Disposition
+    -> Development Decision
+```
+
+Intake never determines value; review determines value. A development decision remains separately authorized.
+
 ## Boundary
 
 Validated intake permits triage only. Internal production requires a separate Approved Development Brief. Catalog registration, release approval, and audience research remain separate processes.

@@ -10,6 +10,8 @@ Demo Intake and A&R owns intake validation, triage, repertoire evaluation, devel
 
 A&R does not own audio engineering, audience-research administration, canonical catalog metadata, or release operations. Internal Studio Development executes an approved brief; Audience Research Operations administers research; human editorial review retains final creative authority.
 
+Intake records facts, not value. Classification and seed designation remain `UNKNOWN` until a completed, documented founder review supports them. An AI intake screen or N/R-only review does not satisfy this gate.
+
 ## Boundary
 
 ```text
@@ -29,4 +31,4 @@ A demo does not become production work because someone likes it. A formal Develo
 
 ## Current Limits
 
-Only `internal_founder_demo` is active. One intake-incomplete demo record exists; additional founder demos are pending submission. No external submissions are accepted, and no demo is automatically assigned to an artist, band, or producer project. See the [intake standard](intake-standard.md), [triage workflow](triage-workflow.md), and [development handoff](development-handoff.md).
+Only `internal_founder_demo` is active. One intake-incomplete demo record exists; its classification and seed designation remain `UNKNOWN` pending founder review. Additional founder demos are pending submission. No external submissions are accepted, and no demo is automatically assigned to an artist, band, or producer project. See the [intake standard](intake-standard.md), [triage workflow](triage-workflow.md), and [development handoff](development-handoff.md).

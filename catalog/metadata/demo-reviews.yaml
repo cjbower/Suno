@@ -40,7 +40,7 @@ schema_reference:
     category_evidence: written evidence for every grade
     semantic_profile: narrative comments for each polarity pair; do not score
     audio_reviewed: whether the reviewer auditioned the source audio
-    founder_review_status: pending, complete, or UNKNOWN
+    founder_review_status: pending, complete only after documented review by the founder, or UNKNOWN
 
 schema_example:
   review_id: UNKNOWN

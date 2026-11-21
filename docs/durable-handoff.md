@@ -256,11 +256,11 @@ Revalidate platform and legal claims before operational use. Preserve each refer
 
 ### Phase 3.0: Legacy Demo Intake — Initial Record
 
-The user supplied one public Suno demo link, recorded as [DEMO-2026-0001](../catalog/demos/internal/intake/DEMO-2026-0001/demo-profile.md). Suno displays the title “Carillon” and creator attribution “Christopher Bower”; the canonical Suno ID and public lyrics are recorded as source evidence. No local original audio, checksum, prompt, source-material identification, model version, or rights review is available. The AI intake screen uses N/R for audio-dependent criteria; founder listening review remains pending.
+The user supplied one public Suno demo link, recorded as [DEMO-2026-0001](../catalog/demos/internal/intake/DEMO-2026-0001/demo-profile.md). Suno displays the title “Carillon” and creator attribution “Christopher Bower”; the canonical Suno ID and public lyrics are recorded as source evidence. No local original audio, checksum, prompt, source-material identification, model version, or rights review is available. The AI intake screen uses N/R for audio-dependent criteria; founder listening review remains pending. Per DEC-3-01, classification and seed designation remain `UNKNOWN` until completed founder review provides supporting evidence.
 
 The disposition is `hold`; no development, artist/voice assignment, audience research, release, or commercialization is authorized. The user confirmed that two unrelated local recordings are not demos and said additional demo files will be provided later. The reference to Carillon in an older manifesto is not conclusively linked to this Suno ID.
 
-The Phase 3.0 inventory is therefore partial. Continue intake when remaining assets and provenance are supplied; do not treat the first record as completing the phase-wide inventory or founder review.
+The Phase 3.0 inventory is therefore partial. Continue intake when remaining assets and provenance are supplied; do not treat the first record as completing the phase-wide inventory or founder review. Intake establishes facts only; review establishes classification and seed value.
 
 ## Known Data-Quality Issues
 

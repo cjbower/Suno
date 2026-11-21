@@ -4,10 +4,13 @@
 
 1. **Receive** into the internal intake queue only when the submission class is active.
 2. **Validate** required provenance, access, audio checksum, source context, and known rights conditions.
-3. **Classify** the opportunity and known limitations without assigning an entity.
-4. **Triage** for creative review, more information, hold, decline, or archive.
-5. **Record** the state, decision evidence, owner, next action, and review trigger in the future demo metadata record.
-6. **Route** eligible opportunities to A&R review. Only an approved Development Brief can authorize internal development.
+3. **Preserve intake facts** and mark classification and seed designation `UNKNOWN`.
+4. **Conduct founder review** and record the reviewer, date, completed status, and written evidence.
+5. **Classify and qualify** only when completed founder-review evidence supports the classification and seed designation; otherwise retain `UNKNOWN`.
+6. **Determine disposition** and record its evidence, owner, next action, risks, and review trigger.
+7. **Route** eligible opportunities as recommendations. Only an approved Development Brief can authorize internal development.
+
+Intake never determines value. The required sequence is: demo exists → intake → UNKNOWN → founder review → classification → seed qualification → disposition → development decision.
 
 ## Lifecycle States
 
@@ -36,6 +39,8 @@ archived
 ## Triage Controls
 
 - An intake pass is not creative approval, rights approval, an assignment, or a release decision.
+- Classification and seed designation are not intake decisions; do not populate their primary values before a completed founder review.
+- An AI intake screen, N/R-only review, title, lyrics, or public-page metadata does not satisfy the founder-review gate.
 - A missing or technically inaccessible asset is not an F grade.
 - Do not infer artist, band, producer-project, voice, or audience fit from the submitter or title.
 - Preserve promising elements even when the complete demo is declined or archived.

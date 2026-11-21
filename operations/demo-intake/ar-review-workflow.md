@@ -18,6 +18,10 @@ Separate:
 
 One strong element may justify preserving a demo even when its overall disposition is hold, decline, or archive.
 
+## Classification and Seed Gate
+
+Classification and seed designation are review conclusions, not intake facts. Do not assign either until a completed founder review is documented with reviewer, date, and written evidence supporting the conclusion. An AI intake screen or N/R-only review does not qualify. Keep unsupported values `UNKNOWN`; record classification and seed rationales against the founder-review evidence.
+
 ## Decisions
 
 A&R may recommend any disposition in the [disposition standard](disposition-standard.md). An assignment, new identity evaluation, collaboration, licensing, or handoff recommendation is not itself authorization to create a record, contact a party, or begin production.

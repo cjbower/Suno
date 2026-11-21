@@ -95,6 +95,32 @@ The following decisions were established in Manifesto V2 and serve as foundation
 
 **Related Decisions:** Catalog-First Architecture; Phase 2B.4 Demo and Audience Research Boundaries.
 
+### Phase 3.0 – Classification Requires Founder Review
+
+**ID:** DEC-3-01
+
+**Title:** Require documented founder review before demo classification or seed designation
+
+**Date:** 2026-11-21
+
+**Category:** Operational | Governance
+
+**Status:** Active
+
+**Discovery:** The first demo intake assigned classification and seed values from public-page facts before a completed founder review.
+
+**Decision:** For all current and future demos, intake records existence, provenance, identifiers, and source references only. `classification.primary` and `seed_designation.primary` must remain `UNKNOWN` until a completed, documented founder review provides written evidence supporting those conclusions. Intake never determines value; review determines value.
+
+**Rationale:** Classification, seed value, development potential, and disposition rationale are evaluative conclusions rather than intake facts.
+
+**Source:** Phase 3.0 Governance Refinement.
+
+**Confidence:** High
+
+**Impact:** AI intake screens, N/R-only reviews, titles, lyrics, and public-page metadata do not authorize classification or seed assignment. Unsupported primary values and rationales remain `UNKNOWN`; disposition and development authority remain separately governed.
+
+**Related Decisions:** DEC-2B4-01.
+
 ### Phase 2B.4 – Demo and Audience Research Boundaries
 
 **ID:** DEC-2B4-01

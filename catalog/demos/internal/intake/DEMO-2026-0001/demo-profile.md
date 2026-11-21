@@ -14,17 +14,17 @@
 
 ## Classification
 
-**Primary:** `song_candidate`<br>
+**Primary:** UNKNOWN<br>
 **Secondary:** UNKNOWN
 
-The public page identifies a titled song and displays lyrics. This is an artifact-form classification only; quality, originality, and development value have not been evaluated.
+Classification is a review outcome, not an intake fact. No completed founder review exists, so classification and its rationale remain UNKNOWN. The public page's title and lyrics are source facts only.
 
 ## Seed Qualification
 
-**Primary:** `song_seed`<br>
+**Primary:** UNKNOWN<br>
 **Secondary:** UNKNOWN
 
-The supplied item is a song-shaped artifact. Its reusable strategic value remains unassessed pending receipt of the original audio and founder review.
+Seed designation is a review outcome, not an intake fact. No completed founder review exists, so seed designation and its rationale remain UNKNOWN.
 
 ## Disposition
 

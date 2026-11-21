@@ -74,10 +74,10 @@ schema_reference:
     risks: known risks or UNKNOWN
     required_evidence: evidence required to resolve the review or UNKNOWN
     review_trigger: event that reopens review or UNKNOWN
-    classification: primary and secondary demo-value classifications
-    classification_rationale: evidence supporting classification or UNKNOWN
-    seed_designation: primary and secondary strategic seed designations
-    seed_rationale: evidence supporting seed designation or UNKNOWN
+    classification: primary and secondary demo-value classifications; primary stays UNKNOWN until a documented founder review supports it
+    classification_rationale: founder-review evidence supporting classification or UNKNOWN
+    seed_designation: primary and secondary strategic seed designations; primary stays UNKNOWN until a documented founder review supports it
+    seed_rationale: founder-review evidence supporting seed designation or UNKNOWN
     provenance_record: path to the authoritative provenance artifact
     evaluation_record: path to the authoritative review artifact
     development_plan: path to the bounded disposition/next-action plan
@@ -136,6 +136,14 @@ schema_example:
   known_defects: UNKNOWN
   elements_to_preserve: UNKNOWN
   notes: UNKNOWN
+  classification:
+    primary: UNKNOWN
+    secondary: UNKNOWN
+  classification_rationale: UNKNOWN
+  seed_designation:
+    primary: UNKNOWN
+    secondary: UNKNOWN
+  seed_rationale: UNKNOWN
 
 demo_records:
   - demo_id: DEMO-2026-0001
@@ -186,13 +194,13 @@ demo_records:
       - Founder listening review
     review_trigger: Receipt of the original audio and supporting provenance
     classification:
-      primary: song_candidate
+      primary: UNKNOWN
       secondary: UNKNOWN
-    classification_rationale: The public Suno page identifies a titled song and displays lyrics; this classifies the artifact form only, not its quality.
+    classification_rationale: UNKNOWN
     seed_designation:
-      primary: song_seed
+      primary: UNKNOWN
       secondary: UNKNOWN
-    seed_rationale: The only supported seed type is a song-shaped artifact; reusable value remains unassessed pending listening and founder review.
+    seed_rationale: UNKNOWN
     assigned_entity_type: UNKNOWN
     assigned_entity_id: UNKNOWN
     voice_candidate: UNKNOWN

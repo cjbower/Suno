@@ -2,7 +2,7 @@
 
 ## Purpose and Scope
 
-Use an internal-only workflow for demos created or controlled by the studio. The only active submission class is `internal_founder_demo`. One intake-incomplete record is registered; additional founder demos are pending submission.
+Use an internal-only workflow for demos created or controlled by the studio. The only active submission class is `internal_founder_demo`. One intake-incomplete record is registered with classification and seed designation `UNKNOWN` until completed founder review; additional founder demos are pending submission.
 
 ## Ownership Boundary
 
