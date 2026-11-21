@@ -239,6 +239,29 @@ Documentation-only architecture for Subphases 2B.4A and 2B.4B is present:
 
 Validation status and any limitations are recorded in `docs/phase-2b4-demo-audience-research-validation-report.md`. The changes are documentation and schema examples only. Local commit details are recorded in `docs/local-commit-report.md`; no push has occurred.
 
+### Phase 2B.5: Strategic and Platform Research Document Integration
+
+The four research documents are integrated at their authoritative paths:
+
+- [AI Music Platform Thesis](../foundations/ai-music-platform-thesis-and-strategic-vision.md) — foundational documented project intent.
+- [Suno Research Reference](../research/suno-platform/suno-research-reference.md) — primary consolidated internal Suno research reference; mixed and time-sensitive.
+- [AI Artist Strategy and Governance](../research/ai-artists/ai-artist-strategy-and-governance.md) — mixed research synthesis and recommendations, not approved policy.
+- [Spotify for Artists Access and Roster Operations](../research/distribution/platforms/spotify-for-artists-access-and-roster-operations.md) — partially verified operational research; current Spotify documentation remains authoritative.
+
+Decision DEC-2B5-01 records the approved direction to develop a durable music-production and release platform. The proposed transparent, human-led fictional-project operating model is not explicitly approved by the existing foundations and remains a proposed decision for human review.
+
+No action recommendations were added to the roadmap because none was explicitly approved. Distributor selection, Spotify account/team setup, contracts, public disclosure language, source registry work, experimentation standards, release gates, and policy-monitoring proposals remain unapproved. The Spotify access reference contributes to, but does not complete, broader distribution research.
+
+Revalidate platform and legal claims before operational use. Preserve each reference's evidence classifications and source register; do not treat research recommendations as policy or legal advice.
+
+### Phase 3.0: Legacy Demo Intake — Initial Record
+
+The user supplied one public Suno demo link, recorded as [DEMO-2026-0001](../catalog/demos/internal/intake/DEMO-2026-0001/demo-profile.md). Suno displays the title “Carillon” and creator attribution “Christopher Bower”; the canonical Suno ID and public lyrics are recorded as source evidence. No local original audio, checksum, prompt, source-material identification, model version, or rights review is available. The AI intake screen uses N/R for audio-dependent criteria; founder listening review remains pending.
+
+The disposition is `hold`; no development, artist/voice assignment, audience research, release, or commercialization is authorized. The user confirmed that two unrelated local recordings are not demos and said additional demo files will be provided later. The reference to Carillon in an older manifesto is not conclusively linked to this Suno ID.
+
+The Phase 3.0 inventory is therefore partial. Continue intake when remaining assets and provenance are supplied; do not treat the first record as completing the phase-wide inventory or founder review.
+
 ## Known Data-Quality Issues
 
 A generation defect was found in some artist documents:
@@ -500,9 +523,9 @@ Reassess the replacement names against current sources before treating their col
 
 Have a human review the voice-architecture and governance documents before changing the YAML schema or making voice assignments.
 
-### 6. Run Phase 2B.3 Distribution Research
+### 6. Complete Broader Distribution Research
 
-Use the previously drafted documentation-only instruction.  Require official sources, retrieval dates, explicit uncertainty, and no account creation or purchasing.
+The Spotify for Artists access and roster operations reference is integrated, but it does not complete broader Phase 2B.3 research into distributors, audience development, and podcast architecture. Continue with official sources, retrieval dates, explicit uncertainty, and no account creation or purchasing.
 
 ### 7. Add Source Registry Design
 
@@ -572,7 +595,7 @@ Artist identity population         Not started
 Voice profile population           Not started
 Source registry population         Not started
 Catalog content development        Not started
-Distribution research              Instruction drafted, not yet executed
+Distribution research              Spotify operational reference integrated; broader distributor, audience, and podcast research remains incomplete
 Podcast platform selection         Not started
 Publishing and release operations  Not started
 ```

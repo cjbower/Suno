@@ -14,8 +14,8 @@
 - `songs.yaml` – Song registry
 - `voices.yaml` – Voice profile registry
 - `motifs.yaml` – Recurring motifs and patterns
-- `demos.yaml` – Demo schema example; no demo records
-- `demo-reviews.yaml` – A&R review schema example; no review records
+- `demos.yaml` – Canonical demo registry; one intake-incomplete record
+- `demo-reviews.yaml` – Canonical A&R review registry; one initial intake screen
 - `development-projects.yaml` – Development handoff schema example; no project records
 - `audience-research-sessions.yaml` – Research session schema example; no session records
 - `audience-responses.yaml` – Response schema example; no response or participant records
@@ -24,7 +24,7 @@
 
 ## Organization Principle
 
-Existing registries and the new schema-only files have different roles. Registry files contain canonical records where present; the five demo/research files contain only `schema_reference` and `schema_example` structures and are not populated registries.
+Registry files contain canonical records where present. The demo and review files retain their `schema_reference` and `schema_example` sections and now also contain the first provisional demo and intake-screen records. Development-project and audience-research files remain schema-only.
 
 Registry files generally contain:
 
@@ -41,7 +41,8 @@ Registry files generally contain:
 - Cross-references connect individual folders to canonical metadata
 - Changes to artist status, genre, or core identity should be reflected in metadata
 - New artists, bands, or albums should be added to metadata before detailed documentation is created
-- Demo and audience-research examples must not be treated as actual records or assignments
+- Demo intake records document evidence and disposition; they do not automatically authorize development, artist assignment, audience research, or release
+- Unknown scalar values remain the literal `UNKNOWN`
 
 ---
 

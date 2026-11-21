@@ -33,6 +33,7 @@ Suno Studio is a **label-based creative operation** with:
 │   └── producer-projects/
 ├── catalog/                   # Albums, repertoire, metadata
 ├── operations/                # Roadmap, release calendar, workflow
+├── research/                  # Naming, platform, distribution, and AI-artist research
 ├── archive/                   # Retired artists, superseded concepts
 ├── CHANGELOG.md               # Version history
 ├── LICENSE                    # License information
@@ -48,6 +49,7 @@ Suno Studio is a **label-based creative operation** with:
 - [AI_Music_Project_Manifesto_and_Notes_v2.md](foundations/AI_Music_Project_Manifesto_and_Notes_v2.md) – Complete editorial vision, artist roster strategy, genre portfolio, voice management, and long-term mission
 - [Manifesto Delta Report](docs/manifesto-delta-report.md) – Changes from original manifesto to V2
 - [Decision Log](docs/decision-log.md) – Recorded architectural and creative decisions
+- [AI Music Platform Thesis](foundations/ai-music-platform-thesis-and-strategic-vision.md) – Foundational intent for a durable music-production and release platform
 
 ### Creative Framework
 
@@ -56,6 +58,12 @@ Suno Studio is a **label-based creative operation** with:
 - [Genre Portfolio](creative/genre-portfolio.md) – 23 supported genres with industry context and guidance
 - [Production Style Guide](creative/production-style-guide.md) – Production standards and preferences
 - [Vocal Style Guide](creative/vocal-style-guide.md) – Vocal recording and performance guidelines
+
+### Research References
+
+- [Suno Research Reference](research/suno-platform/suno-research-reference.md) – Primary consolidated, mixed-evidence Suno reference; preserve classifications and revalidate time-sensitive claims
+- [AI Artist Strategy and Governance](research/ai-artists/ai-artist-strategy-and-governance.md) – Research synthesis and recommendations, not approved policy
+- [Spotify for Artists Access and Roster Operations](research/distribution/platforms/spotify-for-artists-access-and-roster-operations.md) – Operational research reference; current Spotify documentation remains authoritative
 
 ### Operational Guidance
 
@@ -105,8 +113,8 @@ Canonical metadata maintained in [catalog/metadata/](catalog/metadata/) as YAML 
 - `songs.yaml` – Song registry
 - `voices.yaml` – Voice profile registry
 - `motifs.yaml` – Recurring motifs and patterns
-- `demos.yaml` – Demo schema example; no demos registered
-- `demo-reviews.yaml` – A&R review schema example; no reviews registered
+- `demos.yaml` – Canonical demo registry; one intake-incomplete demo record
+- `demo-reviews.yaml` – Canonical A&R review registry; one initial intake screen, founder review pending
 - `development-projects.yaml` – Development handoff schema example; no projects registered
 - `audience-research-sessions.yaml` – Research session schema example; no sessions registered
 - `audience-responses.yaml` – Audience response schema example; no responses registered
@@ -200,7 +208,7 @@ Retired, superseded, and rejected materials are preserved in [archive/](archive/
 
 **Phase 2A (Repository Scaffolding):** ✅ Complete
 
-**Current Development:** Phase 2B.4 documentation and schema examples for Demo Intake/A&R and Audience Research Operations; no records or operational programs are active.
+**Current Development:** Phase 3.0 intake is in progress. One Suno demo link has a provisional intake record; original audio and additional demos are pending. No artist assignments, audience research, releases, accounts, or contracts are activated.
 
 ---
 

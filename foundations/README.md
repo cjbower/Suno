@@ -78,6 +78,10 @@ Docs are **operational and procedural** – they document how the studio works, 
 
 - **creative-constitution.md** – The 10 core principles that guide all creative work at Suno Studio
 
+### Platform Thesis
+
+- [ai-music-platform-thesis-and-strategic-vision.md](ai-music-platform-thesis-and-strategic-vision.md) – Foundational project intent for a durable music-production and release platform. Project-intent statements are not external factual claims; any external claims require separate verification.
+
 ---
 
 ## Using These Documents

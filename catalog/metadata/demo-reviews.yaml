@@ -1,5 +1,5 @@
 # Demo Review Schema
-# Schema example only. No review records are registered in this file.
+# Canonical demo review registry and schema reference.
 
 schema_reference:
   allowed_grades:
@@ -37,6 +37,10 @@ schema_reference:
     reviewer_confidence: confidence or UNKNOWN
     limitations: limitations or UNKNOWN
     notes: context or UNKNOWN
+    category_evidence: written evidence for every grade
+    semantic_profile: narrative comments for each polarity pair; do not score
+    audio_reviewed: whether the reviewer auditioned the source audio
+    founder_review_status: pending, complete, or UNKNOWN
 
 schema_example:
   review_id: UNKNOWN
@@ -65,3 +69,52 @@ schema_example:
   reviewer_confidence: UNKNOWN
   limitations: UNKNOWN
   notes: UNKNOWN
+
+review_records:
+  - review_id: REVIEW-2026-0001
+    demo_id: DEMO-2026-0001
+    review_type: initial_intake_screen
+    reviewer_id: UNKNOWN
+    reviewer_role: AI intake assistant; founder audio review pending
+    review_date: "2026-11-21"
+    evaluation_instrument_version: operations/demo-intake/evaluation-standard.md
+    emotional_impact_grade: N/R
+    song_concept_grade: N/R
+    hook_grade: N/R
+    source_fidelity_grade: N/R
+    voice_performance_grade: N/R
+    production_identity_grade: N/R
+    arrangement_grade: N/R
+    technical_quality_grade: N/R
+    roster_fit_grade: N/R
+    development_potential_grade: N/R
+    overall_creative_grade: N/R
+    strongest_element: UNKNOWN
+    weakest_element: UNKNOWN
+    elements_to_preserve: UNKNOWN
+    elements_to_change: UNKNOWN
+    recommended_disposition: hold
+    reviewer_confidence: UNKNOWN
+    limitations: Audio was not auditioned and this is not a founder review. The original audio file, source material, prompt, and model version have not been provided.
+    audio_reviewed: false
+    founder_review_status: pending
+    category_evidence:
+      emotional_impact: "N/R — no audio audition or founder response is available."
+      song_concept: "N/R — lyrics are visible on the public page, but a fair concept evaluation requires the original work context and founder review."
+      hook_strength: "N/R — melody and repeated-hook effectiveness cannot be judged from page metadata."
+      source_fidelity: "N/R — source material and intended adaptation are unknown."
+      voice_quality: "N/R — no audio audition was performed."
+      production_quality: "N/R — no audio audition was performed."
+      arrangement: "N/R — arrangement cannot be judged without listening."
+      technical_quality: "N/R — no local audio asset or technical inspection is available."
+      development_potential: "N/R — requires full listening review and provenance context."
+      roster_fit: "N/R — artist assignment is out of scope and no identity evaluation was performed."
+    semantic_profile:
+      forgettable_memorable: "Not assessed — no audio audition."
+      generic_distinctive: "Not assessed — no audio audition."
+      artificial_human: "Not assessed — no audio audition."
+      weak_powerful: "Not assessed — no audio audition."
+      confusing_clear: "Not assessed — lyrics are visible, but the complete recording was not auditioned."
+      dated_contemporary: "Not assessed — no audio audition."
+      emotionally_flat_emotionally_affecting: "Not assessed — no audio audition."
+    notes: This record documents intake completeness only. N/R values are not musical judgments; founder review remains pending.

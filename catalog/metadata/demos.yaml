@@ -1,5 +1,5 @@
 # Demo Registry Schema
-# Schema example only. No demo records are registered in this file.
+# Canonical demo registry and schema reference.
 
 schema_reference:
   unknown_value: UNKNOWN
@@ -36,6 +36,8 @@ schema_reference:
   fields:
     demo_id: stable demo identifier
     title: working title or UNKNOWN
+    creation_date: source creation date or UNKNOWN
+    creator: credited creator or UNKNOWN
     submission_type: one of submission_types
     submission_source: origin or UNKNOWN
     submitted_by: authorized submitter identifier or UNKNOWN
@@ -45,9 +47,11 @@ schema_reference:
     external_contributors: contributor references or UNKNOWN
     rights_review_status: status or UNKNOWN
     source_material_id: source registry identifier or UNKNOWN
+    source_material: classification or UNKNOWN
     source_material_description: description or UNKNOWN
     audio_location: approved asset location or UNKNOWN
     audio_sha256: checksum or UNKNOWN
+    audio_downloaded: whether a local original was received
     suno_song_id: platform identifier or UNKNOWN
     suno_url: platform URL or UNKNOWN
     generator: generator name or UNKNOWN
@@ -57,12 +61,26 @@ schema_reference:
     exclude_prompt: preserved exclusion prompt or UNKNOWN
     lyrics_status: status or UNKNOWN
     lyrics_location: approved asset location or UNKNOWN
+    lyrics_available: whether lyrics were present in source evidence
+    prompt_available: whether original prompt evidence was present
     language: language or UNKNOWN
     approximate_genre: genre or UNKNOWN
     approximate_bpm: BPM or UNKNOWN
     review_status: lifecycle state or UNKNOWN
     development_status: status or UNKNOWN
     current_disposition: A&R disposition or UNKNOWN
+    owner: accountable next-step owner or UNKNOWN
+    next_action: bounded action or UNKNOWN
+    risks: known risks or UNKNOWN
+    required_evidence: evidence required to resolve the review or UNKNOWN
+    review_trigger: event that reopens review or UNKNOWN
+    classification: primary and secondary demo-value classifications
+    classification_rationale: evidence supporting classification or UNKNOWN
+    seed_designation: primary and secondary strategic seed designations
+    seed_rationale: evidence supporting seed designation or UNKNOWN
+    provenance_record: path to the authoritative provenance artifact
+    evaluation_record: path to the authoritative review artifact
+    development_plan: path to the bounded disposition/next-action plan
     assigned_entity_type: entity type or UNKNOWN
     assigned_entity_id: entity identifier or UNKNOWN
     voice_candidate: candidate reference or UNKNOWN
@@ -118,3 +136,75 @@ schema_example:
   known_defects: UNKNOWN
   elements_to_preserve: UNKNOWN
   notes: UNKNOWN
+
+demo_records:
+  - demo_id: DEMO-2026-0001
+    title: Carillon
+    creation_date: UNKNOWN
+    creator: Christopher Bower
+    submission_type: internal_founder_demo
+    submission_source: User-provided public Suno share URL
+    submitted_by: UNKNOWN
+    submitted_at: "2026-11-21"
+    ownership_assertion: UNKNOWN
+    contract_required: UNKNOWN
+    external_contributors: UNKNOWN
+    rights_review_status: UNKNOWN
+    source_material_id: UNKNOWN
+    source_material: UNKNOWN
+    source_material_description: UNKNOWN
+    audio_location: "https://suno.com/song/c7b5dc50-d324-42f5-9611-30fe44e0d1a5"
+    audio_sha256: UNKNOWN
+    audio_downloaded: false
+    suno_song_id: c7b5dc50-d324-42f5-9611-30fe44e0d1a5
+    suno_url: "https://suno.com/s/ZLqsa9pWs6BPXl8T"
+    generator: Suno
+    model_version: UNKNOWN
+    original_prompt_status: UNKNOWN
+    original_prompt: UNKNOWN
+    exclude_prompt: UNKNOWN
+    prompt_available: UNKNOWN
+    lyrics_available: true
+    lyrics_status: Visible on public Suno page; not copied locally
+    lyrics_location: "https://suno.com/song/c7b5dc50-d324-42f5-9611-30fe44e0d1a5"
+    language: English
+    approximate_genre: UNKNOWN
+    approximate_bpm: UNKNOWN
+    review_status: intake_incomplete
+    development_status: not_started
+    current_disposition: hold
+    owner: UNKNOWN
+    next_action: Receive the original audio and provenance materials, then complete founder listening review
+    risks:
+      - No local original audio or checksum is available
+      - Source material, rights, model version, and prompt are unknown
+      - Suno URL availability is platform-dependent
+    required_evidence:
+      - Original audio file or an explicitly approved preservation method
+      - Source-material identification and rights-review context
+      - Original prompt and model/version information if available
+      - Founder listening review
+    review_trigger: Receipt of the original audio and supporting provenance
+    classification:
+      primary: song_candidate
+      secondary: UNKNOWN
+    classification_rationale: The public Suno page identifies a titled song and displays lyrics; this classifies the artifact form only, not its quality.
+    seed_designation:
+      primary: song_seed
+      secondary: UNKNOWN
+    seed_rationale: The only supported seed type is a song-shaped artifact; reusable value remains unassessed pending listening and founder review.
+    assigned_entity_type: UNKNOWN
+    assigned_entity_id: UNKNOWN
+    voice_candidate: UNKNOWN
+    production_reference: UNKNOWN
+    song_candidate: UNKNOWN
+    collaboration_candidate: UNKNOWN
+    handoff_candidate: UNKNOWN
+    derived_from: UNKNOWN
+    promoted_work_ids: UNKNOWN
+    known_defects: UNKNOWN
+    elements_to_preserve: UNKNOWN
+    provenance_record: catalog/demos/internal/intake/DEMO-2026-0001/provenance.md
+    evaluation_record: catalog/demos/internal/intake/DEMO-2026-0001/evaluation.md
+    development_plan: catalog/demos/internal/intake/DEMO-2026-0001/development-plan.md
+    notes: Credited creator and title are transcribed from the public Suno page; creator attribution is not a legal ownership finding. See the intake records for limitations.

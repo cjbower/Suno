@@ -29,6 +29,18 @@ All notable changes to Suno Studio repository are documented in this file.
 - Defined cross-domain authority boundaries and updated repository indexes and the durable handoff.
 - No audio, artist assignments, surveys, recruitment, external submissions, contracts, or releases were created or activated.
 
+### Phase 2B.5 – Strategic and Platform Research Integration
+
+- Integrated the platform thesis, Suno research, AI-artist strategy, and Spotify for Artists operations references in their authoritative domains with explicit authority and verification metadata.
+- Added domain indexes, recorded the approved platform decision, and updated the durable handoff and intake report.
+- Kept the proposed AI-artist operating model and all operational recommendations unapproved; no roadmap actions, accounts, contracts, releases, commits, or pushes were created.
+
+### Phase 3.0 – Initial Demo Intake
+
+- Added a provisional intake and review record for the first user-supplied Suno demo link, with unknown evidence preserved explicitly and audio-dependent criteria marked N/R.
+- Recorded a hold disposition pending original audio, provenance, and founder listening review; no development, artist assignment, audience research, or release was authorized.
+- Additional demos and local audio files remain pending; Phase 3.0 inventory is incomplete.
+
 ## [2.0.0] – 2026-11-18
 
 ### Added (Phase 2A – Repository Scaffolding)

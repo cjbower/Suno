@@ -12,9 +12,9 @@ The current active intake class is `internal_founder_demo`. All other classes ar
 
 ## Authoritative Metadata
 
-The proposed schema example is in [`../metadata/demos.yaml`](../metadata/demos.yaml). It contains no registered demo records. Future audio assets should be stored in an approved asset location and referenced by metadata; no audio is stored here by this phase.
+The canonical registry is [`../metadata/demos.yaml`](../metadata/demos.yaml). One provisional record (`DEMO-2026-0001`) points to a user-provided public Suno page; no local audio has been received or stored. The record remains intake-incomplete pending preservation evidence and founder review.
 
-Use the literal `UNKNOWN` for unknown future scalar values rather than silently omitting them. An asserted ownership statement is not rights approval.
+Use the literal `UNKNOWN` for unknown scalar values rather than silently omitting them. The identifier format is `DEMO-YYYY-NNNN`, where `YYYY` is the intake year; identifiers are immutable and existing identifiers must never be renumbered. An asserted ownership statement is not rights approval.
 
 ## Lifecycle
 
@@ -32,7 +32,7 @@ These are related by lineage, not interchangeable records. A future work/composi
 
 ## Known Limitations
 
-This phase creates no demo records, audio, assignments, or development projects. Rights, translations, samples, provenance, generator terms, and ownership claims require review; none are verified by this structure alone.
+The first intake record is provisional and does not include local audio, rights verification, artist assignments, or authorized development. Rights, translations, samples, provenance, generator terms, and ownership claims require review; none are verified by this structure alone.
 
 ## Future External Submissions
 

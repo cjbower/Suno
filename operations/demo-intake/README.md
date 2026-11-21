@@ -29,4 +29,4 @@ A demo does not become production work because someone likes it. A formal Develo
 
 ## Current Limits
 
-Only `internal_founder_demo` is active. No actual demos are registered, no external submissions are accepted, and no demo is automatically assigned to an artist, band, or producer project. See the [intake standard](intake-standard.md), [triage workflow](triage-workflow.md), and [development handoff](development-handoff.md).
+Only `internal_founder_demo` is active. One intake-incomplete demo record exists; additional founder demos are pending submission. No external submissions are accepted, and no demo is automatically assigned to an artist, band, or producer project. See the [intake standard](intake-standard.md), [triage workflow](triage-workflow.md), and [development handoff](development-handoff.md).

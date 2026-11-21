@@ -2,7 +2,7 @@
 
 ## Purpose and Scope
 
-Reserve an internal-only workflow for demos created or controlled by the studio. The only active submission class is `internal_founder_demo`; no demos are registered in this phase.
+Use an internal-only workflow for demos created or controlled by the studio. The only active submission class is `internal_founder_demo`. One intake-incomplete record is registered; additional founder demos are pending submission.
 
 ## Ownership Boundary
 
@@ -10,7 +10,7 @@ Intake metadata records provenance and an ownership assertion, not a legal concl
 
 ## Authoritative Metadata
 
-Use the proposed schema example in [`../../metadata/demos.yaml`](../../metadata/demos.yaml). Queue folders are organizational locations, not registries. Status, disposition, and lineage belong in the future metadata record.
+Use the canonical registry in [`../../metadata/demos.yaml`](../../metadata/demos.yaml). Queue folders are organizational locations, not registries. Status, disposition, and lineage belong in metadata.
 
 ## Lifecycle Locations
 
@@ -23,7 +23,7 @@ Use the proposed schema example in [`../../metadata/demos.yaml`](../../metadata/
 
 ## Asset Distinctions and Limitations
 
-A demo is not automatically a work, recording, master, or release. Promotion creates separate records and preserves source lineage. No audio, demo records, or artist assignments are added here.
+A demo is not automatically a work, recording, master, or release. Promotion creates separate records and preserves source lineage. The first record references a Suno page but has no locally preserved audio; no artist assignments or development authorizations are present.
 
 ## Future Considerations
 

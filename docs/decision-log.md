@@ -69,6 +69,32 @@ The following decisions were established in Manifesto V2 and serve as foundation
 
 7. **Catalog-First Architecture** – Catalog continuity and long-term artist identity are prioritized over short-term commercial considerations.
 
+### Phase 2B.5 – Durable Music-Production and Release Platform
+
+**ID:** DEC-2B5-01
+
+**Title:** Develop Suno Studio as a durable music-production and release platform
+
+**Date:** Not recorded
+
+**Category:** Operational | Governance | Technology
+
+**Status:** Approved
+
+**Decision:** Suno Studio is intentionally being developed as a durable music-production and release platform, not merely as a catalog of songs. The platform includes content intake, rights review, artist and voice strategy, generation workflow, quality review, similarity review, metadata, distribution, monetization, catalog management, governance, automation, and audience development.
+
+**Rationale:** Songs are products of the system, while reusable workflows, governance, automation, distribution knowledge, audience, and catalog are also durable assets.
+
+**Source:** [AI music platform thesis and strategic vision](../foundations/ai-music-platform-thesis-and-strategic-vision.md)
+
+**Authority:** Christopher Bower
+
+**Confidence:** High
+
+**Impact:** Establishes the platform thesis as an approved strategic direction. It does not approve any unapproved operational recommendation, account, contract, release, or capability.
+
+**Related Decisions:** Catalog-First Architecture; Phase 2B.4 Demo and Audience Research Boundaries.
+
 ### Phase 2B.4 – Demo and Audience Research Boundaries
 
 **ID:** DEC-2B4-01
