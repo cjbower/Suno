@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Read-only founder review portal for the Suno demo catalog."
+    />
+    <title>Founder Review Portal | Suno Studio</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <p class="eyebrow">Suno Studio / Demo operations</p>
+          <h1>Founder Review Portal</h1>
+          <p class="subheading">Repository-backed review workspace</p>
+        </div>
+        <div class="topbar-meta">
+          <span class="read-only-badge">Read only</span>
+          <a
+            href="https://github.com/cjbower/Suno"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Repository source</a>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <nav class="sidebar" aria-label="Portal sections">
+          <p class="nav-label">Workspace</p>
+          <button class="nav-item is-active" type="button" data-view="dashboard">
+            Overview
+          </button>
+          <button class="nav-item" type="button" data-view="intake">
+            Demo intake
+          </button>
+          <button class="nav-item" type="button" data-view="queue">
+            Review queue
+          </button>
+          <div class="sidebar-note">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Source: canonical YAML</span>
+          </div>
+        </nav>
+
+        <main id="main-content" class="main-content">
+          <div id="load-error" class="error-banner" role="alert" hidden></div>
+
+          <section id="dashboard-view" class="view" aria-labelledby="dashboard-title">
+            <div class="page-heading">
+              <div>
+                <p class="eyebrow">Current portfolio</p>
+                <h2 id="dashboard-title">Founder review overview</h2>
+                <p class="muted">
+                  Intake facts stay separate from review conclusions.
+                </p>
+              </div>
+              <p class="snapshot-note">Read-only repository snapshot</p>
+            </div>
+            <div id="dashboard-metrics" class="metric-grid" aria-live="polite"></div>
+            <section class="panel" aria-labelledby="attention-title">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Next actions</p>
+                  <h3 id="attention-title">Review queue</h3>
+                </div>
+                <button class="text-button" type="button" data-view="queue">
+                  View all demos
+                </button>
+              </div>
+              <div id="dashboard-table" class="table-wrap"></div>
+            </section>
+            <section class="future-grid" aria-label="Future workflows">
+              <article class="future-card">
+                <span class="future-tag">Future phase</span>
+                <h3>Classification</h3>
+                <p>Available only after a qualifying founder review.</p>
+              </article>
+              <article class="future-card">
+                <span class="future-tag">Future phase</span>
+                <h3>Seed qualification</h3>
+                <p>Requires separate evidence and founder rationale.</p>
+              </article>
+            </section>
+          </section>
+
+          <section id="intake-view" class="view" aria-labelledby="intake-title" hidden>
+            <div class="page-heading">
+              <div>
+                <p class="eyebrow">Repository records</p>
+                <h2 id="intake-title">Demo intake</h2>
+                <p class="muted">Known facts and missing evidence, without write access.</p>
+              </div>
+              <span class="read-only-badge">Read only</span>
+            </div>
+            <div id="intake-list" class="intake-list"></div>
+          </section>
+
+          <section id="queue-view" class="view" aria-labelledby="queue-title" hidden>
+            <div class="page-heading">
+              <div>
+                <p class="eyebrow">Founder review</p>
+                <h2 id="queue-title">Demo review queue</h2>
+                <p class="muted">Search canonical records and inspect their linked review state.</p>
+              </div>
+            </div>
+            <section class="panel" aria-label="Demo review queue">
+              <div class="filter-row">
+                <label class="search-label" for="demo-search">Search demos</label>
+                <input
+                  id="demo-search"
+                  type="search"
+                  placeholder="ID, title, creator, or status"
+                  autocomplete="off"
+                />
+                <label class="select-label" for="review-filter">Review state</label>
+                <select id="review-filter">
+                  <option value="all">All states</option>
+                  <option value="pending">Review Pending</option>
+                  <option value="complete">Review Complete</option>
+                </select>
+              </div>
+              <div id="queue-table" class="table-wrap"></div>
+            </section>
+          </section>
+
+          <section id="detail-view" class="view" aria-labelledby="detail-title" hidden>
+            <button id="back-to-queue" class="back-button" type="button">
+              <span aria-hidden="true">&larr;</span> Back to review queue
+            </button>
+            <div id="demo-detail"></div>
+          </section>
+
+          <footer class="page-footer">
+            <span>Repository = system of record</span>
+            <span id="build-note">Review states are derived from linked YAML records.</span>
+          </footer>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

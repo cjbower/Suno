@@ -71,6 +71,9 @@ Suno Studio is a **label-based creative operation** with:
 - [Release Calendar](operations/release-calendar.md) – Planned releases and timeline
 - [Automation Opportunities](operations/automation-opportunities.md) – Future workflow improvements
 - [Demo Intake and A&R](operations/demo-intake/README.md) – Governed intake, evaluation, and development handoff
+- [Temporary Founder Review Workbench](portal/README.md) – Experimental read-only interface for workflow discovery
+- [Workbench Architecture and Workflow Analysis](docs/architecture/founder-review-workbench.md)
+- [Workbench Wireframes](docs/architecture/founder-review-workbench-wireframes.md)
 - [Audience Research Operations](operations/audience-research/README.md) – Research governance, privacy, and reporting framework
 - [Demo and Audience Research Governance](docs/demo-and-audience-research-governance.md) – Cross-domain decision boundaries
 
@@ -208,7 +211,7 @@ Retired, superseded, and rejected materials are preserved in [archive/](archive/
 
 **Phase 2A (Repository Scaffolding):** ✅ Complete
 
-**Current Development:** Phase 3.0 intake is in progress. One Suno demo link has a provisional intake record; original audio and additional demos are pending. No artist assignments, audience research, releases, accounts, or contracts are activated.
+**Current Development:** Phase 3.1A uses the existing read-only portal prototype as a temporary Founder Review Workbench. It is for local workflow discovery only; it is not deployed or the final portal. One Suno demo remains intake-incomplete with founder review pending; original audio and additional demos are pending. No artist assignments, audience research, releases, accounts, or contracts are activated.
 
 ---
 
@@ -224,6 +227,6 @@ Retired, superseded, and rejected materials are preserved in [archive/](archive/
 
 ---
 
-**Last Updated:** 2026-11-18
+**Last Updated:** 2026-11-21
 
 **Canonical Repository:** This document is authoritative for Suno Studio structure and governance.
