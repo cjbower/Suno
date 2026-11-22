@@ -81,7 +81,7 @@ Phase 2A successfully created the foundational repository structure, artist rost
 ✅ **Core Governance Documents (8 files)**
 - `creative/artist-development-template.md` – Framework for all artist documentation
 - `creative/identity-framework.md` – Source material → emotional objective → artist assignment → genre selection principle
-- `creative/genre-portfolio.md` – Complete genre catalog with 23 genres documented
+- `creative/genre-portfolio.md` – Complete genre catalog with 23 genres documented (historical count discrepancy; the portfolio currently enumerates 22, and no twenty-third label was found)
 - `creative/production-style-guide.md` – Production standards and preferences
 - `creative/vocal-style-guide.md` – Vocal recording and performance guidelines
 - `creative/motif-library.md` – Recurring motifs and patterns (framework)

@@ -55,7 +55,7 @@ Suno Studio is a **label-based creative operation** with:
 
 - [Identity Framework](creative/identity-framework.md) – **Authoritative principle:** Source Material → Emotional Objective → Artist Assignment → Genre Selection
 - [Artist Development Template](creative/artist-development-template.md) – Framework for documenting artist identity and evolution
-- [Genre Portfolio](creative/genre-portfolio.md) – 23 supported genres with industry context and guidance
+- [Genre Portfolio](creative/genre-portfolio.md) – 22 currently enumerated genres with industry context and guidance
 - [Production Style Guide](creative/production-style-guide.md) – Production standards and preferences
 - [Vocal Style Guide](creative/vocal-style-guide.md) – Vocal recording and performance guidelines
 

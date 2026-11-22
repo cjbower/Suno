@@ -61,7 +61,7 @@ Docs are **operational and procedural** – they document how the studio works, 
 - Provide transparency and traceability
 
 **Examples:**
-- "Decision to support 23 genres" (specific decision)
+- "Decision to support a genre portfolio" (specific decision)
 - "Production style guide preferences" (operational standard)
 - "Release quality checkpoints" (operational procedure)
 
@@ -78,6 +78,10 @@ Docs are **operational and procedural** – they document how the studio works, 
 
 - **creative-constitution.md** – The 10 core principles that guide all creative work at Suno Studio
 
+### Taxonomy
+
+- [music-taxonomy-and-intent-framework.md](music-taxonomy-and-intent-framework.md) – Authoritative baseline for source material, genre, style, creator intent, review, seed, disposition, artist, and voice taxonomies
+
 ### Platform Thesis
 
 - [ai-music-platform-thesis-and-strategic-vision.md](ai-music-platform-thesis-and-strategic-vision.md) – Foundational project intent for a durable music-production and release platform. Project-intent statements are not external factual claims; any external claims require separate verification.
@@ -88,6 +92,7 @@ Docs are **operational and procedural** – they document how the studio works, 
 
 **When Creating or Planning Work:**
 - Consult the Creative Constitution
+- Use the Music Taxonomy and Creator-Intent Framework for controlled terminology and unresolved taxonomy gaps
 - Refer to the Manifestos for strategic context
 - Use these as the standard against which new initiatives should be evaluated
 

@@ -64,7 +64,7 @@ All notable changes to Suno Studio repository are documented in this file.
 #### Creative Governance
 - `creative/identity-framework.md` – **Core principle:** Source Material → Emotional Objective → Artist Assignment → Genre Selection
 - `creative/artist-development-template.md` – Artist documentation framework
-- `creative/genre-portfolio.md` – 23 genres documented with industry context
+- `creative/genre-portfolio.md` – 23 genres documented with industry context (historical count; the portfolio currently enumerates 22)
 - `creative/production-style-guide.md` – Production standards
 - `creative/vocal-style-guide.md` – Vocal production guidelines
 - `creative/motif-library.md` – Motif catalog framework
