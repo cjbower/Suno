@@ -27,23 +27,41 @@ function hasWrittenCategoryEvidence(review) {
   });
 }
 
-function isQualifyingFounderReview(review) {
+function founderReviewBlockers(review) {
+  const blockers = [];
   const reviewerRole = String(review.reviewer_role ?? "");
   const reviewDate = String(review.review_date ?? "");
   const hasRateableGrade = GRADE_FIELDS.some((field) =>
     RATEABLE_GRADES.has(String(review[field] ?? "").toUpperCase()),
   );
 
-  return (
-    String(review.founder_review_status ?? "").toLowerCase() === "complete" &&
-    /\bfounder\b/i.test(reviewerRole) &&
-    isKnown(review.reviewer_id) &&
-    isKnown(reviewDate) &&
-    !Number.isNaN(Date.parse(reviewDate)) &&
-    review.audio_reviewed === true &&
-    hasRateableGrade &&
-    hasWrittenCategoryEvidence(review)
-  );
+  if (String(review.founder_review_status ?? "").toLowerCase() !== "complete") {
+    blockers.push("Founder review is not marked complete.");
+  }
+  if (!/\bfounder\b/i.test(reviewerRole)) {
+    blockers.push("Reviewer role does not identify a founder.");
+  }
+  if (!isKnown(review.reviewer_id)) {
+    blockers.push("Founder reviewer identity is missing.");
+  }
+  if (!isKnown(reviewDate) || Number.isNaN(Date.parse(reviewDate))) {
+    blockers.push("A valid review date is missing.");
+  }
+  if (review.audio_reviewed !== true) {
+    blockers.push("Original audio has not been reviewed.");
+  }
+  if (!hasRateableGrade) {
+    blockers.push("No rateable evaluation grade is recorded.");
+  }
+  if (!hasWrittenCategoryEvidence(review)) {
+    blockers.push("Written evaluation evidence is missing.");
+  }
+
+  return blockers;
+}
+
+function isQualifyingFounderReview(review) {
+  return founderReviewBlockers(review).length === 0;
 }
 
 export function deriveReviewState(demo, allReviews) {
@@ -55,12 +73,13 @@ export function deriveReviewState(demo, allReviews) {
     );
   const qualifyingReview = linkedReviews.find(isQualifyingFounderReview);
   const reviewComplete = Boolean(qualifyingReview);
+  const latestReview = linkedReviews[0] ?? null;
   const classification = demo.classification?.primary ?? "UNKNOWN";
   const seedDesignation = demo.seed_designation?.primary ?? "UNKNOWN";
 
   return {
     linkedReviews,
-    latestReview: linkedReviews[0] ?? null,
+    latestReview,
     founderReviewState: reviewComplete
       ? "Complete"
       : linkedReviews.length > 0
@@ -68,6 +87,11 @@ export function deriveReviewState(demo, allReviews) {
         : "Not recorded",
     reviewLabel: reviewComplete ? "Review Complete" : "Review Pending",
     classificationEligible: reviewComplete,
+    eligibilityBlockers: reviewComplete
+      ? []
+      : latestReview
+        ? founderReviewBlockers(latestReview)
+        : ["No linked review record is available."],
     governanceConflict:
       !reviewComplete &&
       (classification !== "UNKNOWN" || seedDesignation !== "UNKNOWN"),

@@ -9,10 +9,12 @@ The repository remains authoritative. The workbench reads the canonical `catalog
 - Dashboard counts for registered demos, pending reviews, completed reviews, and classification eligibility.
 - Read-only intake summary with source links and required evidence.
 - Searchable/filterable demo review queue.
-- Individual demo detail with canonical facts, linked review summary, status, and repository links.
+- Source-first demo detail with the repository ID, working title, source context, creative material, creator intent, constraints, source labels, readiness blockers, governance, and advanced metadata.
 - Review completion and eligibility derived from existing review fields.
 
 The prototype has no data-entry form, write-back, audio upload, authentication, backend, database, deployment workflow, or production hosting configuration. Classification, seed qualification, disposition changes, and artist assignment are not performed by the workbench.
+
+The detail view reads only fields present in the canonical YAML. Screenshot-observed source metadata that has not been captured in those records is clearly identified as not captured; the UI does not hardcode or infer it. The review-readiness panel explains the existing founder-review gate and lists its blockers without changing the gate.
 
 ## Local Development
 

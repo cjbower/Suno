@@ -57,21 +57,34 @@ These are workflow-first sketches for the existing read-only prototype and futur
 
 ```text
 +--------------------------------------------------------------+
-| < Queue       DEMO-2026-0001  Carillon                       |
-| Review pending | Founder review pending | Not eligible       |
+| < Queue       DEMO ID: DEMO-2026-0001                        |
+| Working Title: Carillon     Review Status: Review Pending    |
 |                                                              |
-| Source / provenance          Intake                          |
-| Suno URL                     Status: intake_incomplete        |
-| Provenance record            Rights: UNKNOWN                  |
-| Audio: not received          Checksum: UNKNOWN                |
+| 1. Source Context                                            |
+| Platform: Suno   Creator display: Christopher Bower          |
+| Source URL / Song ID / account / playlist / model / time      |
 |                                                              |
-| Current classification: UNKNOWN   Seed: UNKNOWN               |
-| Disposition: Hold   Next action: receive source audio         |
-| Required evidence: [list]    Risks: [list]                    |
+| 2. Creative Context                                          |
+| Artwork | Style Description | Lyrics | Creator Notes | Prompt |
+|                                                              |
+| 3. Creator Intent    4. Creative Constraints                 |
+| Source material...   Excluded styles...                       |
+|                                                              |
+| 5. Source Labels                                             |
+| Verbatim labels; no automatic taxonomy mapping               |
+|                                                              |
+| 6. Review Readiness                                          |
+| Audio, rights, founder status, required evidence, blockers    |
+|                                                              |
+| 7. Governance                                                |
+| Classification | Seed | Disposition | Linked reviews         |
+|                                                              |
+| 8. Advanced Metadata [expand]                                |
+| Checksum | Archive | Preservation | Technical                |
 +--------------------------------------------------------------+
 ```
 
-**Questions to observe:** Which fields should be above the fold? Which links or unknowns are repeatedly revisited?
+Source values absent from canonical records are displayed as `UNKNOWN` with a not-captured explanation; they are not hardcoded from screenshots. The page remains read-only. Governance appears after creative context and readiness, while technical preservation details remain available in the expandable section.
 
 ## 5. Review Worksheet
 

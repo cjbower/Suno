@@ -19,7 +19,7 @@ During real use, capture evidence for:
 5. What interruptions, rework, or validation errors occur?
 6. Which future automation would remove mechanical work without replacing editorial judgment?
 
-No end-to-end founder listening session has yet been observed by the workbench. The workflow analysis below is based on current repository standards and the single intake record. Pain points and automation candidates are hypotheses to validate, not measured findings.
+The first DEMO-2026-0001 use exposed a source-first information need: the founder sought source and creative context before repository governance. Screenshot-observed source attributes include a playlist, generation model, source label, style description, lyrics, and creation timestamp; these observations are not all present in the canonical demo record. This is one qualitative workflow observation, not a measured multi-demo usability study, and no completed founder listening review is recorded.
 
 ## Current Prototype
 
@@ -30,12 +30,12 @@ The workbench reuses the existing source under `portal/`; no separate `workbench
 | Dashboard | Counts canonical demos, pending reviews, complete reviews, and classification-eligible records |
 | Demo intake | Read-only summary of source, intake state, and required evidence |
 | Demo queue | Search and filter records by review state |
-| Demo detail | Shows canonical demo facts, linked review evidence, status badges, and repository links |
+| Demo detail | Presents source context, creative material, creator intent, constraints, source labels, readiness blockers, governance, and advanced metadata in founder review order |
 | Review state | Derived from linked review data; no state is written back |
 | Classification and seed | Displays current values and gate state; does not decide or edit them |
 | Disposition | Displays the current disposition; does not recommend or change it |
 
-The current registry contains `DEMO-2026-0001` (`Carillon`) with `current_disposition: hold`, `review_status: intake_incomplete`, and primary classification and seed values `UNKNOWN`. Its linked `REVIEW-2026-0001` is an AI intake screen, `founder_review_status: pending`, `audio_reviewed: false`, and its audio-dependent grades are N/R. The UI therefore shows Review Pending and zero Review Complete or Classification Eligible records.
+The current registry contains `DEMO-2026-0001` (`Carillon`) with `current_disposition: hold`, `review_status: intake_incomplete`, and primary classification and seed values `UNKNOWN`. Its linked `REVIEW-2026-0001` is an AI intake screen, `founder_review_status: pending`, `audio_reviewed: false`, and its audio-dependent grades are N/R. The UI therefore shows Review Pending and zero Review Complete or Classification Eligible records. Source metadata not captured in canonical YAML is shown as `UNKNOWN` with a clear not-captured explanation; screenshot observations are not hardcoded into the UI.
 
 The application imports the canonical `demos.yaml` and `demo-reviews.yaml` as raw build inputs, parses them with `js-yaml`, and derives the interface state in memory. A built bundle is a disposable snapshot; it is not an editable record. The current review gate is intentionally conservative: complete founder status, founder reviewer role, known reviewer ID, parseable review date, audio reviewed, at least one rateable grade, and written non-N/R category evidence. `Classification Eligible` means only that this prerequisite gate is met; it does not assign a value.
 

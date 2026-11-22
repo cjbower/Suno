@@ -241,83 +241,445 @@ function renderQueue() {
   renderQueueTable(elements.queueTable, filtered);
 }
 
-function detailField(label, value) {
+function valueAt(record, path) {
+  return path.split(".").reduce((value, key) => value?.[key], record);
+}
+
+function firstKnownValue(record, paths) {
+  for (const path of paths) {
+    const value = valueAt(record, path);
+    if (Array.isArray(value) ? value.some(isKnown) : isKnown(value)) {
+      return value;
+    }
+  }
+  return "UNKNOWN";
+}
+
+function formatValue(value) {
+  if (Array.isArray(value)) {
+    return value.filter(isKnown).map(String).join(", ") || "UNKNOWN";
+  }
+  if (value && typeof value === "object") {
+    return JSON.stringify(value);
+  }
+  return isKnown(value) ? String(value) : "UNKNOWN";
+}
+
+function detailField(label, value, note) {
   const wrapper = createElement("div", "detail-field");
   wrapper.append(
     createElement("dt", "", label),
-    createElement("dd", "", isKnown(value) ? String(value) : "UNKNOWN"),
+    createElement("dd", "", formatValue(value)),
   );
+  if (note) {
+    wrapper.append(createElement("p", "detail-field-note", note));
+  }
   return wrapper;
+}
+
+function detailGrid(fields, className = "detail-grid") {
+  const grid = createElement("dl", className);
+  for (const [label, value, note] of fields) {
+    grid.append(detailField(label, value, note));
+  }
+  return grid;
+}
+
+function detailPanel(number, title, description) {
+  const panel = createElement("section", "panel detail-section");
+  panel.setAttribute("aria-labelledby", `detail-section-${number}-title`);
+  const heading = createElement("div", "detail-panel-heading");
+  heading.append(
+    createElement("p", "eyebrow", `Section ${number}`),
+    createElement("h3", "", title),
+  );
+  heading.lastElementChild.id = `detail-section-${number}-title`;
+  panel.append(heading);
+  if (description) {
+    panel.append(createElement("p", "detail-panel-description", description));
+  }
+  return panel;
+}
+
+function renderTextAsset(label, value, note, linkHref) {
+  const disclosure = createElement("details", "creative-asset");
+  disclosure.open = true;
+  disclosure.append(createElement("summary", "", label));
+  const content = createElement("div", "creative-asset-content");
+  content.append(createElement(
+    "div",
+    isKnown(value) ? "creative-text" : "muted creative-text",
+    formatValue(value),
+  ));
+  if (note) {
+    content.append(createElement("p", "detail-field-note", note));
+  }
+  if (isHttpUrl(linkHref)) {
+    content.append(createLink(`Open ${label.toLowerCase()} source`, linkHref));
+  }
+  disclosure.append(content);
+  return disclosure;
+}
+
+function isHttpUrl(value) {
+  if (!isKnown(value)) {
+    return false;
+  }
+  try {
+    const url = new URL(String(value));
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
+function renderSourceLabels(demo) {
+  const labels = firstKnownValue(demo, [
+    "source_snapshot.source_labels",
+    "source_labels",
+  ]);
+  if (!Array.isArray(labels)) {
+    return detailField("Source labels", labels);
+  }
+
+  const wrapper = createElement("div", "source-label-field");
+  wrapper.append(createElement("p", "field-label", "Source labels"));
+  if (labels.length === 0) {
+    wrapper.append(createElement("p", "muted", "UNKNOWN"));
+    return wrapper;
+  }
+  const chips = createElement("div", "source-label-list");
+  for (const label of labels) {
+    chips.append(createElement("span", "source-label-chip", String(label)));
+  }
+  wrapper.append(chips);
+  return wrapper;
+}
+
+function renderArtwork(demo) {
+  const artwork = firstKnownValue(demo, [
+    "source_snapshot.artwork_reference",
+    "artwork_reference",
+  ]);
+  const wrapper = createElement("div", "artwork-field");
+  wrapper.append(createElement("p", "field-label", "Artwork"));
+  if (!isKnown(artwork)) {
+    wrapper.append(createElement("p", "muted", "UNKNOWN"));
+    return wrapper;
+  }
+
+  if (isHttpUrl(artwork)) {
+    const image = createElement("img", "artwork-preview");
+    image.src = artwork;
+    image.alt = `Artwork for ${demo.title || demo.demo_id}`;
+    image.loading = "lazy";
+    image.referrerPolicy = "no-referrer";
+    wrapper.append(image, createLink("Open artwork source", artwork));
+  } else {
+    wrapper.append(createElement("p", "creative-text", String(artwork)));
+  }
+  return wrapper;
+}
+
+function renderReviewCard(review, index) {
+  const card = createElement("article", "linked-review-card");
+  card.append(
+    createElement("p", "eyebrow", `Linked review ${index + 1}`),
+    createElement("h4", "", review.review_id || "Review ID UNKNOWN"),
+    detailGrid([
+      ["Review type", review.review_type],
+      ["Reviewer role", review.reviewer_role],
+      ["Review date", review.review_date],
+      ["Founder review status", review.founder_review_status],
+      ["Audio reviewed", review.audio_reviewed === true ? "Yes" : review.audio_reviewed === false ? "No" : "UNKNOWN"],
+      ["Overall creative grade", review.overall_creative_grade],
+      ["Recommended disposition", review.recommended_disposition],
+    ], "detail-grid review-facts"),
+  );
+  if (isKnown(review.evaluation_instrument_version)) {
+    card.append(createLink(
+      "Evaluation standard",
+      githubRecordLink(review.evaluation_instrument_version),
+    ));
+  }
+  return card;
 }
 
 function renderDemoDetail(demo) {
   const state = reviewFor(demo);
-  const root = createElement("article", "detail-record");
-  const heading = createElement("div", "detail-heading");
-  const identity = createElement("div");
-  const title = createElement("h2", "", demo.title || "Untitled demo");
-  title.id = "detail-title";
-  title.tabIndex = -1;
+  const sourceUrl = firstKnownValue(demo, [
+    "source_snapshot.source_url",
+    "source_url",
+    "suno_url",
+  ]);
+  const sourceLabelsNote =
+    "Source labels were observed in the Suno screenshots but are not captured in the canonical demo record.";
+  const heading = createElement("header", "detail-heading");
+  const identity = createElement("div", "detail-identity");
+  const demoId = createElement("h2", "detail-demo-id", formatValue(demo.demo_id));
+  demoId.id = "detail-title";
+  demoId.tabIndex = -1;
   identity.append(
-    createElement("p", "eyebrow", demo.demo_id),
-    title,
-    createElement("p", "muted", demo.creator || "Creator UNKNOWN"),
+    createElement("p", "eyebrow", "Demo ID"),
+    demoId,
+    createElement("p", "working-title", `Working Title: ${formatValue(demo.title)}`),
+    createElement(
+      "p",
+      "muted",
+      `Source creator display: ${formatValue(firstKnownValue(demo, [
+        "source_snapshot.source_creator_display",
+        "source_creator_display",
+        "creator",
+      ]))}`,
+    ),
   );
   const badges = createElement("div", "detail-badges");
-  badges.append(
-    statusBadge(state.reviewLabel, state.classificationEligible ? "complete" : "pending"),
-    statusBadge(`Founder review ${state.founderReviewState.toLowerCase()}`, state.classificationEligible ? "complete" : "pending"),
-    state.classificationEligible
-      ? statusBadge("Classification Eligible", "eligible")
-      : statusBadge("Not eligible yet", "neutral"),
-  );
+  badges.append(statusBadge(
+    `Review Status: ${state.reviewLabel}`,
+    state.classificationEligible ? "complete" : "pending",
+  ));
   heading.append(identity, badges);
 
-  const facts = createElement("dl", "detail-grid");
-  for (const [label, value] of [
-    ["Review status", demo.review_status],
-    ["Disposition", demo.current_disposition],
-    ["Submission type", demo.submission_type],
-    ["Submitted", demo.submitted_at],
-    ["Creator attribution", demo.creator],
+  const sourcePanel = detailPanel(1, "Source Context");
+  sourcePanel.append(detailGrid([
+    ["Source platform", firstKnownValue(demo, [
+      "source_snapshot.source_platform",
+      "source_platform",
+      "generator",
+    ])],
+    ["Source URL", sourceUrl],
+    ["Source song ID", firstKnownValue(demo, [
+      "source_snapshot.source_song_id",
+      "source_song_id",
+      "suno_song_id",
+    ])],
+    ["Source display name", firstKnownValue(demo, [
+      "source_snapshot.source_display_name",
+      "source_display_name",
+    ])],
+    ["Source creator display", firstKnownValue(demo, [
+      "source_snapshot.source_creator_display",
+      "source_creator_display",
+      "creator",
+    ]), "Source attribution only; it does not establish project ownership, assigned artist, or performer."],
+    ["Source account", firstKnownValue(demo, [
+      "source_snapshot.source_account",
+      "source_account",
+    ])],
+    ["Source playlist", firstKnownValue(demo, [
+      "source_snapshot.source_playlist",
+      "source_playlist",
+    ]), "Observed in the source screenshots; not captured in the canonical demo record."],
+    ["Source generation model", firstKnownValue(demo, [
+      "source_snapshot.source_generation_model",
+      "source_generation_model",
+      "model_version",
+    ]), "Observed in the source screenshots; not captured in the canonical demo record."],
+    ["Source creation timestamp", firstKnownValue(demo, [
+      "source_snapshot.source_created_timestamp",
+      "source_created_timestamp",
+      "creation_date",
+    ]), "Observed in the source screenshots; not captured in the canonical demo record."],
+    ["Observed timestamp", firstKnownValue(demo, [
+      "source_snapshot.observed_at",
+      "source_observed_at",
+    ])],
+  ]));
+  if (isHttpUrl(sourceUrl)) {
+    const links = createElement("div", "record-links");
+    links.append(createLink("Open source", sourceUrl));
+    sourcePanel.append(links);
+  }
+  sourcePanel.append(createElement(
+    "p",
+    "source-observation-note",
+    "Screenshot-observed metadata is shown only when present in repository data. Playlist, model, labels, style description, and source creation timestamp are not captured in the canonical demo record, so this read-only view does not invent or duplicate their values.",
+  ));
+
+  const creativePanel = detailPanel(
+    2,
+    "Creative Context",
+    "Source creative material is shown as observed. Missing values are not inferred.",
+  );
+  creativePanel.append(renderArtwork(demo));
+  creativePanel.append(renderTextAsset(
+    "Style Description",
+    firstKnownValue(demo, [
+      "source_snapshot.style_description",
+      "style_description",
+    ]),
+    "Observed as a separate source item; not captured in the canonical demo record.",
+  ));
+  creativePanel.append(renderTextAsset(
+    "Lyrics",
+    firstKnownValue(demo, [
+      "source_snapshot.lyrics",
+      "lyrics",
+      "lyrics_text",
+    ]),
+    demo.lyrics_status || "Lyrics text is not stored locally.",
+    isKnown(demo.lyrics_location) ? demo.lyrics_location : sourceUrl,
+  ));
+  creativePanel.append(renderTextAsset(
+    "Creator Notes",
+    firstKnownValue(demo, [
+      "source_snapshot.creator_notes",
+      "creator_notes",
+    ]),
+    "No creator notes are captured in the canonical demo record.",
+  ));
+  creativePanel.append(renderTextAsset(
+    "Prompt",
+    firstKnownValue(demo, [
+      "source_snapshot.prompt",
+      "original_prompt",
+    ]),
+    "Prompt text is not captured in the canonical demo record.",
+  ));
+
+  const intentPanel = detailPanel(
+    3,
+    "Creator Intent",
+    "Creator-stated targets are distinct from source labels and founder review.",
+  );
+  intentPanel.append(detailGrid([
+    ["Source material", firstKnownValue(demo, [
+      "creator_intent.source_material_type",
+      "source_material_type",
+      "source_material",
+    ])],
+    ["Genre target", firstKnownValue(demo, [
+      "creator_intent.genre_target",
+      "genre_target",
+    ])],
+    ["Style target", firstKnownValue(demo, [
+      "creator_intent.style_target",
+      "style_target",
+    ])],
+    ["Voice target", firstKnownValue(demo, [
+      "creator_intent.voice_target",
+      "voice_target",
+    ])],
+    ["Project purpose", firstKnownValue(demo, [
+      "creator_intent.project_purpose",
+      "project_purpose",
+    ])],
+    ["Tempo target", firstKnownValue(demo, [
+      "creator_intent.tempo_target",
+      "tempo_target",
+    ])],
+  ]));
+
+  const constraintsPanel = detailPanel(
+    4,
+    "Creative Constraints",
+    "Intent describes what should be created; constraints describe what should not be created.",
+  );
+  constraintsPanel.append(renderTextAsset(
+    "Excluded Styles",
+    firstKnownValue(demo, [
+      "creative_constraints.exclude_styles",
+      "exclude_styles",
+      "exclude_prompt",
+    ]),
+    "No excluded styles or constraints are captured in the canonical demo record.",
+  ));
+  constraintsPanel.append(renderTextAsset(
+    "Other Generation Constraints",
+    firstKnownValue(demo, [
+      "creative_constraints.other",
+      "generation_constraints",
+    ]),
+    "No other generation constraints are captured in the canonical demo record.",
+  ));
+
+  const labelsPanel = detailPanel(
+    5,
+    "Source Labels",
+    "Source wording is preserved as-is and is not taxonomy-mapped in this workbench.",
+  );
+  labelsPanel.append(renderSourceLabels(demo));
+  labelsPanel.append(createElement("p", "detail-field-note", sourceLabelsNote));
+
+  const readinessPanel = detailPanel(
+    6,
+    "Review Readiness",
+    "Evidence state and gate reasons are derived from the canonical demo and linked review records.",
+  );
+  readinessPanel.append(detailGrid([
+    ["Audio available", demo.audio_downloaded === true
+      ? "Yes"
+      : demo.audio_downloaded === false
+        ? "No - original audio has not been received"
+        : "UNKNOWN"],
+    ["Rights review", demo.rights_review_status],
+    ["Founder review status", state.founderReviewState],
+    ["Intake status", demo.review_status],
+    ["Classification eligibility", state.classificationEligible
+      ? "Eligible to consider; value is not assigned"
+      : "Not eligible yet"],
+  ]));
+
+  const blockers = createElement("div", "readiness-list");
+  blockers.append(createElement("h4", "", "Why this cannot advance"));
+  const blockerList = document.createElement("ul");
+  for (const blocker of state.eligibilityBlockers) {
+    blockerList.append(createElement("li", "", blocker));
+  }
+  if (blockerList.childElementCount === 0) {
+    blockerList.append(createElement("li", "", "No founder-review gate blockers."));
+  }
+  blockers.append(blockerList);
+
+  const requiredEvidence = createElement("div", "readiness-list");
+  requiredEvidence.append(createElement("h4", "", "Required Evidence"));
+  const evidenceList = document.createElement("ul");
+  const evidenceItems = Array.isArray(demo.required_evidence) ? demo.required_evidence : [];
+  for (const item of evidenceItems) {
+    evidenceList.append(createElement("li", "", String(item)));
+  }
+  if (evidenceItems.length === 0) {
+    evidenceList.append(createElement("li", "muted", "UNKNOWN"));
+  }
+  requiredEvidence.append(evidenceList);
+  readinessPanel.append(
+    blockers,
+    requiredEvidence,
+    createElement(
+      "p",
+      "gate-note",
+      "Classification eligibility is only a prerequisite. It does not assign classification or seed, and rights and development decisions remain separate.",
+    ),
+  );
+
+  const governancePanel = detailPanel(
+    7,
+    "Governance",
+    "Governance outcomes remain below source, creative material, and readiness.",
+  );
+  governancePanel.append(detailGrid([
     ["Classification", demo.classification?.primary],
     ["Classification rationale", demo.classification_rationale],
     ["Seed designation", demo.seed_designation?.primary],
     ["Seed rationale", demo.seed_rationale],
-    ["Rights review", demo.rights_review_status],
-    ["Audio checksum", demo.audio_sha256],
-  ]) {
-    facts.append(detailField(label, value));
+    ["Disposition", demo.current_disposition],
+  ]));
+  if (state.governanceConflict) {
+    governancePanel.append(createElement(
+      "p",
+      "error-banner inline-error",
+      "Governance check: a classification or seed value exists before a qualifying founder review.",
+    ));
   }
-
-  const reviewSection = createElement("section", "panel detail-section");
-  reviewSection.append(
-    createElement("p", "eyebrow", "Linked review"),
-    createElement("h3", "", state.latestReview?.review_id || "No review record"),
-  );
-  if (state.latestReview) {
-    const review = state.latestReview;
-    const reviewFacts = createElement("dl", "detail-grid review-facts");
-    for (const [label, value] of [
-      ["Review type", review.review_type],
-      ["Reviewer role", review.reviewer_role],
-      ["Review date", review.review_date],
-      ["Founder review state", review.founder_review_status],
-      ["Audio reviewed", review.audio_reviewed === true ? "Yes" : "No"],
-      ["Overall creative grade", review.overall_creative_grade],
-      ["Recommended disposition", review.recommended_disposition],
-    ]) {
-      reviewFacts.append(detailField(label, value));
-    }
-    reviewSection.append(reviewFacts);
-    if (isKnown(review.evaluation_instrument_version)) {
-      reviewSection.append(createLink("Evaluation standard", githubRecordLink(review.evaluation_instrument_version)));
+  governancePanel.append(createElement("h4", "linked-reviews-title", "Linked Reviews"));
+  if (state.linkedReviews.length > 0) {
+    for (const [index, review] of state.linkedReviews.entries()) {
+      governancePanel.append(renderReviewCard(review, index));
     }
   } else {
-    reviewSection.append(createElement("p", "muted", "A founder review has not been recorded."));
+    governancePanel.append(createElement("p", "muted", "No linked review record is available."));
   }
-
-  const sourceLinks = createElement("div", "record-links");
+  const repositoryLinks = createElement("div", "record-links");
   for (const [label, recordPath] of [
     ["Demo registry", "catalog/metadata/demos.yaml"],
     ["Review registry", "catalog/metadata/demo-reviews.yaml"],
@@ -326,14 +688,25 @@ function renderDemoDetail(demo) {
     ["Disposition plan", demo.development_plan],
   ]) {
     if (isKnown(recordPath)) {
-      sourceLinks.append(createLink(label, githubRecordLink(recordPath)));
+      repositoryLinks.append(createLink(label, githubRecordLink(recordPath)));
     }
   }
+  governancePanel.append(repositoryLinks);
 
-  const factsPanel = createElement("section", "panel detail-section");
-  factsPanel.append(createElement("p", "eyebrow", "Canonical demo record"));
-  factsPanel.append(facts);
+  const advanced = createElement("details", "panel advanced-metadata");
+  advanced.append(createElement("summary", "", "Section 8 - Advanced Metadata"));
+  advanced.append(detailGrid([
+    ["Submitted", demo.submitted_at],
+    ["Submission type", demo.submission_type],
+    ["Preserved audio location", demo.audio_downloaded === true ? demo.audio_location : "UNKNOWN"],
+    ["Checksum", demo.audio_sha256],
+    ["Archive metadata", demo.archive_metadata],
+    ["Preservation metadata", demo.preservation_metadata],
+    ["Integrity metadata", demo.integrity_metadata],
+    ["Technical metadata", demo.technical_metadata],
+  ]));
 
+  const root = createElement("article", "detail-record");
   root.append(heading);
   if (state.governanceConflict) {
     root.append(createElement(
@@ -343,17 +716,15 @@ function renderDemoDetail(demo) {
     ));
   }
   root.append(
-    factsPanel,
-    reviewSection,
+    sourcePanel,
+    creativePanel,
+    intentPanel,
+    constraintsPanel,
+    labelsPanel,
+    readinessPanel,
+    governancePanel,
+    advanced,
   );
-  const gateNote = createElement(
-    "p",
-    "gate-note",
-    state.classificationEligible
-      ? "The founder-review prerequisite is met. Classification and seed still require separate evidence and a documented decision."
-      : "Classification and seed stay UNKNOWN until a qualifying, documented founder review is complete.",
-  );
-  root.append(gateNote, sourceLinks);
   return root;
 }
 
