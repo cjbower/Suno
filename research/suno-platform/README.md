@@ -5,6 +5,7 @@
 ## Primary Reference
 
 - [Suno Research Reference](suno-research-reference.md) — the primary consolidated internal Suno research reference.
+- [Suno Object Model Discovery](suno-object-model-discovery.md) — connector field inventory, workspace/playlist schemas, capability evidence, and unknowns.
 
 **Authority Level:** Primary consolidated internal research reference<br>
 **Source Type:** Mixed first-party research, external research, direct project observations, recommendations, and unknowns<br>

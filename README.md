@@ -62,6 +62,7 @@ Suno Studio is a **label-based creative operation** with:
 ### Research References
 
 - [Suno Research Reference](research/suno-platform/suno-research-reference.md) – Primary consolidated, mixed-evidence Suno reference; preserve classifications and revalidate time-sensitive claims
+- [Suno Object Model Discovery](research/suno-platform/suno-object-model-discovery.md) – Connector-exposed song, workspace, playlist metadata and capability evidence
 - [AI Artist Strategy and Governance](research/ai-artists/ai-artist-strategy-and-governance.md) – Research synthesis and recommendations, not approved policy
 - [Spotify for Artists Access and Roster Operations](research/distribution/platforms/spotify-for-artists-access-and-roster-operations.md) – Operational research reference; current Spotify documentation remains authoritative
 

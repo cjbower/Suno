@@ -40,5 +40,6 @@ Research materials are informational and support decision-making by human editor
 - [Artist Roster](../artist-roster/) – Potential naming subjects
 - [Naming Strategy Report](naming/reports/name-selection-strategy.md) – Synthesis and principles
 - [Suno Platform Research](suno-platform/README.md) – Primary consolidated Suno research reference
+- [Suno Object Model Discovery](suno-platform/suno-object-model-discovery.md) – Connector-exposed song, workspace, and playlist metadata and capabilities
 - [AI Artist Research](ai-artists/README.md) – Strategy and governance research reference
 - [Distribution Research](distribution/README.md) – Platform operations research

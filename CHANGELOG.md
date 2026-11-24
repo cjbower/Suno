@@ -41,6 +41,12 @@ All notable changes to Suno Studio repository are documented in this file.
 - Recorded a hold disposition pending original audio, provenance, and founder listening review; no development, artist assignment, audience research, or release was authorized.
 - Additional demos and local audio files remain pending; Phase 3.0 inventory is incomplete.
 
+### Suno Object Model Discovery (2026-11-24)
+
+- Added a read-only inventory of song, workspace, and playlist fields exposed through the Suno MCP connector.
+- Documented tested capabilities, tool-advertised behavior, and unverified operations while preserving uncertainty about Replace and project relationships.
+- No Suno songs, workspaces, playlists, projects, or visibility settings were changed during this discovery.
+
 ## [2.0.0] – 2026-11-18
 
 ### Added (Phase 2A – Repository Scaffolding)
