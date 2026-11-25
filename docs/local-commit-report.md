@@ -179,6 +179,80 @@ Branch `main` is clean and ahead of `origin/main` by four local commits. No remo
 
 No commits were pushed. Human review and explicit authorization are required before any push.
 
+## Naming Restoration and Preservation-Policy Correction
+
+The founder rejected the destructive naming-research cleanup in `ed67eba0a97a3d65d056ceac643b5d7319d1a62f` (`docs: correct naming research evidence and methodology`) and directed exact restoration of the naming tree to its pre-cleanup state, followed by preservation-first governance. The cleanup's historical commit remains in Git history.
+
+### Naming Corpus Restoration
+
+- **SHA:** `8ff8afafa4c2a2d36264c07a9e6499098da017ef`
+- **Parent:** `e2200f5fc32d1e64a92b8e5f67f5501c60becc1d`
+- **Subject:** `revert: restore human-centered naming research corpus`
+- **Scope:** Exactly 24 paths, all under `research/naming/`; 2,686 insertions and 284 deletions.
+- **Exact restoration check:** `git diff ed67eba0a97a3d65d056ceac643b5d7319d1a62f^ -- research/naming/` returned no differences after the revert and after the restoration commit.
+- **Result:** The current naming tree matches the state immediately before the cleanup. No naming content was edited during restoration.
+- **Voice, strategy, and continuity:** Later voice-governance, adaptive-media, distribution, continuity, and audit commits were not reverted.
+- **Restored paths:**
+  - `research/naming/README.md`
+  - `research/naming/first-names/1970s-female.md`
+  - `research/naming/first-names/1970s-male.md`
+  - `research/naming/first-names/1980s-female.md`
+  - `research/naming/first-names/1980s-male.md`
+  - `research/naming/first-names/1990s-female.md`
+  - `research/naming/first-names/1990s-male.md`
+  - `research/naming/first-names/2000s-female.md`
+  - `research/naming/first-names/2000s-male.md`
+  - `research/naming/first-names/2010s-female.md`
+  - `research/naming/first-names/2010s-male.md`
+  - `research/naming/first-names/2020s-female.md`
+  - `research/naming/first-names/2020s-male.md`
+  - `research/naming/first-names/README.md`
+  - `research/naming/industry-collision-analysis/README.md`
+  - `research/naming/industry-collision-analysis/current-artist-review.md`
+  - `research/naming/industry-collision-analysis/current-band-review.md`
+  - `research/naming/reports/README.md`
+  - `research/naming/reports/name-research-validation-report.md`
+  - `research/naming/reports/name-selection-strategy.md`
+  - `research/naming/reports/name-trends-analysis.md`
+  - `research/naming/reports/official-name-data-source-review.md` (removed to match the pre-cleanup tree)
+  - `research/naming/surnames/README.md`
+  - `research/naming/surnames/top-50-us-surnames.md`
+
+### Downstream Reference Repair
+
+- **SHA:** `ca87bcfb1703847aab1535ac6792b932f964a35c`
+- **Parent:** `8ff8afafa4c2a2d36264c07a9e6499098da017ef`
+- **Subject:** `docs: repair source review links after naming restoration`
+- **Scope:** `README.md`, `docs/durable-handoff.md`, and `docs/strategic-direction-voice-and-adaptive-media-validation-report.md`; three insertions and three deletions.
+- **Reason:** The exact restoration removes the newly added `research/naming/reports/official-name-data-source-review.md`. The active references now point to the source evaluation in the validation report or summarize its findings there. The earlier commit audit's path record remains unchanged as historical evidence.
+- **Validation:** No active Markdown link targets the removed report; its access findings and limitations remain summarized in the validation report and handoff.
+
+### Preservation-Policy Governance
+
+- **SHA:** `c1cb30e9b096dcaafbd0c33d4256845b7f699efe`
+- **Parent:** `ca87bcfb1703847aab1535ac6792b932f964a35c`
+- **Subject:** `docs: require human approval for destructive knowledge changes`
+- **Scope:** Four paths; 184 insertions and one deletion.
+- **Policy:** [Human-Centered Knowledge Preservation Policy](human-centered-knowledge-preservation-policy.md)
+- **Authoritative agent guidance and durable handoff:** [docs/durable-handoff.md](durable-handoff.md), which has no competing repository agent/contributor instruction file.
+- **Decision:** DEC-3-02 in [docs/decision-log.md](decision-log.md).
+- **Discoverability:** The policy is linked from the [README key documents](../README.md#key-documents).
+- **Requirements recorded:** Preservation-first handling, evidence labels, minimum destructive-change review triggers, an explicit founder review packet, non-destructive alternatives, emergency exceptions, and audit requirements. Code, security, rights, privacy, financial, and production records retain their applicable precision standards.
+
+### Limitations and Push Status
+
+- The naming corpus is restored exactly, not revalidated; its historical claims and working material remain as they were before the cleanup.
+- The dedicated source-review report is no longer in the current naming tree. Its detailed content remains available in Git history; access results and key limitations remain summarized in the validation report and handoff.
+- The restoration and policy work is documentation-only. No production capability was activated.
+- No commit was pushed.
+
+### Corrective Audit Commit
+
+- **SHA:** Reported in the final post-commit summary; intentionally not embedded in this file's own commit.
+- **Subject:** `docs: record naming restoration and preservation-policy audit`
+- **Scope:** `docs/local-commit-report.md` only.
+- **Validation:** Recorded in the final post-commit summary.
+
 ## Phase 2B.6 Local Commit Workflow
 
 This section records the naming-evidence, voice-governance, adaptive-media, and distribution-strategy documentation commits. It supersedes the earlier repository-status observations for this workflow; earlier phase records remain unchanged.
