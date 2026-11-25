@@ -13,6 +13,7 @@
 - **band-development-template.md** – Framework for developing and documenting ensemble identities
 - **producer-project-template.md** – Framework for projects organized around production identity
 - **voice-architecture.md** – Framework for voice identity, governance, and lifecycle
+- [Real-Person Voice Consent and Rights Governance](../docs/real-voice-consent-and-rights-governance.md) – Future-use authorization and review gates; no voice assignments are created
 - **genre-portfolio.md** – Complete catalog of supported genres and guidance on genre selection
 
 ---

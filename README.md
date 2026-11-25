@@ -50,6 +50,8 @@ Suno Studio is a **label-based creative operation** with:
 - [Manifesto Delta Report](docs/manifesto-delta-report.md) – Changes from original manifesto to V2
 - [Decision Log](docs/decision-log.md) – Recorded architectural and creative decisions
 - [AI Music Platform Thesis](foundations/ai-music-platform-thesis-and-strategic-vision.md) – Foundational intent for a durable music-production and release platform
+- [Adaptive Media Strategy and Governance](research/ai-artists/adaptive-media-strategy-and-governance.md) – Approved source-centered direction; companion formats and capabilities remain unactivated
+- [Real-Person Voice Consent and Rights Governance](docs/real-voice-consent-and-rights-governance.md) – Explicit authorization and review gates; no voice assignments are created
 
 ### Creative Framework
 
@@ -71,6 +73,8 @@ Suno Studio is a **label-based creative operation** with:
 - [Voice Experiment Metadata](catalog/metadata/voice-experiments.yaml) – Structured experiment and human-listening evidence source
 - [Suno Voice Influence Experiment](research/suno-platform/experiments/voice-influence-test-2026-11-24.md) – Four approved voice-ID control/treatment clips and Christopher's recorded observation
 - [AI Artist Strategy and Governance](research/ai-artists/ai-artist-strategy-and-governance.md) – Research synthesis and recommendations, not approved policy
+- [Official Baby-Name Data Source Review](research/naming/reports/official-name-data-source-review.md) – Evaluation of SSA, California CDPH, Washington DOH, and CDC/NCHS sources
+- [Name Trends Analysis](research/naming/reports/name-trends-analysis.md) – Evidence-limited naming research; no demographic or cultural conclusions
 - [Spotify for Artists Access and Roster Operations](research/distribution/platforms/spotify-for-artists-access-and-roster-operations.md) – Operational research reference; current Spotify documentation remains authoritative
 
 ### Operational Guidance
@@ -237,6 +241,6 @@ Retired, superseded, and rejected materials are preserved in [archive/](archive/
 
 ---
 
-**Last Updated:** 2026-11-21
+**Last Updated:** 2026-11-25
 
 **Canonical Repository:** This document is authoritative for Suno Studio structure and governance.

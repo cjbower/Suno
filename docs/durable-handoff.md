@@ -254,6 +254,22 @@ No action recommendations were added to the roadmap because none was explicitly 
 
 Revalidate platform and legal claims before operational use. Preserve each reference's evidence classifications and source register; do not treat research recommendations as policy or legal advice.
 
+### Phase 2B.6: Adaptive Media, Voice Consent, and Naming Evidence
+
+Approved direction is recorded in [DEC-2B6-01](decision-log.md): music remains central, while source material may support intentionally selected companion media when editorially justified. [DEC-2B6-02](decision-log.md) requires explicit, scope-specific authorization and separate rights review before identifiable real-person voice use. The [Adaptive Media Strategy](../research/ai-artists/adaptive-media-strategy-and-governance.md) and [Real-Person Voice Consent Governance](real-voice-consent-and-rights-governance.md) define boundaries, not activated capabilities.
+
+The roadmap distinguishes approved direction from unscheduled research candidates and unapproved products or operations. No production, media product, release, account, audience-data collection, voice assignment, contract, or external commitment was created.
+
+Naming research was corrected because its earlier validation and reports made unsupported claims about generational significance, audience familiarity, cultural fit, and collision risk. Existing artist and band names remain unchanged. Current artist/band collision assessments are withdrawn pending dated direct searches; the first-name lists are retained as unverified static material, and the 2020s files cover 2020-2024 only.
+
+The [Official Baby-Name Data Source Review](../research/naming/reports/official-name-data-source-review.md) keeps SSA as the intended primary source, evaluates California CDPH and Washington DOH as bounded state supplements, and records that SSA returned HTTP 403 and the California portal HTTP 502 on 2026-11-25. The California data dictionary was accessible. No name data was refreshed or downloaded.
+
+Voice-ID-001 remains partially validated experiment evidence, not proof of production readiness, consistent identity, or consent for an artist assignment. `catalog/metadata/voices.yaml` remains unchanged and contains placeholders.
+
+Branded and direct distribution strategy is approved under [DEC-2B6-03](decision-log.md). The branded-distribution workstream is high priority with a 3-9-month founder planning target; direct distributor/aggregator capability has a 12-18-month preferred target and a less-than-24-month outer target. The roadmap separates internal readiness, a possible gated private pilot, commercial availability, and direct DSP acceptance. No provider is selected, no distribution service is operational, no direct agreement or legal/financial readiness is claimed, no client funds are handled, and no release was delivered during this documentation phase.
+
+See [Strategic Direction, Voice, and Adaptive Media Validation Report](strategic-direction-voice-and-adaptive-media-validation-report.md) for the phase evidence and limitations.
+
 ### Phase 3.0: Legacy Demo Intake — Initial Record
 
 The user supplied one public Suno demo link, recorded as [DEMO-2026-0001](../catalog/demos/internal/intake/DEMO-2026-0001/demo-profile.md). Suno displays the title “Carillon” and creator attribution “Christopher Bower”; the canonical Suno ID and public lyrics are recorded as source evidence. No local original audio, checksum, prompt, source-material identification, model version, or rights review is available. The AI intake screen uses N/R for audio-dependent criteria; founder listening review remains pending. Per DEC-3-01, classification and seed designation remain `UNKNOWN` until completed founder review provides supporting evidence.
@@ -583,19 +599,22 @@ For repository changes:
 Vision and mission                 Complete
 Governance and constitution        Complete
 Repository architecture            Complete
-Naming research corpus             Complete, evidence review pending
+Naming research corpus             Existing static lists retained; ranking and collision evidence unverified; source refresh pending
 Foundations refactor               Complete
 Initial baseline commit            Complete
 Roster entity normalization        Complete, repository-verified
 Known artist-name remediation      Complete, repository-verified; replacement research pending
-Voice architecture foundation      Complete, repository-verified; human review pending
+Voice architecture and consent     Governance documented; no voice assignments; human review pending
+Adaptive media direction           Approved as planning direction; no capabilities activated
 Demo Intake and Audience Research  Documentation and schema examples complete; no records or operations activated
 Local commit workflow              Complete locally; human review required
 Artist identity population         Not started
 Voice profile population           Not started
 Source registry population         Not started
 Catalog content development        Not started
-Distribution research              Spotify operational reference integrated; broader distributor, audience, and podcast research remains incomplete
+Distribution strategy              Approved; provider due diligence and branded-service readiness not started; direct DSP acceptance remains external
+Distribution planning targets      Branded 3-9 months; direct capability preferred 12-18 months, outer target less than 24 months
+Audience and podcast research      Broader research remains incomplete
 Podcast platform selection         Not started
 Publishing and release operations  Not started
 ```

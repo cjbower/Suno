@@ -6,6 +6,14 @@ All notable changes to Suno Studio repository are documented in this file.
 
 ## [Unreleased] – 2026-11-20
 
+### Strategic Direction, Voice Consent, and Naming Evidence (2026-11-25)
+
+- Recorded the approved source-centered adaptive-media direction and distinguished it from unapproved formats, products, and production capabilities.
+- Added the approved branded-to-direct distribution progression and planning targets; no provider, service launch, direct DSP agreement, or delivery is claimed.
+- Added explicit, scope-specific authorization and separate rights-review gates for future use of identifiable real-person voices; made no assignments or voice metadata changes.
+- Evaluated official baby-name sources, documented SSA and portal access limitations, and revised naming guidance to remove unsupported demographic, generational, cultural, and collision claims.
+- Added a validation report; no names, production assets, accounts, audience records, or releases were created or changed.
+
 ### Phase 2B.0 – Roster Normalization
 
 - Separated solo artists, bands, and producer projects into distinct roster locations.
