@@ -11,6 +11,7 @@
 - **retired-artists/** – Artists no longer active in the studio
 - **superseded-prompts/** – Prompts or workflows that have been replaced
 - **rejected-concepts/** – Ideas or concepts that were not pursued
+- **source-ingest/** – Original source documents retained for provenance and recovery
 
 ---
 
@@ -25,3 +26,4 @@ Materials are archived to preserve historical context and decision rationale, no
 - Main README: `../README.md`
 - Active rosters: `../artist-roster/`
 - Active catalog: `../catalog/`
+- [2026-11-24 source ingest archive](./source-ingest/2026-11-24/README.md)
