@@ -12,6 +12,8 @@
 - **release-calendar.md** – Planned releases and timeline
 - **workflow-notes.md** – Current workflow processes and documentation
 - **automation-opportunities.md** – Potential automation and workflow improvements
+- **suno-workspace-assignment-queue-2026-11-24.md** – Full Suno inventory, approved workspace assignments, reconciliation, and remaining ambiguities
+- **suno-song-workspace-inventory-2026-11-24.csv** – Per-record Suno metadata and verified workspace assignments for the 438-record snapshot
 - **demo-intake/** – Demo intake, triage, A&R review, disposition, and approved development handoff
 - **audience-research/** – Research stages, survey design, privacy, analysis, and report templates
 

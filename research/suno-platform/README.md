@@ -8,6 +8,7 @@
 - [Suno Object Model Discovery](suno-object-model-discovery.md) — connector field inventory, workspace/playlist schemas, capability evidence, and unknowns.
 - [EXP-Voice-ID-Validation Registry](experiments/voice-id-validation-registry.md) — Voice-ID-001 evidence, structured human observation, and experiment backlog.
 - [Voice Influence Experiment](experiments/voice-influence-test-2026-11-24.md) — four approved control/treatment clips, verified metadata, and Christopher's recorded observation.
+- [Full Suno Workspace Inventory](../../operations/suno-workspace-assignment-queue-2026-11-24.md) — approved workspace cleanup, current counts, and unresolved classifications.
 
 **Authority Level:** Primary consolidated internal research reference<br>
 **Source Type:** Mixed first-party research, external research, direct project observations, recommendations, and unknowns<br>

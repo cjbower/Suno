@@ -74,6 +74,8 @@ Suno Studio is a **label-based creative operation** with:
 - [Roadmap](operations/roadmap.md) – Long-term strategic vision
 - [Release Calendar](operations/release-calendar.md) – Planned releases and timeline
 - [Automation Opportunities](operations/automation-opportunities.md) – Future workflow improvements
+- [Suno Workspace Inventory and Assignment Record](operations/suno-workspace-assignment-queue-2026-11-24.md) – Full inventory, workspace counts, approved assignments, and ambiguous classifications
+- [Suno Song Workspace Inventory CSV](operations/suno-song-workspace-inventory-2026-11-24.csv) – Row-level metadata and derived workspace memberships for 438 library records
 - [Demo Intake and A&R](operations/demo-intake/README.md) – Governed intake, evaluation, and development handoff
 - [Temporary Founder Review Workbench](portal/README.md) – Local demo review and Voice-ID-001 repository-writeback alpha
 - [Workbench Architecture and Workflow Analysis](docs/architecture/founder-review-workbench.md) – Demo and experiment review boundaries plus future workflow placeholders

@@ -41,11 +41,24 @@ All notable changes to Suno Studio repository are documented in this file.
 - Recorded a hold disposition pending original audio, provenance, and founder listening review; no development, artist assignment, audience research, or release was authorized.
 - Additional demos and local audio files remain pending; Phase 3.0 inventory is incomplete.
 
+### Suno Workspace Assignment Queue (2026-11-24)
+
+- Classified the 33 previously unassigned objects into two Songs, 30 excluded Replace artifacts, and one excluded Untitled Project.
+- Confirmed workspace creation is supported, created Kio, and assigned both Songs; verified the workspace metadata and membership.
+- Left all Replace artifacts and the Untitled Project untouched and unassigned.
+
 ### Suno Object Model Discovery (2026-11-24)
 
 - Added a read-only inventory of song, workspace, and playlist fields exposed through the Suno MCP connector.
 - Documented tested capabilities, tool-advertised behavior, and unverified operations while preserving uncertainty about Replace and project relationships.
 - No Suno songs, workspaces, playlists, projects, or visibility settings were changed during this discovery.
+
+### Suno Workspace Organization and Voice Influence Experiment (2026-11-24)
+
+- Reconciled 438 Suno library records against workspace-filtered listings and preserved the per-song metadata snapshot.
+- With user approval, created Nebraska and EXP-Voice-ID-Validation, moved 238 Nebraska-themed clips from N-Learning, and assigned four previously unfiled voice-test clips; verified every requested ID, reconciled final workspace counts, and confirmed a post-move global listing still contained all 438 inventoried IDs.
+- Left 19 topic-ambiguous records in their existing workspaces and kept Replace-, Untitled Project-, and edit-labeled records outside reassignment.
+
 
 ### Voice-ID-Validation Experiment Registry (2026-11-24)
 
