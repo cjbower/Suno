@@ -223,6 +223,34 @@ The following decisions were established in Manifesto V2 and serve as foundation
 
 **Related Decisions:** Source Material Principle; Identity Persistence; Catalog-First Architecture.
 
+### Phase 3.0 – Human-Centered Knowledge Preservation
+
+**ID:** DEC-3-02
+
+**Title:** Require preservation-first governance and founder approval for destructive changes to human-centered knowledge
+
+**Date:** 2026-11-25
+
+**Category:** Governance | Operational
+
+**Status:** Approved
+
+**Decision:** Strategic, creative, historical, interpretive, research, policy, and other human-oriented repository content must not be substantively removed, replaced, deprecated, or consolidated in a meaning-changing way without explicit founder approval. Uncertainty should be labeled and contextualized rather than treated as permission to erase useful knowledge.
+
+**Rationale:** Lost knowledge is difficult to identify or reconstruct after removal. The repository supports human learning, creativity, strategic continuity, and future judgment in addition to machine execution. Code-level precision and validation standards must not be applied indiscriminately to human-centered documentation.
+
+**Source:** Founder-approved direction recorded in the [Human-Centered Knowledge Preservation Policy](human-centered-knowledge-preservation-policy.md).
+
+**Authority:** Christopher Bower
+
+**Confidence:** High
+
+**Impact:** Establishes preservation-first handling and an explicit human-review gate for destructive changes to covered documentation; it does not lower technical standards for executable or machine-enforced material.
+
+**Conditions:** Technical, security, legal, privacy, financial, and machine-enforced records continue to require appropriate precision. This rule does not protect secrets, malware, improperly stored private data, or immediately dangerous material. Destructive changes require a review packet and explicit approval. Preservation does not convert an interpretation into verified fact.
+
+**Related Decisions:** DEC-3-01; DEC-2B4-01.
+
 ---
 
 ## Cross-References

@@ -69,7 +69,13 @@ Human intent and architecture
 
 Manual edits are allowed, but should be disclosed before the next agent phase so that observed repository state and conversational state remain synchronized.
 
-The repository is Git-managed.  Managed deletion, relocation, consolidation, and refactoring are allowed when deliberate, validated, documented, and recoverable.  Prefer one authoritative source of truth over indefinite duplicate structures.
+The repository is Git-managed. For executable artifacts and other non-human-centered material, managed deletion, relocation, consolidation, and refactoring remain permissible when deliberate, validated, documented, and recoverable. For human-centered documentation, the preservation-first approval gate below governs; recoverability alone is not approval.
+
+## Preservation-First Documentation Governance
+
+Human-centered documents require preservation-first treatment. Destructive or meaning-altering changes require explicit founder approval; broad cleanup requests do not authorize deletion. Failed validation or inaccessible sources require qualification and context, not automatic removal. When uncertain, preserve the material and ask.
+
+The authoritative rules, review thresholds, required approval packet, alternatives, emergency exceptions, and audit requirements are in the [Human-Centered Knowledge Preservation Policy](human-centered-knowledge-preservation-policy.md). Future Luna and Copilot agents must follow that policy before changing human-centered documentation.
 
 ## Repository Architecture
 

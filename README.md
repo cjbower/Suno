@@ -49,6 +49,7 @@ Suno Studio is a **label-based creative operation** with:
 - [AI_Music_Project_Manifesto_and_Notes_v2.md](foundations/AI_Music_Project_Manifesto_and_Notes_v2.md) – Complete editorial vision, artist roster strategy, genre portfolio, voice management, and long-term mission
 - [Manifesto Delta Report](docs/manifesto-delta-report.md) – Changes from original manifesto to V2
 - [Decision Log](docs/decision-log.md) – Recorded architectural and creative decisions
+- [Human-Centered Knowledge Preservation Policy](docs/human-centered-knowledge-preservation-policy.md) – Preservation-first governance and founder approval requirements for destructive documentation changes
 - [AI Music Platform Thesis](foundations/ai-music-platform-thesis-and-strategic-vision.md) – Foundational intent for a durable music-production and release platform
 - [Adaptive Media Strategy and Governance](research/ai-artists/adaptive-media-strategy-and-governance.md) – Approved source-centered direction; companion formats and capabilities remain unactivated
 - [Real-Person Voice Consent and Rights Governance](docs/real-voice-consent-and-rights-governance.md) – Explicit authorization and review gates; no voice assignments are created
