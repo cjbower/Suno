@@ -95,6 +95,32 @@ The following decisions were established in Manifesto V2 and serve as foundation
 
 **Related Decisions:** Catalog-First Architecture; Phase 2B.4 Demo and Audience Research Boundaries.
 
+### Phase 2B.6 - Real-Person Voice Consent
+
+**ID:** DEC-2B6-02
+
+**Title:** Require explicit, scoped authorization and separate rights review before real-person voice use
+
+**Date:** 2026-11-25
+
+**Category:** Governance | Creative
+
+**Status:** Approved
+
+**Decision:** Consented real-person voice use is an approved future quality-control direction for assessing consistency, reproducibility, and drift. Do not capture, analyze for replication, model, assign, generate with, edit into a work, or distribute an identifiable real person's voice without documented, informed, scope-specific authorization and separate rights review. Authorization for one person, model, artist, work, platform, or medium does not imply authorization for another. This is not an operational production workflow and does not establish a voice assignment or automated approval.
+
+**Rationale:** Technical access or public availability does not establish a person's consent or clear rights. Voice identity, source recording rights, and the intended use must be reviewed separately.
+
+**Source:** Approved governance direction supplied for the 2026-11-25 documentation phase; see [Real-Person Voice Consent and Rights Governance](real-voice-consent-and-rights-governance.md).
+
+**Authority:** Christopher Bower
+
+**Confidence:** High
+
+**Impact:** Establishes a governance gate for future work only. It creates no voice assignment, contract, production use, or legal determination.
+
+**Related Decisions:** Identity Persistence; DEC-2B4-01.
+
 ### Phase 3.0 – Classification Requires Founder Review
 
 **ID:** DEC-3-01

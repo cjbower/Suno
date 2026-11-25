@@ -8,6 +8,16 @@
 
 A voice identity is a managed vocal implementation with its own stable identifier and lifecycle. It is distinct from an artist identity: an artist may persist while the technologies or implementations used for the artist's voice change.
 
+## Identity and Performance Layers
+
+- **Artist identity:** The durable creative identity and catalog attribution.
+- **Voice identity/version:** The governed vocal identity and a preserved version of its approved baseline.
+- **Voice assignment:** An explicit, scoped relationship between an artist and a voice identity/version; it is not inferred from a registry key or experiment.
+- **Implementation and model:** The provider, model/version, configuration, and technical means used to realize a voice version.
+- **Song performance:** A work-specific performance/output whose choices and variation do not by themselves create a new artist identity or voice assignment.
+
+Keep these layers separately attributable so a model or performance change cannot silently rewrite artist identity or historical catalog lineage.
+
 ## Voice Profile
 
 A voice profile is the governed record for a voice identity and a specific version. It should distinguish enduring vocal characteristics from implementation-specific technical details, record provenance and review status, and provide enough configuration context to support reproducibility. A profile is not an artist biography or an artist identity record.
@@ -35,3 +45,7 @@ A replacement must be explicitly reviewed and documented, with a durable relatio
 ## Voice-to-Artist Relationships
 
 Artist and voice identifiers are separate. A relationship between them should be explicit, reviewable, and time-bounded when applicable. The architecture must support an artist continuing across voice versions or replacements without changing the artist's identity. Relationship cardinality and any sharing between artists require governance and must not be inferred from names or metadata keys.
+
+## Real-Person Voice Use
+
+Consented real-person voice use is an approved future quality-control direction for evaluating identity consistency and drift, not an operational production workflow. Any identifiable real-person voice requires documented, scope-specific authorization and separate rights review before capture, modeling, assignment, generation, or distribution. Consent for one model, artist, work, platform, or medium does not automatically authorize another. See [Real-Person Voice Consent and Rights Governance](../docs/real-voice-consent-and-rights-governance.md). This requirement does not create or approve an assignment.
