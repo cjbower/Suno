@@ -3,8 +3,8 @@
 **Purpose:** Durable repository source for Suno research, prompting experiments, model-history findings, company context, competitive analysis, and AI-artist implications<br>
 **Status:** Research reference<br>
 **Author:** Christopher Bower<br>
-**Version:** 1.1.0<br>
-**Research cutoff:** November 20, 2026<br>
+**Version:** 1.2.0<br>
+**Research cutoff:** November 24, 2026<br>
 **Scope:** Suno company and model history, direct observations, prompting research, competitive context, legal developments, and AI-artist implications.
 **Authority Level:** Primary consolidated internal Suno research reference
 **Source Type:** Mixed first-party research, external research, direct project observations, recommendations, and unknowns
@@ -16,6 +16,7 @@
 
 | Date | Version | Changes |
 |---|---:|---|
+| 2026-11-24 | 1.2.0 | Added the dedicated prompt-behavior synthesis and linked the dated classification investigation. |
 | 2026-11-20 | 1.1.0 | Added a detailed litigation, licensing, and operational-risk section; expanded the source register. |
 | 2026-11-20 | 1.0.0 | Initial consolidated reference derived from direct Suno experiments and external research. |
 
@@ -160,6 +161,8 @@ A matching version number does not demonstrate common ancestry.  “V6” is a p
 ---
 
 ## 6. Direct Prompting Experiments
+
+Prompt-field and generation-behavior findings are summarized in the dedicated [Prompt Behavior Research](./prompt-behavior.md). The dated [classification investigation](./experiments/suno-classification-investigation-2026-11-22.md) preserves its exploratory observations, hypotheses, and proposed experiments. The investigation is not evidence of Suno's internal architecture or a deterministic prompt specification.
 
 ### 6.1 Experiment objective
 

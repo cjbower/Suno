@@ -41,6 +41,10 @@ Research materials are informational and support decision-making by human editor
 - [Naming Strategy Report](naming/reports/name-selection-strategy.md) – Synthesis and principles
 - [Suno Platform Research](suno-platform/README.md) – Primary consolidated Suno research reference
 - [Suno Object Model Discovery](suno-platform/suno-object-model-discovery.md) – Connector-exposed song, workspace, and playlist metadata and capabilities
+- [Suno MCP Capability Matrix](suno-platform/suno-mcp-capability-matrix.md) – Complete point-in-time inventory of connector operations, parameters, status, and unknown capabilities
+- [Suno Prompt Behavior Research](suno-platform/prompt-behavior.md) – Evidence-aware synthesis of prompting observations and experiments
+- [Suno Song and Workspace Metadata Discovery](suno-platform/experiments/suno-song-metadata-discovery-2026-11-24.md) – Read-only Suno song field snapshot and workspace/Replace findings
+- [Suno Experiment Index](suno-platform/experiments/README.md) – Index of dated Suno experiments and registries
 - [EXP-Voice-ID-Validation Registry](suno-platform/experiments/voice-id-validation-registry.md) – Voice-ID-001 evidence, recorded human observation, structured answers, and backlog
 - [Suno Voice Influence Experiment](suno-platform/experiments/voice-influence-test-2026-11-24.md) – Four-link control/treatment record with metadata and Christopher's observation
 - [Voice Experiment Review Workflow](../docs/architecture/founder-review-workbench.md) – Voice-ID-001 repository-writeback alpha and accepted evaluation persistence principles

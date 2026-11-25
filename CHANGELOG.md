@@ -41,6 +41,17 @@ All notable changes to Suno Studio repository are documented in this file.
 - Recorded a hold disposition pending original audio, provenance, and founder listening review; no development, artist assignment, audience research, or release was authorized.
 - Additional demos and local audio files remain pending; Phase 3.0 inventory is incomplete.
 
+### Research Knowledge Consolidation (2026-11-24)
+
+- Added an evidence-aware prompt-behavior synthesis and preserved the dated Suno classification investigation as an exploratory experiment record.
+- Linked Suno and AI-artist research indexes to their relevant references and existing reusable artifacts.
+- Kept platform, artist-governance, and prompting recommendations distinct from approved decisions or operational standards.
+
+### Suno Song Metadata Discovery (2026-11-24)
+
+- Recorded read-only metadata snapshots for two unfiled `Showtime in the City` clips, one `Replace` clip, and one untitled clip.
+- Documented exposed workspace and visibility operations, absent lineage fields, and evidence limits without changing catalog schemas or Suno records.
+
 ### Suno Workspace Assignment Queue (2026-11-24)
 
 - Classified the 33 previously unassigned objects into two Songs, 30 excluded Replace artifacts, and one excluded Untitled Project.
@@ -52,6 +63,25 @@ All notable changes to Suno Studio repository are documented in this file.
 - Added a read-only inventory of song, workspace, and playlist fields exposed through the Suno MCP connector.
 - Documented tested capabilities, tool-advertised behavior, and unverified operations while preserving uncertainty about Replace and project relationships.
 - No Suno songs, workspaces, playlists, projects, or visibility settings were changed during this discovery.
+
+### Suno Voice, Character, and Speech Capability Discovery (2026-11-24)
+
+- Expanded the Suno MCP capability matrix with descriptor-level schemas and evidence-classified findings for speech, voice, and character operations.
+- Recorded limits and unknowns for multiple speakers, dialogue, narration, voice consistency, object IDs, and lifecycle behavior.
+- Compared voice-related parameter names across audio creation, editing, extension, and cover descriptors; only `voice_id` was advertised from the requested identifier set.
+- Added a read-only comparison of both Kio `Showtime in the City` records; neither exposes voice identity or a generation-parameters object.
+- Inspected one read-only `voices-list` result and documented its observed voice-entry fields, ownership/public indicators, and recording provenance; account-specific identifiers and labels are redacted.
+- Compared advertised music and speech voice selectors, recording/preset voice evidence, and unresolved artist-identity, cloning, model-equivalence, and persistence questions.
+- Expanded the capability matrix with typed parameter schemas for audio creation, covers, extensions, and the descriptor-described return-shape limitations.
+- Rechecked `voices-list` for both `own` and `loved`: one own voice was returned, the loved collection was empty, and no pagination cursor was present; ID format is UUID-shaped, while source/ownership variability remains unknown.
+- Documented `audio-covers-create` claims about source eligibility, lyrics, optional `voice_id`, audio-influence behavior, title defaults, and the absence of melody/arrangement or in-place vocalist-replacement guarantees.
+- Compared voice-ID ownership, readiness, public-voice lookup, and source-field constraints across music and speech generation; public non-owned voice acceptance remains ambiguous in the descriptors.
+- Inspected the observed voice by ID and confirmed the same seven-field entry; documented the absence of detail/status/verification operations, readiness and training metadata, recording references, model associations, and clip-usage links.
+- Compared the 22 exact-title `Try, Try Again` search results with Kio, Nebraska, and ordinary-song samples; documented optional controls and prompt-level vocal wording without treating it as voice-ID provenance.
+- Queried four redacted voice-name variants in `own` and `loved`, then queried the observed ID under both collection settings; all name matches and ID results resolved to the same owned, private record, with no alternate/public result observed.
+- Documented the `voices-list` collection enum and name/ID query scope; `public`, `all`, source-value, and ownership-state searches were not advertised and were not attempted.
+- Tested first- and last-segment UUID fragments, partial name strings, and one near-typo against `own` and `loved`; name substrings matched only in `own`, UUID fragments and the near-typo returned no entries.
+- No speech or audio was generated, and no voices, characters, songs, playlists, or workspaces were created or modified.
 
 ### Suno Workspace Organization and Voice Influence Experiment (2026-11-24)
 

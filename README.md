@@ -63,6 +63,10 @@ Suno Studio is a **label-based creative operation** with:
 
 - [Suno Research Reference](research/suno-platform/suno-research-reference.md) – Primary consolidated, mixed-evidence Suno reference; preserve classifications and revalidate time-sensitive claims
 - [Suno Object Model Discovery](research/suno-platform/suno-object-model-discovery.md) – Connector-exposed song, workspace, playlist metadata and capability evidence
+- [Suno MCP Capability Matrix](research/suno-platform/suno-mcp-capability-matrix.md) – Point-in-time inventory of every advertised connector operation, parameters, evidence status, and unknowns
+- [Suno Prompt Behavior Research](research/suno-platform/prompt-behavior.md) – Prompt findings, evidence limits, and links to preserved experiments; not a deterministic prompt standard
+- [Suno Song and Workspace Metadata Discovery](research/suno-platform/experiments/suno-song-metadata-discovery-2026-11-24.md) – Read-only snapshot of Suno song metadata and workspace/Replace relationships
+- [Suno Experiment Index](research/suno-platform/experiments/README.md) – Index of Suno platform experiments and registries
 - [EXP-Voice-ID-Validation Registry](research/suno-platform/experiments/voice-id-validation-registry.md) – Voice-ID-001 experiment record, recorded human evidence, and planned follow-ups
 - [Voice Experiment Metadata](catalog/metadata/voice-experiments.yaml) – Structured experiment and human-listening evidence source
 - [Suno Voice Influence Experiment](research/suno-platform/experiments/voice-influence-test-2026-11-24.md) – Four approved voice-ID control/treatment clips and Christopher's recorded observation
