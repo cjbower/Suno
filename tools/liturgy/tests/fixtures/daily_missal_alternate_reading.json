@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-29",
+  "calendar": {"id": "us", "label": "United States"},
+  "ordinaryForm": {
+    "celebration": {
+      "id": "synthetic_sunday",
+      "name": "Synthetic Sunday",
+      "rank": "SUNDAY",
+      "colors": ["purple"],
+      "holyDayOfObligation": false
+    },
+    "optionalMemorials": [],
+    "season": "Advent",
+    "sundayCycle": "B",
+    "weekdayCycle": 1,
+    "psalterWeek": 1,
+    "readingsSource": "proper",
+    "readings": [
+      {"kind": "first", "label": "First Reading", "citation": "Synthetic 1:1", "alternatives": []},
+      {"kind": "psalm", "label": "Responsorial Psalm", "citation": "Psalm 80:2-3", "alternatives": []},
+      {"kind": "second", "label": "Second Reading", "citation": "Synthetic 2:1", "alternatives": []},
+      {
+        "kind": "gospel",
+        "label": "Gospel",
+        "citation": "Synthetic 3:1-5",
+        "alternatives": ["Synthetic 3:1-2"]
+      }
+    ],
+    "translation": "World English Bible (Catholic Edition)",
+    "officialReadings": "https://example.test/sunday-readings"
+  }
+}

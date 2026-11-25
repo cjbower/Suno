@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-25",
+  "calendar": {"id": "us", "label": "United States"},
+  "ordinaryForm": {
+    "celebration": {
+      "id": "synthetic_weekday",
+      "name": "Synthetic Wednesday",
+      "rank": "WEEKDAY",
+      "colors": ["green"],
+      "holyDayOfObligation": false
+    },
+    "optionalMemorials": [],
+    "season": "Ordinary Time",
+    "sundayCycle": "A",
+    "weekdayCycle": 2,
+    "psalterWeek": 2,
+    "readingsSource": "proper",
+    "readings": [
+      {
+        "kind": "first",
+        "label": "First Reading",
+        "citation": "Synthetic 1:1",
+        "alternatives": [],
+        "text": "Synthetic non-Psalm text must not be copied."
+      },
+      {
+        "kind": "psalm",
+        "label": "Responsorial Psalm",
+        "citation": "Psalm 98:1, 2-3ab, 7-8, 9",
+        "alternatives": [],
+        "universalLectionary": false,
+        "text": {
+          "verses": [
+            {"verse": "1", "text": "A wholly synthetic public-domain test line."}
+          ]
+        }
+      },
+      {
+        "kind": "gospel",
+        "label": "Gospel",
+        "citation": "Synthetic 2:1",
+        "alternatives": [],
+        "text": "Synthetic Gospel text must not be copied."
+      }
+    ],
+    "translation": "World English Bible (Catholic Edition)",
+    "officialReadings": "https://example.test/official-readings",
+    "newApiField": {"retained": true, "text": "must be filtered from metadata"}
+  },
+  "missal1962": {"source": "synthetic distinct calendar"}
+}

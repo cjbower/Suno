@@ -1,0 +1,17 @@
+{
+  "date": "2026-12-02",
+  "calendar": {"id": "us", "label": "United States"},
+  "ordinaryForm": {
+    "celebration": {"id": "synthetic_optional_day", "name": "Synthetic Weekday", "rank": "WEEKDAY", "colors": ["green"]},
+    "optionalMemorials": [
+      {"id": "synthetic_memorial", "name": "Synthetic Optional Memorial", "colors": ["white"]}
+    ],
+    "season": "Advent",
+    "readingsSource": "proper",
+    "readings": [
+      {"kind": "psalm", "label": "Responsorial Psalm", "citation": "Psalm 25:4-5", "alternatives": []}
+    ],
+    "translation": "World English Bible (Catholic Edition)",
+    "officialReadings": "https://example.test/optional-memorial"
+  }
+}
