@@ -73,7 +73,7 @@ Suno Studio is a **label-based creative operation** with:
 - [Voice Experiment Metadata](catalog/metadata/voice-experiments.yaml) – Structured experiment and human-listening evidence source
 - [Suno Voice Influence Experiment](research/suno-platform/experiments/voice-influence-test-2026-11-24.md) – Four approved voice-ID control/treatment clips and Christopher's recorded observation
 - [AI Artist Strategy and Governance](research/ai-artists/ai-artist-strategy-and-governance.md) – Research synthesis and recommendations, not approved policy
-- [Official Baby-Name Data Source Review](research/naming/reports/official-name-data-source-review.md) – Evaluation of SSA, California CDPH, Washington DOH, and CDC/NCHS sources
+- [Official Baby-Name Data Source Evaluation](docs/strategic-direction-voice-and-adaptive-media-validation-report.md#official-name-data-source-evaluation) – Evaluation of SSA, California CDPH, Washington DOH, and CDC/NCHS sources
 - [Name Trends Analysis](research/naming/reports/name-trends-analysis.md) – Evidence-limited naming research; no demographic or cultural conclusions
 - [Spotify for Artists Access and Roster Operations](research/distribution/platforms/spotify-for-artists-access-and-roster-operations.md) – Operational research reference; current Spotify documentation remains authoritative
 

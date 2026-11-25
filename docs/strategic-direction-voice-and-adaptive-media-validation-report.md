@@ -99,7 +99,7 @@ No sensitive consent evidence should be stored in Git by default. Future records
 | [Washington State DOH Baby Names](https://doh.wa.gov/data-and-statistical-reports/health-statistics/birth/baby-names) | Official page retrieved; it links to an interactive All Births dashboard and says top 50 names to Washington residents, with `boy` / `girl` and year controls. | Relevant state-level candidate, but complete coverage, category definitions, and reproducible export were not validated. No data was merged into the corpus. |
 | [CDC/NCHS Vital Statistics Online](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) | Official portal and natality documentation reviewed. | Useful for birth-statistics context, not given-name rankings. General natality totals do not establish name popularity or artist-name availability. |
 
-The source-specific access results and refresh requirements are documented in [Official Baby-Name Data Source Review](../research/naming/reports/official-name-data-source-review.md). No individual birth records were used, requested, or added. The California data dictionary was read, but no name-level source data was downloaded.
+The source-specific access results and limitations are summarized in the table above. No individual birth records were used, requested, or added. The California data dictionary was read, but no name-level source data was downloaded.
 
 ## Naming Corpus Corrections
 

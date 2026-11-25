@@ -262,7 +262,7 @@ The roadmap distinguishes approved direction from unscheduled research candidate
 
 Naming research was corrected because its earlier validation and reports made unsupported claims about generational significance, audience familiarity, cultural fit, and collision risk. Existing artist and band names remain unchanged. Current artist/band collision assessments are withdrawn pending dated direct searches; the first-name lists are retained as unverified static material, and the 2020s files cover 2020-2024 only.
 
-The [Official Baby-Name Data Source Review](../research/naming/reports/official-name-data-source-review.md) keeps SSA as the intended primary source, evaluates California CDPH and Washington DOH as bounded state supplements, and records that SSA returned HTTP 403 and the California portal HTTP 502 on 2026-11-25. The California data dictionary was accessible. No name data was refreshed or downloaded.
+The [Official Baby-Name Data Source Evaluation](strategic-direction-voice-and-adaptive-media-validation-report.md#official-name-data-source-evaluation) keeps SSA as the intended primary source and evaluates California CDPH and Washington DOH as bounded state supplements. The 2026-11-25 access check recorded HTTP 403 from SSA and HTTP 502 from the California portal; the California data dictionary was accessible. No name data was refreshed or downloaded.
 
 Voice-ID-001 remains partially validated experiment evidence, not proof of production readiness, consistent identity, or consent for an artist assignment. `catalog/metadata/voices.yaml` remains unchanged and contains placeholders.
 
