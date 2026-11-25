@@ -41,6 +41,19 @@ The application imports the canonical `demos.yaml` and `demo-reviews.yaml` as ra
 
 Current code and operating instructions are in [`portal/README.md`](../../portal/README.md), [`portal/src/main.js`](../../portal/src/main.js), and [`portal/src/review-state.js`](../../portal/src/review-state.js). The prototype is local-development software. It has no authentication, backend, database, write-back, deployment workflow, or production hosting configuration.
 
+## Review Modes and Workflow Boundaries
+
+| Mode | Purpose | Status and boundary |
+|---|---|---|
+| Demo Intake | Record source facts, provenance, identifiers, and missing evidence | Existing read-only view; does not evaluate creative quality or approve submissions |
+| Founder Review | Evaluate an eligible demo using the approved review standard | Existing queue/detail workflow; separate from experiment evaluation and gated classification |
+| Voice Experiment Review | Capture structured human evidence for a controlled generation experiment | Voice-ID-001 has a local writeback exception; no other experiment or review workflow can write |
+| A/B Focus Group Evaluation | Conduct blind comparisons, collect preference rankings, and aggregate results statistically | Future placeholder only; no participants, sessions, or aggregation are implemented |
+| New Music Discovery Intake | Maintain a personal review queue, categorize music, recommend a workspace, and record Archive / Reject / Promote triage | Future placeholder only; does not replace demo intake or change catalog membership |
+| Founder Triage Workflow | Prioritize and route work for founder attention | Future placeholder only; not a formal demo review, experiment evaluation, or approval gate |
+
+Voice Experiment Review is an evidence-capture workflow, not a music discovery queue or audience study. Focus group testing would require a separately designed participant process, blinding method, preference instrument, privacy handling, and statistical plan before implementation.
+
 ## Workflow Analysis
 
 For each workflow, the manual activities are drawn from existing standards and current records. Repetition and pain points remain hypotheses until the founder uses the workbench and records observations. Automation candidates below are ideas for later prioritization only.
@@ -144,6 +157,90 @@ Keep a derived, in-memory read model rather than a second persistent registry. I
 ### Future Write Model
 
 No write capability is implemented. A future write model should draft changes to the existing YAML and required Markdown records, validate them, and submit a reviewable repository change rather than maintaining a parallel database. It should use least-privilege GitHub identity, a non-main branch, and a pull request; never place a personal access token or app secret in browser code. Repository validation and human approval remain authoritative.
+
+## Current Persistence Architecture
+
+The canonical structured experiment record is `catalog/metadata/voice-experiments.yaml`. The browser reads it as a Vite raw input. For Voice-ID-001 only, a local development-server endpoint validates and writes submissions to that YAML and the two corresponding Markdown records. All other views remain read-only.
+
+```text
+voice-experiments.yaml
+        │ Vite import + js-yaml parse
+        ▼
+Voice-ID-001 view + listener-name suggestions
+        │ validate form + source revision
+        ▼
+Loopback-only Vite endpoint
+        │ update YAML + registry + experiment report
+        ▼
+Append-only audit + unique JSON snapshot → success status
+```
+
+The listener field is free-form with datalist suggestions derived from the initial listener and previous Voice-ID-001 submissions. Its value is evaluation metadata only; it is not authenticated, authorized, or linked to an account. Each submission stores a timestamp, listener name (`user`), modified field names, previous values, new values, and the complete structured-answer snapshot.
+
+The endpoint accepts only the literal experiment ID `Voice-ID-001`, uses fixed repository paths, rejects stale revisions, invalid values, non-loopback requests, and cross-origin POSTs, and is registered only with Vite's development server. The endpoint is not included in production builds. Repository writes are in the working tree; a Git commit remains necessary for durable version-control history.
+
+### Historical Export Validation (2026-11-24)
+
+- The saved [Voice-ID-001 evaluation export](../../research/suno-platform/experiments/voice-id-001-evaluation-2026-11-24.json) parses as JSON and exactly matches serializer output reconstructed with its captured form values, `exported_at`, and export-time status (`Completed`).
+- `context.assets` is an array containing four asset objects. Each `song_url` is syntactically valid, uses `https://suno.com/song/`, and ends with the corresponding `song_id`. This validates structure and URL/ID consistency, not live Suno availability or access.
+- Unanswered choice and comment fields are serialized as JSON `null`; the one-sentence conclusion preserves exactly “The output is obvious.” The observation itself is included separately. No additional evaluation answer is present.
+- The export is a timestamped snapshot. It recorded `listening_status: Completed`; the canonical status is now `Recorded`. The historical export remains unchanged, and the observation and unanswered fields were left intact.
+- No standalone JSON Schema is published. Conformance was checked against the producer function and canonical YAML shape; schema-version validation is therefore application-contract validation, not validation against an independent formal schema.
+
+### Historical Save Dialog and Download Evidence
+
+The prior export-only page created an `application/json` Blob, created an object URL, placed it on an anchor with the `download` filename `voice-id-001-evaluation-2026-11-24.json`, clicked the anchor, and revoked the object URL on a zero-delay timer. It did not call `showSaveFilePicker`, a native dialog API, or a repository filesystem API. A macOS Save dialog was therefore browser/host download handling, commonly shown when the browser is configured to ask where downloads should be saved; this workspace's browser preference was not independently inspected.
+
+The exported file exists under the repository's experiment directory. Its filesystem modification time (`2026-11-24 16:24:17 PST`) matches the export timestamp (`2026-11-25T00:24:17.657Z`) to the same displayed second, which is evidence that a download was saved at that time. The file is currently untracked, so it is in the working tree but not yet part of Git history. The app itself did not update repository sources before or during export. Source YAML and experiment docs predate the export and supplied the persisted context; no new structured listening answer was added by this export.
+
+The previous UI wrote “Assessment JSON downloaded” immediately after `link.click()`. That reported initiation, not confirmation that the browser saved a file. The earlier Playwright download-event check timed out, so that attempt alone could not establish success or failure; Playwright download handling requires observing the browser download event and saving/inspecting its artifact, and it does not reliably expose a native macOS Save dialog as a page element. The file and timestamp evidence provide separate confirmation for this export. The browser may either prompt for a destination or save to its configured download location; if download handling is blocked, the old UI's immediate success text could still appear.
+
+## Repository-First Evaluation Workflow
+
+The Voice-ID-001 proof-of-concept implements the repository-first sequence below. The previously saved dated export remains unchanged; every new writeback creates a unique snapshot.
+
+```text
+Voice Experiment Review
+        ↓
+Validate inputs and source revision
+        ↓
+Update Voice-ID-001 YAML + Markdown
+        ↓
+Generate unique JSON snapshot
+        ↓
+Show success status
+```
+
+The form submits to the local API; it does not write files from browser code. There is no generalized repository writer, authentication, or deployment. This exception does not enable writes for founder reviews, focus groups, A/B tests, or discovery intake.
+
+## Evaluation Persistence Design Principles
+
+**Status: Accepted**
+
+Voice-ID-001 is the first repository-backed evaluation workflow and is accepted as an alpha proof-of-concept. It validates repository writeback, evaluation capture, listener tracking, and evidence preservation; it does not establish the final persistence model.
+
+Future evaluation workflows should distinguish:
+
+1. **Current Evaluation State** - the active answers and status for an evaluation.
+2. **Audit History** - an append-only history of evaluation events and their provenance.
+3. **Evidence Snapshots** - preserved snapshots of the evaluation and supporting evidence.
+
+This separation is a design principle for future workflows, not a claim that the current Voice-ID-001 implementation stores these as independent models. Its current save behavior remains alpha behavior and may be redesigned before broader adoption.
+
+Review persistence semantics when Founder Review uses writeback, A/B Testing is implemented, Focus Groups are introduced, or Discovery Intake stores evaluations. Do not generalize the Voice-ID-001 proof-of-concept to those workflows without that review.
+
+## Reusable Evaluation Schema Recommendation
+
+Use a small shared envelope with a workflow discriminator and separate versioned payload schemas. Do not force all evaluation types into one flat record.
+
+| Workflow | Shared envelope fields | Workflow-specific fields |
+|---|---|---|
+| Voice experiment | Stable evaluation ID, schema version, workflow type, experiment reference, evaluator/source, date, status, evidence/asset references, responses, provenance | Control/treatment assignment, generation model/settings, voice parameter presence, per-criterion vocal observations |
+| A/B song testing | Stable evaluation ID, schema version, workflow type, study/trial reference, participant pseudonym, date, status, evidence references, responses | Blind stimulus labels, randomized presentation order, preference choice/ranking, confidence, repeated-trial data |
+| Focus group | Stable session/evaluation ID, schema version, workflow type, study/session reference, date, moderator, evidence references, status | Participant pseudonyms, consent state/reference, individual response attribution, discussion notes, aggregation method and cohort results |
+| New music discovery intake | Stable evaluation ID, schema version, workflow type, asset reference, reviewer, date, status, evidence/provenance, responses | Categorization, workspace recommendation, Archive / Reject / Promote disposition, rationale, follow-up owner |
+
+Common response records should retain a stable question/criterion ID, typed answer, optional comments, and explicit unanswered/null semantics. Workflow payloads should own their controlled choices and validation rules. Focus-group identity and consent material require a separate privacy decision and should not be placed in a public repository by default. This schema family remains a design recommendation only; no shared platform, schema validator, focus group, or discovery intake is implemented.
 
 ## Technology Recommendation
 

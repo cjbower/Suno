@@ -47,6 +47,38 @@ All notable changes to Suno Studio repository are documented in this file.
 - Documented tested capabilities, tool-advertised behavior, and unverified operations while preserving uncertainty about Replace and project relationships.
 - No Suno songs, workspaces, playlists, projects, or visibility settings were changed during this discovery.
 
+### Voice-ID-Validation Experiment Registry (2026-11-24)
+
+- Formalized the existing four-clip control/treatment test as Voice-ID-001 in a dedicated experiment registry.
+- Recorded verified generation metadata findings separately from pending human listening evidence; the audible effect remains undetermined.
+- Added a human-evaluation placeholder and backlog entries for a v6-mini replication, speech comparison, Nebraska anthem comparison, and cover comparison.
+- This documentation-only update generated no audio, modified no songs, and ran no new experiment.
+### Voice Experiment Export and Persistence Validation (2026-11-24)
+
+- Validated the saved Voice-ID-001 JSON export against the serializer: valid JSON, four `context.assets` array entries, ID-consistent Suno URL paths, and explicit `null` values for unanswered fields.
+- Preserved the export as an unchanged timestamped snapshot and set the canonical human-evidence status to `Recorded`; the exact observation remains “The output is obvious.”
+- Documented that the browser initiates a Blob download but does not write to repository sources, and that the immediate UI success message does not confirm the browser saved the file.
+- Added current persistence findings, a repository-first recommendation, and a shared-envelope/workflow-specific schema recommendation. No write-back, schema validator, new experiment, or Suno operation was implemented.
+### Voice-ID-001 Repository Writeback Proof-of-Concept (2026-11-24)
+
+- Added free-form listener-name entry with type-ahead suggestions from the existing listener and prior Voice-ID-001 submissions; names remain evaluation metadata, not authenticated identity.
+- Added local, loopback-only Vite development writeback, limited to the Voice-ID-001 YAML record and its registry/report.
+- Recorded each submission's timestamp, listener name (`user`), modified fields, previous/new values, and complete answer snapshot; generated a unique JSON snapshot without overwriting the earlier export.
+- Kept founder reviews, A/B/focus-group workflows, discovery intake, and production builds outside the writeback scope. No evaluation was submitted during implementation.
+### Evaluation Platform Design Principles (2026-11-24)
+
+- Accepted Voice-ID-001 as an alpha repository-backed evaluation proof-of-concept, not as the final persistence model.
+- Documented that future workflows should distinguish current evaluation state, append-only audit history, and evidence snapshots.
+- Deferred broader persistence decisions until Founder Review writeback, A/B Testing, Focus Groups, or Discovery Intake require them.
+### Voice-ID-001 Human Evaluation Workflow (2026-11-24)
+
+- Added a distinct Voice Experiment Review view to the local Founder Review workbench with control/treatment Suno links, metadata evidence, human observation provenance, and structured evaluation questions.
+- Added an export-only JSON form; it does not write to repository files or a backend. The existing observation is prefilled exactly, while unreported answers remain empty.
+- Preserved “The output is obvious.” as completed human listening evidence from Christopher Bower without inferring answers about identification, pronunciation, pacing, realism, timbre, strength, or reuse.
+- Added a canonical structured voice-experiment YAML source and updated the registry, indexes, and architecture documentation.
+- Documented A/B Focus Group Evaluation, New Music Discovery Intake, and Founder Triage as future-only workflows; none were implemented.
+- No audio was generated, no songs were modified, and no new experiments were run.
+
 ## [2.0.0] – 2026-11-18
 
 ### Added (Phase 2A – Repository Scaffolding)

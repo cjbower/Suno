@@ -1,0 +1,148 @@
+schema_version: 1
+experiment_records:
+  - experiment_id: Voice-ID-001
+    title: Voice influence control/treatment test
+    outcome_status: Partially validated
+    objective: Determine whether supplying voice_id materially changes generated music.
+    hypothesis:
+      - The voice asset influences generated singing.
+      - The influence is detectable by human listeners.
+    workspace:
+      name: EXP-Voice-ID-Validation
+      id: 9f39af6d-d8b4-43d9-b35d-d9fdf90b1a8e
+    metadata_findings:
+      - evidence: Verified Metadata Evidence
+        finding: Treatment clips contain voice_id in audio-wait metadata.
+      - evidence: Verified Metadata Evidence
+        finding: Control clips do not contain voice_id in audio-wait metadata.
+      - evidence: Verified Metadata Evidence
+        finding: library-list omits voice_id for all four clips.
+    assets:
+      - condition: control
+        song_id: 5b2f7776-9c9f-4293-8c67-8e8f04d82b87
+        song_url: https://suno.com/song/5b2f7776-9c9f-4293-8c67-8e8f04d82b87
+        duration_seconds: 15.52
+        model: v6
+        voice_id_in_audio_wait: false
+      - condition: control
+        song_id: 51572459-0f68-49b2-8b02-9fd169ae6ad0
+        song_url: https://suno.com/song/51572459-0f68-49b2-8b02-9fd169ae6ad0
+        duration_seconds: 14.32
+        model: v6
+        voice_id_in_audio_wait: false
+      - condition: treatment
+        song_id: 1d7e002f-4255-4b81-9c5b-3fe8f98294a8
+        song_url: https://suno.com/song/1d7e002f-4255-4b81-9c5b-3fe8f98294a8
+        duration_seconds: 14.8
+        model: v6
+        voice_id_in_audio_wait: true
+      - condition: treatment
+        song_id: fd5bca7b-83c2-4f07-a4a3-aac66502c2df
+        song_url: https://suno.com/song/fd5bca7b-83c2-4f07-a4a3-aac66502c2df
+        duration_seconds: 14.8
+        model: v6
+        voice_id_in_audio_wait: true
+    human_evaluation:
+      evaluation_date: '2026-11-24'
+      listener: Christopher Bower
+      listening_status: Recorded
+      observation_source: Christopher Bower
+      evidence_classification: Human Listening Evidence
+      observation: The output is obvious.
+      interpretation: The original statement, subsequent structured submission, and reported observations are preserved separately; no conclusions beyond the recorded evidence are inferred.
+      reported_observations:
+        - observation_type: listener_statement
+          source: Christopher Bower
+          statement: "The voices are completely different."
+        - observation_type: listener_statement
+          source: Christopher Bower
+          statement: "It mostly sounds like me."
+        - observation_type: pronunciation
+          source: Voice-ID-001 recordings
+          statement: All four recordings pronounced "plains" as "plain".
+        - observation_type: cross_condition_comparison
+          source: Voice-ID-001 recordings
+          statement: The pronunciation issue appeared in both control and treatment groups.
+        - observation_type: interpretation
+          source: Experiment summary
+          statement: The pronunciation issue appears independent of voice_id.
+      open_questions:
+        - Would the reported distinction replicate in a blind or otherwise controlled comparison?
+      answers:
+        identify_treatment_clips: null
+        sounds_more_like_actual_voice: null
+        more_like_actual_voice_comments: null
+        pronunciation_change: null
+        pronunciation_comments: null
+        cadence_or_pacing_change: null
+        cadence_or_pacing_comments: null
+        realism_change: null
+        realism_comments: null
+        vocal_timbre_change: null
+        timbre_comments: null
+        reliably_distinguish_groups: null
+        treatment_strength: null
+        reuse_voice_asset: null
+        reuse_voice_comments: null
+        one_sentence_conclusion: The output is obvious.
+      submissions:
+        - submission_id: a6678067-f126-498f-9be4-eac7d8f26659
+          timestamp: '2026-11-25T01:43:31.823Z'
+          snapshot_name: voice-id-001-evaluation-writeback-2026-11-25T01-43-31-823Z-a6678067.json
+          user: Christopher Bower
+          listener_name: Christopher Bower
+          modified_fields:
+            - answers.identify_treatment_clips
+            - answers.sounds_more_like_actual_voice
+            - answers.pronunciation_change
+            - answers.cadence_or_pacing_change
+            - answers.realism_change
+            - answers.vocal_timbre_change
+            - answers.reliably_distinguish_groups
+            - answers.treatment_strength
+            - answers.reuse_voice_asset
+            - answers.pronunciation_comments
+          previous_values:
+            answers.identify_treatment_clips: null
+            answers.sounds_more_like_actual_voice: null
+            answers.pronunciation_change: null
+            answers.cadence_or_pacing_change: null
+            answers.realism_change: null
+            answers.vocal_timbre_change: null
+            answers.reliably_distinguish_groups: null
+            answers.treatment_strength: null
+            answers.reuse_voice_asset: null
+            answers.pronunciation_comments: null
+          new_values:
+            answers.identify_treatment_clips: 'Yes'
+            answers.sounds_more_like_actual_voice: 'Yes'
+            answers.pronunciation_change: 'No'
+            answers.cadence_or_pacing_change: 'No'
+            answers.realism_change: No meaningful difference
+            answers.vocal_timbre_change: 'Yes'
+            answers.reliably_distinguish_groups: 'Yes'
+            answers.treatment_strength: Strong
+            answers.reuse_voice_asset: 'Yes'
+            answers.pronunciation_comments: Interesting, the displayed lyrics show "plains" (plural) and the voices, all of them, pronounce it is "plain"
+          structured_answers:
+            identify_treatment_clips: 'Yes'
+            sounds_more_like_actual_voice: 'Yes'
+            pronunciation_change: 'No'
+            cadence_or_pacing_change: 'No'
+            realism_change: No meaningful difference
+            vocal_timbre_change: 'Yes'
+            reliably_distinguish_groups: 'Yes'
+            treatment_strength: Strong
+            reuse_voice_asset: 'Yes'
+            more_like_actual_voice_comments: null
+            pronunciation_comments: Interesting, the displayed lyrics show "plains" (plural) and the voices, all of them, pronounce it is "plain"
+            cadence_or_pacing_comments: null
+            realism_comments: null
+            timbre_comments: null
+            reuse_voice_comments: null
+            one_sentence_conclusion: The output is obvious.
+    future_experiments:
+      - Voice-ID-002
+      - Voice-ID-003
+      - Voice-ID-004
+      - Voice-ID-005

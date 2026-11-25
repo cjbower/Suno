@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Read-only founder review workspace for Suno demo intake and review."
+      content="Founder review and demo intake workspace with controlled local Voice-ID-001 writeback."
     />
     <title>Founder Review Workspace | Suno Studio</title>
   </head>
@@ -13,12 +13,12 @@
     <div class="app-shell">
       <header class="topbar">
         <div class="brand">
-          <p class="eyebrow">Suno Studio / Demo operations</p>
+          <p class="eyebrow">Suno Studio / Review workspace</p>
           <h1>Founder Review Workspace</h1>
-          <p class="subheading">Source-first demo review</p>
+          <p class="subheading">Demo review and controlled experiment evaluation</p>
         </div>
         <div class="topbar-meta">
-          <span class="read-only-badge">Read only</span>
+          <span class="read-only-badge">Voice-ID-001 local writeback only</span>
           <a
             href="https://github.com/cjbower/Suno"
             target="_blank"
@@ -37,11 +37,14 @@
             Demo intake
           </button>
           <button class="nav-item" type="button" data-view="queue">
-            Review queue
+            Founder review
+          </button>
+          <button class="nav-item" type="button" data-view="voice-experiment">
+            Voice experiment review
           </button>
           <div class="sidebar-note">
             <span class="status-dot" aria-hidden="true"></span>
-            <span>Source: canonical YAML</span>
+            <span>Source: repository records</span>
           </div>
         </nav>
 
@@ -126,6 +129,227 @@
             </section>
           </section>
 
+          <section id="voice-experiment-view" class="view" aria-labelledby="voice-experiment-title" hidden>
+            <div class="page-heading">
+              <div>
+                <p class="eyebrow">Voice Experiment Review</p>
+                <h2 id="voice-experiment-title">Voice-ID-001 Review</h2>
+                <p class="muted">
+                  Structured listening evidence, separate from Demo Intake, Founder Review, and future focus-group testing.
+                </p>
+              </div>
+              <span class="read-only-badge">Local repository writeback</span>
+            </div>
+
+            <div class="experiment-grid">
+              <section class="panel" aria-labelledby="experiment-information-title">
+                <h3 id="experiment-information-title">Experiment Information</h3>
+                <dl id="voice-experiment-information" class="experiment-facts"></dl>
+                <div id="voice-experiment-reference-links" class="record-links"></div>
+              </section>
+              <section class="panel" aria-labelledby="experiment-findings-title">
+                <h3 id="experiment-findings-title">Verified Metadata Evidence</h3>
+                <ul id="voice-metadata-findings" class="evidence-list"></ul>
+              </section>
+            </div>
+
+            <section class="panel" aria-labelledby="experiment-clips-title">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Listening materials</p>
+                  <h3 id="experiment-clips-title">Control and treatment clips</h3>
+                </div>
+                <span class="muted">Open clips individually in Suno</span>
+              </div>
+              <div class="clip-groups">
+                <section aria-labelledby="control-clips-title">
+                  <h4 id="control-clips-title">Control - no `voice_id`</h4>
+                  <div id="voice-control-clips" class="voice-asset-list"></div>
+                </section>
+                <section aria-labelledby="treatment-clips-title">
+                  <h4 id="treatment-clips-title">Treatment - `voice_id` supplied</h4>
+                  <div id="voice-treatment-clips" class="voice-asset-list"></div>
+                </section>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="human-evidence-title">
+              <h3 id="human-evidence-title">Human Listening Evidence</h3>
+              <dl id="voice-human-evidence" class="experiment-facts"></dl>
+              <p id="voice-observation" class="observation-quote"></p>
+              <div class="evidence-separation">
+                <section>
+                  <h4>Interpretation</h4>
+                  <p id="voice-interpretation"></p>
+                </section>
+                <section>
+                  <h4>Open Questions</h4>
+                  <ul id="voice-open-questions" class="evidence-list"></ul>
+                </section>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="voice-form-title">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Structured evidence</p>
+                  <h3 id="voice-form-title">Listening Assessment Form</h3>
+                </div>
+                <span id="voice-listening-status" class="status-badge"></span>
+              </div>
+              <p class="muted">
+                The original observation is preserved exactly and remains separate from each listener's structured answers.
+                Listener name is evaluation metadata only and is not an authenticated identity. Saving writes only Voice-ID-001 records.
+              </p>
+              <form id="voice-review-form" class="evaluation-form">
+                <div class="evaluation-field">
+                  <label for="voice-listener-name">Listener name</label>
+                  <input
+                    id="voice-listener-name"
+                    name="listener_name"
+                    type="text"
+                    list="voice-listener-suggestions"
+                    autocomplete="off"
+                    required
+                  />
+                  <datalist id="voice-listener-suggestions"></datalist>
+                </div>
+                <div class="evaluation-grid">
+                  <div class="evaluation-field">
+                    <label for="identify-treatment-clips">1. Could you identify the treatment clips without being told?</label>
+                    <select id="identify-treatment-clips" name="identify_treatment_clips">
+                      <option value="">Not recorded</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                      <option>Unsure</option>
+                    </select>
+                  </div>
+
+                  <div class="evaluation-field">
+                    <label for="sounds-more-like-actual-voice">2. Did the treatment clips sound more like your actual voice?</label>
+                    <select id="sounds-more-like-actual-voice" name="sounds_more_like_actual_voice">
+                      <option value="">Not recorded</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                      <option>Unsure</option>
+                    </select>
+                    <label for="more-like-actual-voice-comments">Comments</label>
+                    <textarea id="more-like-actual-voice-comments" name="more_like_actual_voice_comments" rows="2"></textarea>
+                  </div>
+
+                  <div class="evaluation-field">
+                    <label for="pronunciation-change">3. Did pronunciation change?</label>
+                    <select id="pronunciation-change" name="pronunciation_change">
+                      <option value="">Not recorded</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                      <option>Unsure</option>
+                    </select>
+                    <label for="pronunciation-comments">Comments</label>
+                    <textarea id="pronunciation-comments" name="pronunciation_comments" rows="2"></textarea>
+                  </div>
+
+                  <div class="evaluation-field">
+                    <label for="cadence-or-pacing-change">4. Did cadence or pacing change?</label>
+                    <select id="cadence-or-pacing-change" name="cadence_or_pacing_change">
+                      <option value="">Not recorded</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                      <option>Unsure</option>
+                    </select>
+                    <label for="cadence-or-pacing-comments">Comments</label>
+                    <textarea id="cadence-or-pacing-comments" name="cadence_or_pacing_comments" rows="2"></textarea>
+                  </div>
+
+                  <div class="evaluation-field">
+                    <label for="realism-change">5. Did realism change?</label>
+                    <select id="realism-change" name="realism_change">
+                      <option value="">Not recorded</option>
+                      <option>More realistic</option>
+                      <option>Less realistic</option>
+                      <option>No meaningful difference</option>
+                    </select>
+                    <label for="realism-comments">Comments</label>
+                    <textarea id="realism-comments" name="realism_comments" rows="2"></textarea>
+                  </div>
+
+                  <div class="evaluation-field">
+                    <label for="vocal-timbre-change">6. Did vocal timbre change?</label>
+                    <select id="vocal-timbre-change" name="vocal_timbre_change">
+                      <option value="">Not recorded</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                      <option>Unsure</option>
+                    </select>
+                    <label for="timbre-comments">Comments</label>
+                    <textarea id="timbre-comments" name="timbre_comments" rows="2"></textarea>
+                  </div>
+
+                  <div class="evaluation-field">
+                    <label for="reliably-distinguish-groups">7. Could you reliably distinguish the two groups?</label>
+                    <select id="reliably-distinguish-groups" name="reliably_distinguish_groups">
+                      <option value="">Not recorded</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                      <option>Unsure</option>
+                    </select>
+                  </div>
+
+                  <div class="evaluation-field">
+                    <label for="treatment-strength">8. Treatment Strength</label>
+                    <select id="treatment-strength" name="treatment_strength">
+                      <option value="">Not recorded</option>
+                      <option>None</option>
+                      <option>Slight</option>
+                      <option>Moderate</option>
+                      <option>Strong</option>
+                      <option>Extremely Obvious</option>
+                    </select>
+                  </div>
+
+                  <div class="evaluation-field">
+                    <label for="reuse-voice-asset">9. Would you use the voice asset again?</label>
+                    <select id="reuse-voice-asset" name="reuse_voice_asset">
+                      <option value="">Not recorded</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                      <option>Need More Testing</option>
+                    </select>
+                    <label for="reuse-voice-comments">Comments</label>
+                    <textarea id="reuse-voice-comments" name="reuse_voice_comments" rows="2"></textarea>
+                  </div>
+
+                  <div class="evaluation-field evaluation-conclusion">
+                    <label for="one-sentence-conclusion">10. One Sentence Conclusion</label>
+                    <textarea id="one-sentence-conclusion" name="one_sentence_conclusion" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button class="primary-button" type="submit" disabled>Save evaluation to repository</button>
+                  <p id="voice-writeback-status" role="status" aria-live="polite"></p>
+                </div>
+              </form>
+            </section>
+
+            <section class="future-grid" aria-label="Future evaluation frameworks">
+              <article class="future-card">
+                <span class="future-tag">Future workflow - not implemented</span>
+                <h3>A/B Focus Group Evaluation</h3>
+                <p>Blind comparisons, preference ranking, and statistical aggregation.</p>
+              </article>
+              <article class="future-card">
+                <span class="future-tag">Future workflow - not implemented</span>
+                <h3>New Music Discovery Intake</h3>
+                <p>Personal review queue, categorization, workspace recommendation, and Archive / Reject / Promote triage.</p>
+              </article>
+              <article class="future-card">
+                <span class="future-tag">Future workflow - not implemented</span>
+                <h3>Founder Triage Workflow</h3>
+                <p>Proposed quick prioritization and routing for founder review; separate from formal demo review and experiment evidence.</p>
+              </article>
+            </section>
+          </section>
+
           <section id="detail-view" class="view" aria-labelledby="detail-title" hidden>
             <button id="back-to-queue" class="back-button" type="button">
               <span aria-hidden="true">&larr;</span> Back to review queue
@@ -135,7 +359,7 @@
 
           <footer class="page-footer">
             <span>Repository = system of record</span>
-            <span id="build-note">Review states are derived from linked YAML records.</span>
+            <span id="build-note">Demo review remains read-only; local writeback is limited to Voice-ID-001.</span>
           </footer>
         </main>
       </div>

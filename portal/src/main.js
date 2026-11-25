@@ -1,8 +1,10 @@
 import { load } from "js-yaml";
 import demoYaml from "../../catalog/metadata/demos.yaml?raw";
 import reviewYaml from "../../catalog/metadata/demo-reviews.yaml?raw";
+import voiceExperimentYaml from "../../catalog/metadata/voice-experiments.yaml?raw";
 import "./styles.css";
 import { deriveReviewState } from "./review-state.js";
+import { validateVoiceEvaluationFormValues } from "./voice-experiment.js";
 
 const REPOSITORY_URL = "https://github.com/cjbower/Suno";
 const elements = {
@@ -15,6 +17,20 @@ const elements = {
   reviewFilter: document.querySelector("#review-filter"),
   detail: document.querySelector("#demo-detail"),
   backToQueue: document.querySelector("#back-to-queue"),
+  voiceExperimentInformation: document.querySelector("#voice-experiment-information"),
+  voiceExperimentReferenceLinks: document.querySelector("#voice-experiment-reference-links"),
+  voiceMetadataFindings: document.querySelector("#voice-metadata-findings"),
+  voiceControlClips: document.querySelector("#voice-control-clips"),
+  voiceTreatmentClips: document.querySelector("#voice-treatment-clips"),
+  voiceHumanEvidence: document.querySelector("#voice-human-evidence"),
+  voiceObservation: document.querySelector("#voice-observation"),
+  voiceInterpretation: document.querySelector("#voice-interpretation"),
+  voiceOpenQuestions: document.querySelector("#voice-open-questions"),
+  voiceListeningStatus: document.querySelector("#voice-listening-status"),
+  voiceReviewForm: document.querySelector("#voice-review-form"),
+  voiceListenerName: document.querySelector("#voice-listener-name"),
+  voiceListenerSuggestions: document.querySelector("#voice-listener-suggestions"),
+  voiceWritebackStatus: document.querySelector("#voice-writeback-status"),
   views: [...document.querySelectorAll(".view")],
   navigation: [...document.querySelectorAll(".nav-item[data-view]")],
 };
@@ -99,6 +115,204 @@ function renderMetrics() {
     renderMetric("Review Complete", complete, "Qualifying founder reviews", "complete"),
     renderMetric("Classification Eligible", eligible, "Eligible to consider; not assigned", "eligible"),
   );
+}
+
+function renderDefinitionList(target, entries) {
+  const children = [];
+  for (const [label, value] of entries) {
+    children.push(createElement("dt", "", label), createElement("dd", "", String(value)));
+  }
+  target.replaceChildren(...children);
+}
+
+function renderVoiceClip(target, asset) {
+  const card = createElement("article", "voice-asset");
+  const heading = createElement("h4", "", asset.song_id);
+  const facts = createElement(
+    "p",
+    "muted",
+    `${Number(asset.duration_seconds).toFixed(2)} sec · Model ${asset.model} · audio-wait voice_id ${asset.voice_id_in_audio_wait ? "present" : "absent"}`,
+  );
+  card.append(heading, facts, createLink("Open clip in Suno", asset.song_url));
+  return card;
+}
+
+function renderVoiceExperiment(experiment) {
+  const controlAssets = experiment.assets.filter((asset) => asset.condition === "control");
+  const treatmentAssets = experiment.assets.filter((asset) => asset.condition === "treatment");
+  if (
+    experiment.experiment_id !== "Voice-ID-001" ||
+    controlAssets.length !== 2 ||
+    treatmentAssets.length !== 2
+  ) {
+    throw new Error("Voice experiment metadata must contain Voice-ID-001 with two control and two treatment clips.");
+  }
+
+  renderDefinitionList(elements.voiceExperimentInformation, [
+    ["Experiment ID", experiment.experiment_id],
+    ["Current outcome", experiment.outcome_status],
+    ["Objective", experiment.objective],
+    ["Workspace", `${experiment.workspace.name} (${experiment.workspace.id})`],
+  ]);
+  elements.voiceExperimentReferenceLinks.replaceChildren(
+    createLink(
+      "Experiment registry",
+      githubRecordLink("research/suno-platform/experiments/voice-id-validation-registry.md"),
+    ),
+    createLink(
+      "Structured experiment metadata",
+      githubRecordLink("catalog/metadata/voice-experiments.yaml"),
+    ),
+    createLink(
+      "Workspace assignment record",
+      githubRecordLink("operations/suno-workspace-assignment-queue-2026-11-24.md"),
+    ),
+  );
+  elements.voiceMetadataFindings.replaceChildren(
+    ...experiment.metadata_findings.map((item) =>
+      createElement("li", "", `${item.evidence}: ${item.finding}`),
+    ),
+  );
+  elements.voiceControlClips.replaceChildren(
+    ...controlAssets.map((asset) => renderVoiceClip(elements.voiceControlClips, asset)),
+  );
+  elements.voiceTreatmentClips.replaceChildren(
+    ...treatmentAssets.map((asset) => renderVoiceClip(elements.voiceTreatmentClips, asset)),
+  );
+
+  const evaluation = experiment.human_evaluation;
+  const listeningStatus = String(evaluation.listening_status).toLowerCase();
+  const statusVariant =
+    listeningStatus === "completed"
+      ? "complete"
+      : listeningStatus === "pending"
+        ? "pending"
+        : "recorded";
+  elements.voiceListeningStatus.className = `status-badge status-${statusVariant}`;
+  elements.voiceListeningStatus.textContent = `Listening status: ${evaluation.listening_status}`;
+  renderDefinitionList(elements.voiceHumanEvidence, [
+    ["Listening status", evaluation.listening_status],
+    ["Evaluation date", evaluation.evaluation_date],
+    ["Listener", evaluation.listener],
+    ["Observation source", evaluation.observation_source],
+    ["Evidence classification", evaluation.evidence_classification],
+  ]);
+  elements.voiceObservation.textContent = `“${evaluation.observation}”`;
+  elements.voiceInterpretation.textContent = evaluation.interpretation;
+  elements.voiceOpenQuestions.replaceChildren(
+    ...evaluation.open_questions.map((question) => createElement("li", "", question)),
+  );
+
+  const latestSubmission = evaluation.submissions?.at(-1);
+  const answers = latestSubmission?.structured_answers ?? evaluation.answers;
+  elements.voiceListenerName.value =
+    latestSubmission?.listener_name ?? latestSubmission?.user ?? evaluation.listener;
+  for (const [name, value] of Object.entries(answers)) {
+    const field = elements.voiceReviewForm.elements.namedItem(name);
+    if (!field) {
+      throw new Error(`Voice evaluation form is missing the ${name} field.`);
+    }
+    field.value = value ?? "";
+  }
+}
+
+function renderListenerSuggestions(names) {
+  elements.voiceListenerSuggestions.replaceChildren(
+    ...names.map((name) => {
+      const option = document.createElement("option");
+      option.value = name;
+      return option;
+    }),
+  );
+}
+
+let writebackRevision;
+let writebackReady = false;
+
+async function loadVoiceWritebackState() {
+  const submitButton = elements.voiceReviewForm.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  try {
+    const response = await fetch("/api/voice-id-001/state", {
+      headers: { Accept: "application/json" },
+    });
+    const state = await response.json();
+    if (!response.ok) {
+      throw new Error(state.error ?? "Repository writeback is unavailable.");
+    }
+    if (
+      state.experiment_id !== "Voice-ID-001" ||
+      typeof state.revision !== "string" ||
+      !Array.isArray(state.listener_suggestions) ||
+      !Array.isArray(state.submissions)
+    ) {
+      throw new Error("Repository writeback returned an invalid state.");
+    }
+    writebackRevision = state.revision;
+    writebackReady = true;
+    renderListenerSuggestions(state.listener_suggestions);
+    voiceExperiment.human_evaluation.submissions = state.submissions;
+    if (state.latest_submission) {
+      renderVoiceExperiment(voiceExperiment);
+    }
+    submitButton.disabled = false;
+    elements.voiceWritebackStatus.textContent = "Local repository connection ready.";
+  } catch (error) {
+    writebackReady = false;
+    elements.voiceWritebackStatus.textContent =
+      `Repository writeback unavailable: ${error.message}`;
+  }
+}
+
+async function saveVoiceEvaluation(event) {
+  event.preventDefault();
+  if (!writebackReady || !writebackRevision) {
+    elements.voiceWritebackStatus.textContent =
+      "Repository writeback is unavailable; no changes were saved.";
+    return;
+  }
+
+  const submitButton = elements.voiceReviewForm.querySelector('button[type="submit"]');
+  const formValues = Object.fromEntries(new FormData(elements.voiceReviewForm).entries());
+  try {
+    validateVoiceEvaluationFormValues(formValues);
+  } catch (error) {
+    elements.voiceWritebackStatus.textContent = `Validation failed: ${error.message}`;
+    return;
+  }
+
+  submitButton.disabled = true;
+  elements.voiceWritebackStatus.textContent = "Validating and saving Voice-ID-001...";
+  try {
+    const response = await fetch("/api/voice-id-001", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        experiment_id: "Voice-ID-001",
+        revision: writebackRevision,
+        form_values: formValues,
+      }),
+    });
+    const result = await response.json();
+    if (!response.ok) {
+      if (response.status === 409) {
+        writebackReady = false;
+        writebackRevision = undefined;
+      }
+      throw new Error(result.error ?? "Repository writeback failed.");
+    }
+
+    writebackRevision = result.revision;
+    voiceExperiment.human_evaluation.submissions = result.submissions;
+    renderListenerSuggestions(result.listener_suggestions);
+    renderVoiceExperiment(voiceExperiment);
+    elements.voiceWritebackStatus.textContent =
+      `Saved to the repository. JSON snapshot: ${result.snapshot_name}`;
+  } catch (error) {
+    elements.voiceWritebackStatus.textContent = `Save failed: ${error.message}`;
+  } finally {
+    submitButton.disabled = !writebackReady;
+  }
 }
 
 function renderQueueTable(target, records) {
@@ -754,17 +968,27 @@ function showDemo(demoId) {
 }
 
 function displayError(error) {
-  console.error("Founder Review Portal could not load repository data.", error);
-  elements.error.textContent = `Unable to load canonical repository data: ${error.message}`;
+  console.error("Founder Review Portal could not load repository review data.", error);
+  elements.error.textContent = `Unable to load repository review data: ${error.message}`;
   elements.error.hidden = false;
 }
 
 let demos;
 let reviewRecords;
+let voiceExperiment;
 
 try {
   demos = parseRecords(demoYaml, "demo_records", "Demo registry");
   reviewRecords = parseRecords(reviewYaml, "review_records", "Review registry");
+  const voiceExperiments = parseRecords(
+    voiceExperimentYaml,
+    "experiment_records",
+    "Voice experiment registry",
+  );
+  voiceExperiment = voiceExperiments.find((record) => record.experiment_id === "Voice-ID-001");
+  if (!voiceExperiment || voiceExperiments.length !== 1) {
+    throw new Error("Voice experiment registry must contain exactly one Voice-ID-001 record.");
+  }
   const demoIds = new Set(demos.map((demo) => demo.demo_id));
   if (demoIds.size !== demos.length || demos.some((demo) => !isKnown(demo.demo_id))) {
     throw new Error("Demo registry contains a missing or duplicate demo identifier.");
@@ -778,6 +1002,7 @@ try {
   renderDashboardTable();
   renderIntake();
   renderQueue();
+  renderVoiceExperiment(voiceExperiment);
   for (const button of elements.navigation) {
     button.addEventListener("click", () => showView(button.dataset.view));
   }
@@ -787,6 +1012,8 @@ try {
   elements.search.addEventListener("input", renderQueue);
   elements.reviewFilter.addEventListener("change", renderQueue);
   elements.backToQueue.addEventListener("click", () => showView("queue"));
+  elements.voiceReviewForm.addEventListener("submit", saveVoiceEvaluation);
+  void loadVoiceWritebackState();
 } catch (error) {
   displayError(error);
 }

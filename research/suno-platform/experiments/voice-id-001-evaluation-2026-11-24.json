@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "experiment_id": "Voice-ID-001",
+  "evaluation_date": "2026-11-24",
+  "listener": "Christopher Bower",
+  "listening_status": "Completed",
+  "observation_source": "Christopher Bower",
+  "evidence_classification": "Human Listening Evidence",
+  "observation": "The output is obvious.",
+  "exported_at": "2026-11-25T00:24:17.657Z",
+  "context": {
+    "workspace": {
+      "name": "EXP-Voice-ID-Validation",
+      "id": "9f39af6d-d8b4-43d9-b35d-d9fdf90b1a8e"
+    },
+    "assets": [
+      {
+        "condition": "control",
+        "song_id": "5b2f7776-9c9f-4293-8c67-8e8f04d82b87",
+        "song_url": "https://suno.com/song/5b2f7776-9c9f-4293-8c67-8e8f04d82b87",
+        "duration_seconds": 15.52,
+        "model": "v6",
+        "voice_id_in_audio_wait": false
+      },
+      {
+        "condition": "control",
+        "song_id": "51572459-0f68-49b2-8b02-9fd169ae6ad0",
+        "song_url": "https://suno.com/song/51572459-0f68-49b2-8b02-9fd169ae6ad0",
+        "duration_seconds": 14.32,
+        "model": "v6",
+        "voice_id_in_audio_wait": false
+      },
+      {
+        "condition": "treatment",
+        "song_id": "1d7e002f-4255-4b81-9c5b-3fe8f98294a8",
+        "song_url": "https://suno.com/song/1d7e002f-4255-4b81-9c5b-3fe8f98294a8",
+        "duration_seconds": 14.8,
+        "model": "v6",
+        "voice_id_in_audio_wait": true
+      },
+      {
+        "condition": "treatment",
+        "song_id": "fd5bca7b-83c2-4f07-a4a3-aac66502c2df",
+        "song_url": "https://suno.com/song/fd5bca7b-83c2-4f07-a4a3-aac66502c2df",
+        "duration_seconds": 14.8,
+        "model": "v6",
+        "voice_id_in_audio_wait": true
+      }
+    ],
+    "metadata_findings": [
+      {
+        "evidence": "Verified Metadata Evidence",
+        "finding": "Treatment clips contain voice_id in audio-wait metadata."
+      },
+      {
+        "evidence": "Verified Metadata Evidence",
+        "finding": "Control clips do not contain voice_id in audio-wait metadata."
+      },
+      {
+        "evidence": "Verified Metadata Evidence",
+        "finding": "library-list omits voice_id for all four clips."
+      }
+    ]
+  },
+  "structured_answers": {
+    "identify_treatment_clips": null,
+    "sounds_more_like_actual_voice": null,
+    "pronunciation_change": null,
+    "cadence_or_pacing_change": null,
+    "realism_change": null,
+    "vocal_timbre_change": null,
+    "reliably_distinguish_groups": null,
+    "treatment_strength": null,
+    "reuse_voice_asset": null,
+    "more_like_actual_voice_comments": null,
+    "pronunciation_comments": null,
+    "cadence_or_pacing_comments": null,
+    "realism_comments": null,
+    "timbre_comments": null,
+    "reuse_voice_comments": null,
+    "one_sentence_conclusion": "The output is obvious."
+  }
+}

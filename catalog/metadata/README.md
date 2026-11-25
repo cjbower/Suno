@@ -16,6 +16,7 @@
 - `motifs.yaml` – Recurring motifs and patterns
 - `demos.yaml` – Canonical demo registry; one intake-incomplete record
 - `demo-reviews.yaml` – Canonical A&R review registry; one initial intake screen
+- `voice-experiments.yaml` – Structured Voice-ID experiment evidence and evaluation answers; not joined to demo review state
 - `development-projects.yaml` – Development handoff schema example; no project records
 - `audience-research-sessions.yaml` – Research session schema example; no session records
 - `audience-responses.yaml` – Response schema example; no response or participant records
@@ -42,6 +43,7 @@ Registry files generally contain:
 - Changes to artist status, genre, or core identity should be reflected in metadata
 - New artists, bands, or albums should be added to metadata before detailed documentation is created
 - Demo intake records document evidence and disposition; they do not automatically authorize development, artist assignment, audience research, or release
+- Voice experiment records document controlled-generation evidence separately from demo intake and founder review; the Voice-ID-001 local writeback proof-of-concept appends audited submissions, while other workflows remain read-only
 - Unknown scalar values remain the literal `UNKNOWN`
 
 ---

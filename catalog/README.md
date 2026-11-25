@@ -44,6 +44,7 @@ Refer to `metadata/` for canonical YAML files:
 - `voices.yaml` – Voice profile registry
 - `motifs.yaml` – Motif registry
 - `demos.yaml` and `demo-reviews.yaml` – Canonical demo and review registries; one intake-incomplete demo and one N/R review screen are registered
+- `voice-experiments.yaml` – Structured Voice-ID experiment metadata and human evidence, separate from demo/review records
 - `development-projects.yaml` – Schema example only; no development project is authorized
 - `audience-research-sessions.yaml` and `audience-responses.yaml` – Schema examples only; no sessions or responses registered
 

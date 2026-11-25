@@ -63,6 +63,9 @@ Suno Studio is a **label-based creative operation** with:
 
 - [Suno Research Reference](research/suno-platform/suno-research-reference.md) – Primary consolidated, mixed-evidence Suno reference; preserve classifications and revalidate time-sensitive claims
 - [Suno Object Model Discovery](research/suno-platform/suno-object-model-discovery.md) – Connector-exposed song, workspace, playlist metadata and capability evidence
+- [EXP-Voice-ID-Validation Registry](research/suno-platform/experiments/voice-id-validation-registry.md) – Voice-ID-001 experiment record, recorded human evidence, and planned follow-ups
+- [Voice Experiment Metadata](catalog/metadata/voice-experiments.yaml) – Structured experiment and human-listening evidence source
+- [Suno Voice Influence Experiment](research/suno-platform/experiments/voice-influence-test-2026-11-24.md) – Four approved voice-ID control/treatment clips and Christopher's recorded observation
 - [AI Artist Strategy and Governance](research/ai-artists/ai-artist-strategy-and-governance.md) – Research synthesis and recommendations, not approved policy
 - [Spotify for Artists Access and Roster Operations](research/distribution/platforms/spotify-for-artists-access-and-roster-operations.md) – Operational research reference; current Spotify documentation remains authoritative
 
@@ -72,8 +75,8 @@ Suno Studio is a **label-based creative operation** with:
 - [Release Calendar](operations/release-calendar.md) – Planned releases and timeline
 - [Automation Opportunities](operations/automation-opportunities.md) – Future workflow improvements
 - [Demo Intake and A&R](operations/demo-intake/README.md) – Governed intake, evaluation, and development handoff
-- [Temporary Founder Review Workbench](portal/README.md) – Experimental read-only interface for workflow discovery
-- [Workbench Architecture and Workflow Analysis](docs/architecture/founder-review-workbench.md)
+- [Temporary Founder Review Workbench](portal/README.md) – Local demo review and Voice-ID-001 repository-writeback alpha
+- [Workbench Architecture and Workflow Analysis](docs/architecture/founder-review-workbench.md) – Demo and experiment review boundaries plus future workflow placeholders
 - [Workbench Wireframes](docs/architecture/founder-review-workbench-wireframes.md)
 - [Audience Research Operations](operations/audience-research/README.md) – Research governance, privacy, and reporting framework
 - [Demo and Audience Research Governance](docs/demo-and-audience-research-governance.md) – Cross-domain decision boundaries
