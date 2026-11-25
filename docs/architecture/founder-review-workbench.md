@@ -1,6 +1,6 @@
 # Temporary Founder Review Workbench
 
-**Status:** Phase 3.1A workflow-discovery artifact. The existing browser prototype remains under [`portal/`](../../portal/) and is reclassified as a temporary, read-only workbench. It is not the final portal, is not deployed, and may be discarded after workflow learning.
+**Status:** Workflow-discovery artifact. The existing browser prototype remains under [`portal/`](../../portal/) and is a temporary local workbench. A controlled, loopback-only writeback proof-of-concept is implemented for Voice-ID-001 only; other review modes remain read-only. It is not the final portal, is not deployed, and may be discarded after workflow learning.
 
 ## Purpose
 
@@ -32,14 +32,15 @@ The workbench reuses the existing source under `portal/`; no separate `workbench
 | Demo queue | Search and filter records by review state |
 | Demo detail | Presents source context, creative material, creator intent, constraints, source labels, readiness blockers, governance, and advanced metadata in founder review order |
 | Review state | Derived from linked review data; no state is written back |
+| Voice Experiment Review | Dedicated Voice-ID-001 view with control/treatment links, metadata and human evidence separated, structured listening questions, and local repository writeback with JSON snapshots |
 | Classification and seed | Displays current values and gate state; does not decide or edit them |
 | Disposition | Displays the current disposition; does not recommend or change it |
 
-The current registry contains `DEMO-2026-0001` (`Carillon`) with `current_disposition: hold`, `review_status: intake_incomplete`, and primary classification and seed values `UNKNOWN`. Its linked `REVIEW-2026-0001` is an AI intake screen, `founder_review_status: pending`, `audio_reviewed: false`, and its audio-dependent grades are N/R. The UI therefore shows Review Pending and zero Review Complete or Classification Eligible records. Source metadata not captured in canonical YAML is shown as `UNKNOWN` with a clear not-captured explanation; screenshot observations are not hardcoded into the UI.
+The current demo registry contains `DEMO-2026-0001` (`Carillon`) with `current_disposition: hold`, `review_status: intake_incomplete`, and primary classification and seed values `UNKNOWN`. Its linked `REVIEW-2026-0001` is an AI intake screen, `founder_review_status: pending`, `audio_reviewed: false`, and its audio-dependent grades are N/R. The demo UI therefore shows Review Pending and zero Review Complete or Classification Eligible records. Voice-ID-001 is a separate experimental evaluation and does not change demo review state. Source metadata not captured in canonical YAML is shown as `UNKNOWN` with a clear not-captured explanation; screenshot observations are not hardcoded into demo records.
 
-The application imports the canonical `demos.yaml` and `demo-reviews.yaml` as raw build inputs, parses them with `js-yaml`, and derives the interface state in memory. A built bundle is a disposable snapshot; it is not an editable record. The current review gate is intentionally conservative: complete founder status, founder reviewer role, known reviewer ID, parseable review date, audio reviewed, at least one rateable grade, and written non-N/R category evidence. `Classification Eligible` means only that this prerequisite gate is met; it does not assign a value.
+The application imports the canonical `demos.yaml`, `demo-reviews.yaml`, and `voice-experiments.yaml` as raw build inputs, parses them with `js-yaml`, and derives the interface state in memory. A built bundle is a disposable snapshot; it is not an editable record. The local Vite development server has one narrow write endpoint for Voice-ID-001; this endpoint is not part of a production bundle. The current demo review gate is intentionally conservative: complete founder status, founder reviewer role, known reviewer ID, parseable review date, audio reviewed, at least one rateable grade, and written non-N/R category evidence. `Classification Eligible` means only that this prerequisite gate is met; it does not assign a value.
 
-Current code and operating instructions are in [`portal/README.md`](../../portal/README.md), [`portal/src/main.js`](../../portal/src/main.js), and [`portal/src/review-state.js`](../../portal/src/review-state.js). The prototype is local-development software. It has no authentication, backend, database, write-back, deployment workflow, or production hosting configuration.
+Current code and operating instructions are in [`portal/README.md`](../../portal/README.md), [`portal/src/main.js`](../../portal/src/main.js), [`portal/src/review-state.js`](../../portal/src/review-state.js), [`portal/src/voice-experiment.js`](../../portal/src/voice-experiment.js), and [`portal/server/voice-id-001-writeback.js`](../../portal/server/voice-id-001-writeback.js). The prototype has no authentication, user accounts, permissions, database, deployment workflow, or production hosting configuration. The Voice-ID-001 writeback identifies the submitting user by the free-form listener name only; it does not claim that name is verified.
 
 ## Review Modes and Workflow Boundaries
 
@@ -130,6 +131,7 @@ Do not add personal listening notes or sensitive material to an unapproved telem
 |---|---|---|
 | `catalog/metadata/demos.yaml` | `schema_reference`, `schema_example`, and `demo_records`; each demo includes identifiers, provenance pointers, lifecycle/disposition, classification/seed fields, required evidence, risks, and next action | Supplies demo identity, intake state, current values, and links |
 | `catalog/metadata/demo-reviews.yaml` | `schema_reference`, `schema_example`, and `review_records`; reviews link by `demo_id` and include reviewer fields, letter grades, N/R evidence, category evidence, and founder-review status | Supplies linked review state and written evaluation evidence |
+| `catalog/metadata/voice-experiments.yaml` | Structured experiment records, asset IDs/links, verified metadata findings, human observation provenance, unanswered evaluation fields, and append-only Voice-ID-001 submissions | Supplies Voice-ID-001 facts and records submissions; no other review workflow writes to it |
 | Per-demo Markdown | Profile, evaluation, provenance, and bounded disposition plan | Supporting records opened by repository links; not parsed as a second index |
 
 ### Strengths
@@ -137,6 +139,7 @@ Do not add personal listening notes or sensitive material to an unapproved telem
 - YAML is already the canonical registry and is versioned with the source repository.
 - Stable IDs and explicit `UNKNOWN` values make incomplete evidence visible.
 - Demo and review records are separated while linked by `demo_id`.
+- Controlled experiment evidence has its own registry and does not affect demo classifications or founder-review eligibility.
 - The existing review fields carry category evidence and distinguish an AI intake screen from founder review.
 - Repository diffs provide an inspectable history of source changes.
 
@@ -144,19 +147,12 @@ Do not add personal listening notes or sensitive material to an unapproved telem
 
 - YAML shape is documented but not enforced by a schema validator in the current workflow.
 - Cross-file links and parallel Markdown records require manual consistency checks.
+- Voice-ID-001 writeback updates its YAML and two Markdown records together, but the schema is not independently validated by a formal JSON Schema.
 - Classification and seed fields have no published controlled-value lists or explicit decision criteria.
 - Classification/seed rationale is on the demo record, without a direct review ID/evidence reference.
 - Review completion and classification eligibility are derived in UI code rather than a canonical field; that is appropriate for a read model but the rule must stay documented and tested.
 - The portal currently embeds a build-time snapshot; users can mistake stale displayed data for current repository state.
 - Current data is too small to establish frequent actions or a stable queue design.
-
-### Future Read Model
-
-Keep a derived, in-memory read model rather than a second persistent registry. It should join demos to reviews by immutable IDs and expose source provenance, current disposition, outstanding evidence, latest founder-review status, and the reason a gate is pending or open. Future builds should identify the source commit or generation time so stale snapshots are detectable. Controlled taxonomies and validation rules need approval before being encoded.
-
-### Future Write Model
-
-No write capability is implemented. A future write model should draft changes to the existing YAML and required Markdown records, validate them, and submit a reviewable repository change rather than maintaining a parallel database. It should use least-privilege GitHub identity, a non-main branch, and a pull request; never place a personal access token or app secret in browser code. Repository validation and human approval remain authoritative.
 
 ## Current Persistence Architecture
 
@@ -242,6 +238,14 @@ Use a small shared envelope with a workflow discriminator and separate versioned
 
 Common response records should retain a stable question/criterion ID, typed answer, optional comments, and explicit unanswered/null semantics. Workflow payloads should own their controlled choices and validation rules. Focus-group identity and consent material require a separate privacy decision and should not be placed in a public repository by default. This schema family remains a design recommendation only; no shared platform, schema validator, focus group, or discovery intake is implemented.
 
+### Future Read Model
+
+Keep a derived, in-memory read model rather than a second persistent registry. It should join demos to reviews by immutable IDs and expose source provenance, current disposition, outstanding evidence, latest founder-review status, and the reason a gate is pending or open. Future builds should identify the source commit or generation time so stale snapshots are detectable. Controlled taxonomies and validation rules need approval before being encoded.
+
+### Future Write Model
+
+The Voice-ID-001 local endpoint is an isolated proof-of-concept, not a pattern to copy as a generic writer. Any future write model for other workflows should separately define authorization, validation, review, and rollback; use a reviewable repository change rather than a parallel database; and never place credentials in browser code. Repository validation and human approval remain authoritative.
+
 ## Technology Recommendation
 
 Keep Option A for this temporary exercise: plain HTML, CSS, and JavaScript with the existing Vite local server/build and `js-yaml` parser. Modify the existing prototype rather than scaffolding a new `workbench/` application.
@@ -252,25 +256,25 @@ Keep Option A for this temporary exercise: plain HTML, CSS, and JavaScript with 
 | B. React static app | Adds component framework and conventions | Strong for a larger interactive product | Free local use; hosting depends on later choice | Needs build and package structure beyond this prototype | Premature; adds setup without improving workflow discovery |
 | C. Markdown/YAML templates plus a small local script | Minimal UI dependencies | Easy for batch summaries, weak for interactive queue/detail work | Free local use | Naturally repository-oriented | Alternative if browser interaction proves unnecessary; not as useful for observing navigation and task flow |
 
-Avoid further visual polish, mobile optimization, authentication, deployment, or write-back in this phase. The prototype exists to test a workflow, not to establish a long-term product stack.
+Avoid further visual polish, mobile optimization, authentication, deployment, or generalized write-back in this phase. The prototype exists to test bounded workflows, not to establish a long-term product stack.
 
 ## Evolution Toward Founder Review Portal v1
 
 1. **Phase 3.1A - temporary workbench:** Run locally against repository data; observe actual use; record friction and field gaps. Do not publish or write.
 2. **Phase 3.1B - workflow findings and product boundary:** Review observations across several demos; approve a stable review worksheet, classification/seed taxonomies, gate definitions, and the minimum useful read model. Decide whether this prototype should be discarded or retained.
-3. **Portal v1 design:** Define identity and authorization, public/private data exposure, stale-snapshot handling, accessible review queues, auditability, PR-based writes, and repository-side validation before selecting production architecture.
-4. **Future implementation (not approved here):** GitHub Pages could host static assets; GitHub Actions could build, validate, and publish them. Validation workflows could check YAML schemas, IDs, references, allowed values, and governance gates. Review queues and automated reports could be derived from canonical records. Classification and seed workflows must remain gated and evidence-based. Write-back should propose pull requests, not commit directly to `main`.
+3. **Portal v1 design:** Define authentication/authorization, public/private data exposure, stale-snapshot handling, accessible review queues, auditability, PR-based writes, and repository-side validation before selecting production architecture. The Voice-ID-001 listener field is not an authentication mechanism.
+4. **Future implementation (not approved here):** GitHub Pages could host static assets; GitHub Actions could build, validate, and publish them. Validation workflows could check YAML schemas, IDs, references, allowed values, and governance gates. Review queues and automated reports could be derived from canonical records. Classification and seed workflows must remain gated and evidence-based. Any write-back beyond the bounded Voice-ID-001 local proof-of-concept should propose pull requests, not commit directly to `main`.
 
-No Pages configuration, GitHub Actions, deployment workflow, validation automation, authentication, API, database, or write-back is created by this phase.
+No Pages configuration, GitHub Actions, deployment workflow, generalized validation automation, authentication, or database is created by this phase. The only API/write capability is the local Voice-ID-001 proof-of-concept described above.
 
 ## Validation Summary
 
-- The existing portal source remains in `portal/`; this phase adds no second UI codebase or metadata source.
-- The portal remains read-only. Source registries and demo/review records are not modified.
+- The existing portal source remains in `portal/`; no second UI codebase or metadata source was added.
+- Voice-ID-001 has a fixed-path local writeback exception. Demo intake, founder review, and future workflows remain read-only.
 - No GitHub Actions, deployment configuration, or authentication implementation is added.
-- The prototype's existing focused tests and build were previously validated; this documentation-only phase does not rebuild deployment output.
+- The focused tests cover the writeback service, including validation, audit values, listener suggestions, snapshot preservation, and stale revisions.
 - The workflow analysis distinguishes repository-backed current facts from unconfirmed user-workflow hypotheses.
 
 ## Recommended Phase 3.1B
 
-Conduct guided, time-boxed founder sessions with several real demos. Capture task sequence, information accessed, repeated entry, missing data, friction, and validation mistakes using the observation table above. At the end, approve or revise the workflows, field set, classification/seed criteria, and whether a permanent Portal v1 is justified. Do not begin write-back or deployment until that evidence and security design are reviewed.
+Conduct guided, time-boxed founder sessions with several real demos. Capture task sequence, information accessed, repeated entry, missing data, friction, and validation mistakes using the observation table above. At the end, approve or revise the workflows, field set, classification/seed criteria, and whether a permanent Portal v1 is justified. Do not extend write-back beyond Voice-ID-001 or deploy until that evidence and security design are reviewed.
