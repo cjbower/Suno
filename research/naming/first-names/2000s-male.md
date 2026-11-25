@@ -1,7 +1,5 @@
 # Top 20 Male First Names – 2000s
 
-> **Evidence notice:** Legacy static list; underlying counts and ranking method are not retained or validated. All age, audience, generational, cultural, genre, collision, and branding interpretations in this file are withdrawn. See the [Name Research Validation Report](../reports/name-research-validation-report.md).
-
 **Purpose**
 
 This dataset documents the top 20 most popular male first names born during the 2000s in the United States.
