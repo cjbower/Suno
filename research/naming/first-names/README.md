@@ -2,7 +2,7 @@
 
 **Purpose**
 
-This folder contains decade-based datasets of popular first names by gender. These datasets support understanding of generational naming patterns and audience familiarity.
+This folder contains static decade-labeled first-name lists. The source labels (for example, male/female) must not be interpreted as an individual's gender identity or as evidence of audience familiarity.
 
 **Contents**
 
@@ -15,7 +15,7 @@ This folder contains decade-based datasets of popular first names by gender. The
 
 **Methodology**
 
-Each decade file lists the top 20 names for that decade and gender.
+Each file presents a historical top-20 list for its stated decade and source category. The local files do not retain the annual counts or a reproducible extraction needed to verify a decade aggregation.
 
 Each entry includes:
 - Rank (1-20)
@@ -24,27 +24,24 @@ Each entry includes:
 
 **Sources**
 
-Data derived from:
-- U.S. Social Security Administration name databases
-- Census records
-- Birth registration data
-- Academic naming research
+The [SSA Popular Baby Names page](https://www.ssa.gov/oact/babynames/) is the intended primary source for national and state/territory rankings. The page and data endpoints returned HTTP 403 during the 2026-11-25 review, so current coverage and source methodology were not independently rechecked. The California and Washington state sources are evaluated separately in the [official source review](../reports/official-name-data-source-review.md); they are not merged into these files.
 
 **How to Use**
 
-1. Identify target audience age range
-2. Find associated decade(s)
-3. Note which names are generationally familiar
-4. Use for collision analysis (common names may have higher collision risk)
-5. Consider generational branding (e.g., "Adrian" suggests Gen-X/Millennial, "Benjamin" suggests Gen-Z/Gen-A)
+1. Confirm the exact source, period, geographic scope, categories, and aggregation method.
+2. Treat the lists as historical context only until underlying counts and extraction are verified.
+3. Use current, documented searches of relevant music services, identifiers, domains, social accounts, and trademark sources for collision assessment.
+4. Do not infer age, gender identity, cultural identity, audience familiarity, or genre from a name's frequency.
 
 **Limitations**
 
 - Reflects primarily U.S. naming patterns
 - Skewed toward English-language databases
 - Does not capture regional, cultural, or ethnic variations
-- Historical data only; does not predict future naming trends
-- Popularity correlates with collision risk
+- The 2020s files cover 2020-2024 only and are partial, not a complete decade or current-year update
+- A top-N list omits names outside its threshold
+- Popularity does not establish collision risk or availability
+- Do not combine data sources with different categories, time ranges, geographies, or transformations without documenting differences
 
 **Research Gaps**
 
@@ -55,7 +52,8 @@ Data derived from:
 
 **Next Steps**
 
-Review datasets in conjunction with:
+Review the evidence and limitations in:
+- [Official Baby-Name Data Source Review](../reports/official-name-data-source-review.md)
 - [Name Trends Analysis](../reports/name-trends-analysis.md)
 - [Name Selection Strategy](../reports/name-selection-strategy.md)
 - [Current Artist Review](../industry-collision-analysis/current-artist-review.md)
