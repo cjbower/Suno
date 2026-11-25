@@ -175,6 +175,34 @@ The following decisions were established in Manifesto V2 and serve as foundation
 
 **Related Decisions:** DEC-2B5-01; DEC-2B6-01; DEC-2B4-01.
 
+### Phase 2B.6 - Dynamic Event-Driven Media
+
+**ID:** DEC-2B6-04
+
+**Title:** Dynamic event-driven, preference-matched media is an approved platform end state
+
+**Date:** 2026-11-25
+
+**Category:** Creative | Operational | Governance | Technology
+
+**Status:** Approved strategic direction
+
+**Decision:** Permanent catalog music and dynamic event-driven media are complementary. The approved end-state direction includes a continuously refreshed, source-to-lyrics process; preference-matched music and sports-information channels; direct audience leverage; portability across catalog, audience, production, distribution, and analytics; early practical implementation; and replaceable generation providers. Providers advance foundational models; the company retains responsibility for publication quality, source integrity, identity, rights, audience alignment, and operational reliability. See the [Adaptive Media Strategy and Governance](../research/ai-artists/adaptive-media-strategy-and-governance.md) for the detailed boundaries and examples.
+
+**Rationale:** A durable creative platform can serve both long-lived catalog listening and timely, audience-aligned storytelling. Early practical integration may create learning and strategic options, while portability and clear provider boundaries reduce avoidable dependence on a single generation or distribution path. The five-to-ten-year platform thesis is founder direction, not a verified market outcome.
+
+**Source:** Approved founder strategic direction supplied for the 2026-11-25 documentation phase.
+
+**Authority:** Christopher Bower
+
+**Confidence:** High that this is approved founder direction; future platform behavior, market timing, provider performance, and first-mover outcomes remain uncertain.
+
+**Impact:** Records a strategic end state and planning direction only. It does not activate a product, channel, audience-data collection, preference or subscriber record, generation workflow, media output, provider relationship, distribution relationship, platform affiliation, or release.
+
+**Conditions:** The permanent catalog remains; rights and consent remain mandatory; publication quality remains human-governed; external platform timing remains outside company control; no team, league, platform, or other affiliation is implied; no provider is irreplaceable; and early adoption does not guarantee success. No stage is complete until separately scoped and approved.
+
+**Related Decisions:** DEC-2B5-01; DEC-2B6-01; DEC-2B6-03; DEC-2B4-01.
+
 ### Phase 3.0 – Classification Requires Founder Review
 
 **ID:** DEC-3-01

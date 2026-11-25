@@ -8,6 +8,9 @@ All notable changes to Suno Studio repository are documented in this file.
 
 ### Strategic Direction, Voice Consent, and Naming Evidence (2026-11-25)
 
+- Expanded the canonical adaptive-media strategy with the approved dynamic event-driven media end state, source-to-lyrics model, sports examples, audience and distribution portability, latency and quality measures, and rights/safety controls.
+- Recorded DEC-2B6-04, added a five-stage gated roadmap and durable handoff, and linked a validation report; no production capability, media, audience record, provider, distribution relationship, or product was activated.
+- Added a concise platform-thesis synthesis. Existing manifesto direction and research indexes remain intact; no substantive human-centered knowledge was removed.
 - Recorded the approved source-centered adaptive-media direction and distinguished it from unapproved formats, products, and production capabilities.
 - Added the approved branded-to-direct distribution progression and planning targets; no provider, service launch, direct DSP agreement, or delivery is claimed.
 - Added explicit, scope-specific authorization and separate rights-review gates for future use of identifiable real-person voices; made no assignments or voice metadata changes.

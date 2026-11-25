@@ -276,6 +276,16 @@ Branded and direct distribution strategy is approved under [DEC-2B6-03](decision
 
 See [Strategic Direction, Voice, and Adaptive Media Validation Report](strategic-direction-voice-and-adaptive-media-validation-report.md) for the phase evidence and limitations.
 
+### Dynamic Event-Driven, Preference-Matched Media
+
+The approved platform end state is recorded in [DEC-2B6-04](decision-log.md). Permanent catalog music and dynamic event-driven work coexist; the direction includes continuously refreshed source-to-lyrics storytelling, preference alignment, sports information through music, direct audience leverage, distribution and production portability, early practical implementation, and replaceable generation providers. The [Adaptive Media Strategy and Governance](../research/ai-artists/adaptive-media-strategy-and-governance.md) is the authoritative detailed strategy. The [Dynamic Event-Driven Media Strategy Validation Report](dynamic-event-driven-media-strategy-validation-report.md) records this documentation phase and its evidence boundaries.
+
+This phase is documentation only. No production capability, media generation, preference or subscriber record, provider selection, distribution relationship, platform affiliation, or product launch is active. No provider or platform timing is guaranteed; the five-to-ten-year thesis and first-mover advantages remain founder hypotheses.
+
+Recommended next work is the roadmap's staged research and architecture phase, followed only through distinct human approvals for any prototype, audience pilot, multi-channel pilot, or commercial-readiness review. Keep a small blast radius and preserve rights, consent, source integrity, publication-quality, correction, and release gates. No workstream stage is represented as complete.
+
+All changes for this phase are additive and follow the [Human-Centered Knowledge Preservation Policy](human-centered-knowledge-preservation-policy.md); no substantive human-centered knowledge was removed or consolidated.
+
 ### Phase 3.0: Legacy Demo Intake — Initial Record
 
 The user supplied one public Suno demo link, recorded as [DEMO-2026-0001](../catalog/demos/internal/intake/DEMO-2026-0001/demo-profile.md). Suno displays the title “Carillon” and creator attribution “Christopher Bower”; the canonical Suno ID and public lyrics are recorded as source evidence. No local original audio, checksum, prompt, source-material identification, model version, or rights review is available. The AI intake screen uses N/R for audio-dependent criteria; founder listening review remains pending. Per DEC-3-01, classification and seed designation remain `UNKNOWN` until completed founder review provides supporting evidence.

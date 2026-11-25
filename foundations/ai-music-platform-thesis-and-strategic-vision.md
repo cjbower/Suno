@@ -138,6 +138,8 @@ The approved direction is source-centered: music remains central, while a source
 
 The adaptive-media direction authorizes planning, not activation of a new format, production capability, audience-data collection, account, or release. The separately approved distribution progression is recorded in DEC-2B6-03; it sets planning targets but does not make any service operational. Format proposals and real-person voice use require separate human, rights, consent, privacy, and accessibility review.
 
+The approved dynamic-media end state complements permanent catalog music with event-driven, preference-matched works, direct audience relationships, and portable production and distribution. Its five-to-ten-year platform thesis and replaceable-provider boundary are founder direction, not verified market outcomes or active capabilities; [DEC-2B6-04](../docs/decision-log.md) records the approval, and the [Adaptive Media Strategy and Governance](../research/ai-artists/adaptive-media-strategy-and-governance.md) is the authoritative detailed reference.
+
 ## Distribution Capability Progression
 
 The approved distribution direction is a phased progression from production and release operations to branded distribution on wholesale or third-party delivery infrastructure, then selective direct DSP relationships and direct distributor or aggregator capability. The 3-9-month branded-distribution target and 12-18-month preferred / less-than-24-month outer direct-capability targets are planning windows, not guarantees. Readiness gates and external dependencies are in the [Roadmap](../operations/roadmap.md) and [DEC-2B6-03](../docs/decision-log.md).

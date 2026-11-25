@@ -52,6 +52,7 @@ Suno Studio is a **label-based creative operation** with:
 - [Human-Centered Knowledge Preservation Policy](docs/human-centered-knowledge-preservation-policy.md) – Preservation-first governance and founder approval requirements for destructive documentation changes
 - [AI Music Platform Thesis](foundations/ai-music-platform-thesis-and-strategic-vision.md) – Foundational intent for a durable music-production and release platform
 - [Adaptive Media Strategy and Governance](research/ai-artists/adaptive-media-strategy-and-governance.md) – Approved source-centered direction; companion formats and capabilities remain unactivated
+- [Dynamic Event-Driven Media Strategy Validation Report](docs/dynamic-event-driven-media-strategy-validation-report.md) – Approved end-state direction, preservation, validation, and inactive-capability boundaries
 - [Real-Person Voice Consent and Rights Governance](docs/real-voice-consent-and-rights-governance.md) – Explicit authorization and review gates; no voice assignments are created
 
 ### Creative Framework

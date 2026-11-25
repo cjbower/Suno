@@ -4,6 +4,8 @@
 
 Define authority boundaries across Demo Intake and A&R, Internal Studio Development, Audience Research Operations, editorial review, catalog, release operations, and marketing.
 
+This document supports the complementary permanent-catalog and dynamic-media direction recorded in [Adaptive Media Strategy and Governance](../research/ai-artists/adaptive-media-strategy-and-governance.md). It governs audience-research and decision authority; it does not activate audience-data collection, personalized delivery, production, or release.
+
 ## Authority and Ownership
 
 | Domain | Owns | Does not own |

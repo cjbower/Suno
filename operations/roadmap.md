@@ -36,6 +36,16 @@ These remain unscheduled candidates and are not necessary conditions for the app
 - Refresh official naming datasets and collision research using reproducible, current sources.
 - Define voice authorization evidence and secure handling without storing sensitive documents in Git.
 
+### Dynamic Event-Driven, Preference-Matched Media (Approved End State; Not Activated)
+
+[DEC-2B6-04](../docs/decision-log.md) approves this platform end state as strategic direction only. The detailed product and governance principles are maintained in the [Adaptive Media Strategy](../research/ai-artists/adaptive-media-strategy-and-governance.md). The following is a future, gated sequence with no dates; no stage is marked complete, and each requires a separate scope, small blast radius, human approval, and appropriate rights, privacy, safety, and release review.
+
+1. **Research and architecture:** Define source acquisition and verification, rights and editorial controls, preference-matching boundaries, source-to-lyrics stages, internal versus provider/DSP latency, lifecycle and correction handling, canonical identifiers, portability, and evidence needed for later gates. No provider is selected.
+2. **Internal prototype:** Consider only after research and architecture review and separate approval of its sources, test boundaries, data handling, provider use, and human review. Keep it internal and reversible; this roadmap entry does not authorize generation or publication.
+3. **Controlled audience pilot:** Consider only after separate approval of an opt-in cohort, consent, privacy and retention controls, explicit scope, human oversight, and stop/correction procedures. No subscriber or preference records are created by this roadmap.
+4. **Multi-channel pilot:** Consider only after pilot evidence and separate channel, rights, provider, portability, correction/takedown, disclosure, and operational approvals. External ingestion and availability remain dependent on each provider and platform.
+5. **Commercial readiness:** Make a distinct go/no-go decision only after publication quality, source integrity, identity, rights, audience alignment, security, reliability, support, legal/financial review, portability, and sustainable correction and takedown operations have evidence. No launch date or commercial readiness is established here.
+
 ### High Priority: Branded Distribution (3-9-Month Planning Target)
 
 **Approved direction:** Develop a customer-facing branded distribution service operated by Suno Studio and delivered to DSPs through an evaluated wholesale, white-label, or third-party provider where direct relationships do not yet exist.
