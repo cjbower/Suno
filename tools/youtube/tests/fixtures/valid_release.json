@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "release_id": "psalm-2026-12-01-pop-punk-v1",
+  "title": "Synthetic Psalm Song",
+  "description": "An original song inspired by Psalm 72.",
+  "tags": [
+    "psalm",
+    "pop punk",
+    "original music"
+  ],
+  "category_id": "10",
+  "made_for_kids": false,
+  "contains_synthetic_media": true,
+  "youtube": {
+    "expected_channel_id": "UCGtP5aRMQm5jc_XrDZOyX0Q",
+    "video_id": null
+  }
+}

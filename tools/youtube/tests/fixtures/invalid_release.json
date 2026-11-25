@@ -1,0 +1,14 @@
+{
+  "schema_version": "9.0.0",
+  "release_id": "../unsafe",
+  "title": "",
+  "description": null,
+  "tags": [42],
+  "category_id": "ten",
+  "made_for_kids": "false",
+  "contains_synthetic_media": 1,
+  "youtube": {
+    "expected_channel_id": "not-a-channel-id",
+    "video_id": null
+  }
+}
