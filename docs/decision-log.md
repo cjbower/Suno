@@ -95,6 +95,32 @@ The following decisions were established in Manifesto V2 and serve as foundation
 
 **Related Decisions:** Catalog-First Architecture; Phase 2B.4 Demo and Audience Research Boundaries.
 
+### Phase 2B.6 - Source-Centered Adaptive Media
+
+**ID:** DEC-2B6-01
+
+**Title:** Develop a source-centered creative platform that can support intentionally selected companion media
+
+**Date:** 2026-11-25
+
+**Category:** Creative | Operational | Governance
+
+**Status:** Approved
+
+**Decision:** Music remains a central expression of Suno Studio's work, while approved source material may also be considered for distinct companion formats when they serve the source and editorial purpose. Adaptations must preserve source provenance, use format-specific rights and consent review, remain traceable as distinct works, and receive separate human production and release approval.
+
+**Rationale:** A durable, source-led platform should make purposeful cross-media work possible without assuming that every source belongs in every medium or that approval for one format extends to another.
+
+**Source:** Approved strategic direction supplied for the 2026-11-25 documentation phase; see [Adaptive Media Strategy and Governance](../research/ai-artists/adaptive-media-strategy-and-governance.md).
+
+**Authority:** Christopher Bower
+
+**Confidence:** High
+
+**Impact:** Establishes a planning direction only. It does not activate a new format, product, service, account, audience-data collection, production workflow, distribution channel, or release.
+
+**Related Decisions:** DEC-2B5-01; DEC-2B4-01; Source Material Principle; Catalog-First Architecture.
+
 ### Phase 2B.6 - Real-Person Voice Consent
 
 **ID:** DEC-2B6-02
@@ -120,6 +146,34 @@ The following decisions were established in Manifesto V2 and serve as foundation
 **Impact:** Establishes a governance gate for future work only. It creates no voice assignment, contract, production use, or legal determination.
 
 **Related Decisions:** Identity Persistence; DEC-2B4-01.
+
+### Phase 2B.6 - Branded and Direct Distribution
+
+**ID:** DEC-2B6-03
+
+**Title:** Pursue branded distribution on wholesale infrastructure, followed by direct distributor capability
+
+**Date:** 2026-11-25
+
+**Category:** Operational | Governance | Technology
+
+**Status:** Approved strategic direction
+
+**Decision:** Pursue a branded music-distribution service using wholesale or third-party delivery infrastructure as the short-term company capability, with a founder planning target of 3-9 months. After establishing and operating the branded service, pursue direct digital-distributor or aggregator capability, with a preferred target of 12-18 months and an outer target of less than 24 months.
+
+**Rationale:** Existing production, intake, metadata, quality-review, catalog, release, and automation work can become an operational foundation for distribution. Wholesale delivery provides a planned intermediate phase while the company develops the delivery reliability, catalog operations, accounting, compliance, support, and DSP relationships required for direct distribution.
+
+**Source:** Approved founder direction supplied for the 2026-11-25 documentation phase; see the [Roadmap](../operations/roadmap.md) and [AI Music Platform Thesis](../foundations/ai-music-platform-thesis-and-strategic-vision.md).
+
+**Authority:** Christopher Bower
+
+**Confidence:** High for the strategic direction and planning targets; external provider and DSP acceptance remain uncertain.
+
+**Impact:** Approves planning toward these capabilities, not operational readiness or launch. No provider, account, legal or financial readiness, direct DSP agreement, client funds handling, or release delivery is established or claimed. Targets are not promises, contracts, or guarantees of platform acceptance.
+
+**Conditions:** Pass the legal, financial, provider, security, operational, and human go/no-go gates before any pilot or commercial launch. Do not claim direct DSP relationships before agreements exist.
+
+**Related Decisions:** DEC-2B5-01; DEC-2B6-01; DEC-2B4-01.
 
 ### Phase 3.0 – Classification Requires Founder Review
 

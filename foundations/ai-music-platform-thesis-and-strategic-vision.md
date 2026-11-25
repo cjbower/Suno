@@ -132,6 +132,18 @@ Catalog + Audience + Workflow + Automation + Governance + Distribution Expertise
 
 A future buyer may value the operational platform that produces releases more than any single release.
 
+## Adaptive Media Direction
+
+The approved direction is source-centered: music remains central, while a source may also support intentionally selected companion media when the format serves its meaning and editorial purpose. Shared provenance and workflow should not collapse distinct derivative works, rights, audiences, or release decisions. See [Adaptive Media Strategy and Governance](../research/ai-artists/adaptive-media-strategy-and-governance.md).
+
+The adaptive-media direction authorizes planning, not activation of a new format, production capability, audience-data collection, account, or release. The separately approved distribution progression is recorded in DEC-2B6-03; it sets planning targets but does not make any service operational. Format proposals and real-person voice use require separate human, rights, consent, privacy, and accessibility review.
+
+## Distribution Capability Progression
+
+The approved distribution direction is a phased progression from production and release operations to branded distribution on wholesale or third-party delivery infrastructure, then selective direct DSP relationships and direct distributor or aggregator capability. The 3-9-month branded-distribution target and 12-18-month preferred / less-than-24-month outer direct-capability targets are planning windows, not guarantees. Readiness gates and external dependencies are in the [Roadmap](../operations/roadmap.md) and [DEC-2B6-03](../docs/decision-log.md).
+
+No wholesale provider has been selected, no branded service is operational, and no direct DSP agreement or approval is claimed. Provider selection, pilot, commercial availability, and direct acceptance each require separate evidence and approval.
+
 ## Final Statement
 
 The objective is not simply to generate music.

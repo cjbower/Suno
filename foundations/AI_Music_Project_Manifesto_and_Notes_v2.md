@@ -164,6 +164,8 @@ A podcast may contextualize a release, a release may deepen a podcast's emotiona
 
 Show formats, hosts, cadence, audience strategy, editorial review, music licensing, and the degree of cross-promotion require future decisions. Podcast content should follow the same source, attribution, identity, and quality governance as other studio work.
 
+The approved source-centered adaptive-media direction and its unactivated capability boundary are documented in [Adaptive Media Strategy and Governance](../research/ai-artists/adaptive-media-strategy-and-governance.md).
+
 ## 12. Catalog Development
 
 Catalog-first development is a core operating principle. The durable asset is the traceable body of sources, artist identities, songs, releases, podcasts, and related editorial materials, not an isolated output or predetermined album schedule.
