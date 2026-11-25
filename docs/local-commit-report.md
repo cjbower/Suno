@@ -178,3 +178,112 @@ Branch `main` is clean and ahead of `origin/main` by four local commits. No remo
 ### Human Review Gate
 
 No commits were pushed. Human review and explicit authorization are required before any push.
+
+## Phase 2B.6 Local Commit Workflow
+
+This section records the naming-evidence, voice-governance, adaptive-media, and distribution-strategy documentation commits. It supersedes the earlier repository-status observations for this workflow; earlier phase records remain unchanged.
+
+### Pre-Commit Repository Status
+
+- Starting `HEAD`: `09377013b5fb0f8d167b04b99f39879ad3ee2698` on branch `main`; the worktree had 38 expected Markdown paths (34 tracked modifications and four untracked files), with no staged paths.
+- No production code, YAML, configuration, media, or binary paths were changed.
+- Reviewed all changed documents and the staged contents by commit group. The shared decision log was split by decision: DEC-2B6-02 with voice governance, and DEC-2B6-01 plus DEC-2B6-03 with strategy.
+- `git diff --check` passed. All changed Markdown files were non-empty; credential-pattern and trailing-whitespace checks passed; no new broken local Markdown links were found.
+- The pre-existing root README link to `docs/production-philosophy.md` remains unresolved and was not changed.
+- SSA retrieval returned HTTP 403 and the California data portal returned HTTP 502; the California data dictionary was accessible. Washington DOH coverage and reproducible export were not verified. No personal birth records or new name rankings were used.
+- No application test suite was run; this was documentation-only work.
+
+### Commits Created
+
+#### 1. Naming Evidence and Methodology
+
+- **SHA:** `ed67eba0a97a3d65d056ceac643b5d7319d1a62f`
+- **Parent:** `09377013b5fb0f8d167b04b99f39879ad3ee2698`
+- **Subject:** `docs: correct naming research evidence and methodology`
+- **Body:** Qualify the retained name lists, evaluate official data sources, and withdraw unsupported demographic and collision conclusions.
+- **Files added:** `research/naming/reports/official-name-data-source-review.md`
+- **Files modified:**
+  - `research/naming/README.md`
+  - `research/naming/first-names/1970s-female.md`
+  - `research/naming/first-names/1970s-male.md`
+  - `research/naming/first-names/1980s-female.md`
+  - `research/naming/first-names/1980s-male.md`
+  - `research/naming/first-names/1990s-female.md`
+  - `research/naming/first-names/1990s-male.md`
+  - `research/naming/first-names/2000s-female.md`
+  - `research/naming/first-names/2000s-male.md`
+  - `research/naming/first-names/2010s-female.md`
+  - `research/naming/first-names/2010s-male.md`
+  - `research/naming/first-names/2020s-female.md`
+  - `research/naming/first-names/2020s-male.md`
+  - `research/naming/first-names/README.md`
+  - `research/naming/industry-collision-analysis/README.md`
+  - `research/naming/industry-collision-analysis/current-artist-review.md`
+  - `research/naming/industry-collision-analysis/current-band-review.md`
+  - `research/naming/reports/README.md`
+  - `research/naming/reports/name-research-validation-report.md`
+  - `research/naming/reports/name-selection-strategy.md`
+  - `research/naming/reports/name-trends-analysis.md`
+  - `research/naming/surnames/README.md`
+  - `research/naming/surnames/top-50-us-surnames.md`
+- **Files renamed/deleted:** None.
+- **Changes:** 24 files; 284 insertions and 2,686 deletions.
+- **Validation:** Exact 24-path naming allowlist; staged whitespace, link, and credential checks passed. Unsupported rankings, identity inferences, and prior collision conclusions were withdrawn without changing roster names.
+- **Known limitations:** Source access limitations and non-reproducible legacy rankings remain documented; no current collision searches were performed.
+
+#### 2. Real-Person Voice Consent Governance
+
+- **SHA:** `1c132ac532a485cd03203ac833bd75b9bf8fa95f`
+- **Parent:** `ed67eba0a97a3d65d056ceac643b5d7319d1a62f`
+- **Subject:** `docs: establish real-person voice consent governance`
+- **Body:** Define scope-specific authorization and rights review, distinguish identity and implementation layers, and record future quality-control intent without enabling production use.
+- **Files added:** `docs/real-voice-consent-and-rights-governance.md`
+- **Files modified:** `creative/voice-architecture.md`, `docs/decision-log.md` (DEC-2B6-02 only), `docs/voice-governance-principles.md`.
+- **Files renamed/deleted:** None.
+- **Changes:** Four files; 109 insertions and no deletions.
+- **Validation:** Exact four-path staging; the decision-log delta contained only DEC-2B6-02; staged whitespace, link, and credential checks passed. No voice assignment, contract, model, or production workflow was created.
+- **Known limitations:** Quality-control intent is a future direction only; no metrics or operational evaluation workflow is established.
+
+#### 3. Adaptive Media and Distribution Strategy
+
+- **SHA:** `a9da17c7815978ce87dcff49baa1b55dcbb31dec`
+- **Parent:** `1c132ac532a485cd03203ac833bd75b9bf8fa95f`
+- **Subject:** `docs: document adaptive media and distribution strategy`
+- **Body:** Record source-centered companion-media direction and the phased branded-to-direct distribution targets, with explicit readiness, rights, privacy, and activation boundaries.
+- **Files added:** `research/ai-artists/adaptive-media-strategy-and-governance.md`
+- **Files modified:** `docs/decision-log.md` (DEC-2B6-01 and DEC-2B6-03 only), `foundations/AI_Music_Project_Manifesto_and_Notes_v2.md`, `foundations/ai-music-platform-thesis-and-strategic-vision.md`.
+- **Files renamed/deleted:** None.
+- **Changes:** Four files; 145 insertions and no deletions.
+- **Validation:** Exact four-path staging; the decision-log delta contained only DEC-2B6-01 and DEC-2B6-03; staged whitespace, link, and credential checks passed.
+- **Known limitations:** Distribution windows are planning targets, not readiness evidence or guarantees. No provider, service, direct DSP agreement, client commitment, or release delivery is claimed.
+
+#### 4. Strategic Direction Handoff and Validation
+
+- **SHA:** `31c59fe9158904de0db9a61cd0efc8f262f20354`
+- **Parent:** `a9da17c7815978ce87dcff49baa1b55dcbb31dec`
+- **Subject:** `docs: update strategic direction handoff and validation`
+- **Body:** Reflect the approved distribution targets and adaptive-media boundaries in the roadmap and continuity indexes; add cross-domain evidence and limitations.
+- **Files added:** `docs/strategic-direction-voice-and-adaptive-media-validation-report.md`
+- **Files modified:** `CHANGELOG.md`, `README.md`, `creative/README.md`, `docs/durable-handoff.md`, `operations/roadmap.md`, `research/ai-artists/README.md`.
+- **Files renamed/deleted:** None.
+- **Changes:** Seven files; 247 insertions and 26 deletions.
+- **Validation:** Exact seven-path staging; staged whitespace, link, and credential checks passed. The existing README broken link was preserved unchanged.
+- **Known limitations:** The report records provider, legal, financial, and platform dependencies as unresolved; no service or pilot is operational.
+
+#### 5. Phase 2B.6 Commit Audit
+
+- **SHA:** Reported in the final post-commit summary; intentionally not embedded in this file's own commit.
+- **Subject:** `docs: record Phase 2B.6 local commit audit`
+- **Related phase:** Phase 2B.6 local commit workflow.
+- **Files added/renamed/deleted:** None.
+- **Files modified:** `docs/local-commit-report.md`.
+- **Validation:** The report was checked for non-empty Markdown, relative-link integrity, and whitespace before staging. Final repository status and `git diff HEAD --check` were verified after the audit commit.
+- **Known limitations:** The audit commit's SHA is necessarily reported outside its own committed contents.
+
+### Final Repository Status
+
+Four strategy commits were created before the audit-only commit, each as a direct child of the preceding commit. No commits were amended, squashed, rebased, reset, or rewritten. No commit was pushed. The audit-only commit leaves branch `main` five local commits ahead of `origin/main`, with a clean worktree and empty index.
+
+### Human Review Gate
+
+No commits were pushed. Human review and explicit authorization are required before any push.
